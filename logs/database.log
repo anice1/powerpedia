@@ -1,0 +1,60 @@
+------------------------
+2022-09-16 23:07:27,013 
+------------------------
+ __main__: connection to server at "d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com" (3.126.47.113), port 5432 failed: FATAL:  database "d2b_assessmentsd" does not exist
+
+------------------------
+2022-09-16 23:07:29,010 
+------------------------
+ __main__: connection to server at "d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com" (3.126.47.113), port 5432 failed: FATAL:  database "d2b_assessmentsd" does not exist
+
+------------------------
+2022-09-16 23:08:54,939 
+------------------------
+ __main__: connection to server at "d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com" (3.126.47.113), port 5432 failed: FATAL:  database "d2b_assessmentsd" does not exist
+
+------------------------
+2022-09-16 23:09:37,578 
+------------------------
+ __main__: connection to server at "d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com" (3.126.47.113), port 5432 failed: FATAL:  database "d2b_assessmentsd" does not exist
+
+------------------------
+2022-09-16 23:09:46,791 
+------------------------
+ __main__: connection to server at "d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com" (3.126.47.113), port 5432 failed: FATAL:  database "d2b_assessmentsd" does not exist
+
+------------------------
+2022-09-16 23:10:31,624 
+------------------------
+ __main__: connection to server at "d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com" (3.126.47.113), port 5432 failed: FATAL:  database "d2b_assessmentsd" does not exist
+
+------------------------
+2022-09-16 23:11:05,984 
+------------------------
+ __main__: connection to server at "d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com" (3.126.47.113), port 5432 failed: FATAL:  database "d2b_assessmentsd" does not exist
+
+------------------------
+2022-09-16 23:11:14,600 
+------------------------
+ __main__: connection to server at "d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com" (3.126.47.113), port 5432 failed: FATAL:  database "d2b_assessmentsd" does not exist
+
+------------------------
+2022-09-16 23:11:56,049 
+------------------------
+ __main__: connection to server at "d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com" (3.126.47.113), port 5432 failed: FATAL:  database "d2b_assessmentsd" does not exist
+
+------------------------
+2022-09-16 23:12:02,881 
+------------------------
+ __main__: connection to server at "d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com" (3.126.47.113), port 5432 failed: FATAL:  database "d2b_assessmentsd" does not exist
+
+------------------------
+2022-09-16 23:12:24,880 
+------------------------
+ __main__: connection to server at "d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com" (3.126.47.113), port 5432 failed: FATAL:  database "d2b_assessmentsd" does not exist
+
+------------------------
+2022-09-16 23:12:34,474 
+------------------------
+ __main__: connection to server at "d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com" (3.126.47.113), port 5432 failed: FATAL:  database "d2b_assessmentsd" does not exist
+
