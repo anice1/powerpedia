@@ -7,38 +7,53 @@ import sys
 sys.path.insert(0, "../Data2Bot-Assessment/")
 from setup import env
 
-# set our database logger
-logger = logging.getLogger(__name__)
-logger.setLevel(logging.DEBUG)
 
-# set the log formatter 
-formatter = logging.Formatter('------------------------\n%(asctime)s \n------------------------\n %(name)s: %(message)s')
-# set the file handler
-file_handler = logging.FileHandler(filename='logs/'+env('LOG', 'DB_ERROR_LOG'))
-file_handler.setFormatter(formatter)
-logger.addHandler(file_handler)
+class LogHandler:
+    def __init__(self) -> None:
+        # set our database logger
+        self.logger = logging.getLogger(__name__)
+        self.logger.setLevel(logging.DEBUG)
 
-# Load connection variables from config.ini
-DB_CONNECTION = env("SERVER", "DB_CONNECTION")
-DB_HOST = env("SERVER", "DB_HOST")
-DB_PORT = env("SERVER", "DB_PORT")
-DB_DATABASE = env("SERVER", "DB_DATABASE")
-DB_USERNAME = env("SERVER", "DB_USERNAME")
-DB_PASSWORD = env("SERVER", "DB_PASSWORD")
+        # set the log formatter
+        self.formatter = logging.Formatter(
+            "------------------------\n%(asctime)s \n------------------------\n %(name)s: %(message)s"
+        )
+        # set the file handler
+        self.file_handler = logging.FileHandler(
+            filename="logs/" + env("LOG", "DB_ERROR_LOG")
+        )
+        self.file_handler.setFormatter(self.formatter)
+        self.logger.addHandler(self.file_handler)
 
-# Establish a connection with the db
-try:
-    conn = pg.connect(
-        host=DB_HOST,
-        dbname=DB_DATABASE,
-        user=DB_USERNAME,
-        password=DB_PASSWORD,
-        port=DB_PORT,
-    )
 
-    # close connection
-    conn.close()
-except Exception as e:
-    # log error to file
-    logger.debug(e)
-    print('An error occcured, check', file_handler.get_name.__str__())
+class DatabaseConn(LogHandler):
+    def __init__(self) -> None:
+        super().__init__()
+
+        # Load connection variables from config.ini
+        self.DB_CONNECTION = env("SERVER", "DB_CONNECTION")
+        self.DB_HOST = env("SERVER", "DB_HOST")
+        self.DB_PORT = env("SERVER", "DB_PORT")
+        self.DB_DATABASE = env("SERVER", "DB_DATABASE")
+        self.DB_USERNAME = env("SERVER", "DB_USERNAME")
+        self.DB_PASSWORD = env("SERVER", "DB_PASSWORD")
+
+    def connect(self):
+        # Establish a connection with the db
+        try:
+            conn = pg.connect(
+                host=self.DB_HOST,
+                dbname=self.DB_DATABASE,
+                user=self.DB_USERNAME,
+                password=self.DB_PASSWORD,
+                port=self.DB_PORT,
+            )
+
+            # close connection
+            conn.close()
+        except Exception as e:
+            # log error to file
+            self.logger.debug(e)
+            print("An error occcured, check", self.file_handler.get_name.__str__())
+
+        return conn
