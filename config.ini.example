@@ -11,3 +11,6 @@ DB_PORT=5432
 DB_DATABASE=new_db
 DB_USERNAME=root
 DB_PASSWORD=''
+
+[LOG]
+DB_ERROR_LOG = database.log
