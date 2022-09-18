@@ -1,11 +1,11 @@
 import psycopg2 as pg
-
-from handlers.LogHandler import LogHandler
 from handlers.Env import env
+from handlers.log_handler import LogHandler
+import os
 
 
 class DatabaseConn(LogHandler):
-    def __init__(self, logger_name=__name__) -> None:
+    def __init__(self, logger_name=__file__) -> None:
         """Establish database connection based on the server settings in config.ini
 
         Args:

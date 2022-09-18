@@ -1,11 +1,19 @@
-from db_connect import DatabaseConn
 import boto3
+import logging
 from handlers.Env import env
+from handlers.log_handler import LogHandler
+from db_connect import DatabaseConn
 
 
 def initiate_s3():
-    s3 = boto3.client("s3")
-    s3.download_file(env("SERVER", "S3_WAREHOUSE_BUCKET_NAME"), "orders_data", "*")
+    logger = LogHandler(logger_name="AWS s3 Download")
+    try:
+        s3 = boto3.client("s3")
+        s3.download_file(
+            env("SERVER", "S3_WAREHOUSE_BUCKET_NAME"), "orders_data", "orders.csv"
+        )
+    except Exception as e:
+        logger.logger.debug()
 
 
 def raw_data_extract():
@@ -15,12 +23,12 @@ def raw_data_extract():
 
 
 # instantiate class
-db_conn = DatabaseConn("extract")
+db_conn = DatabaseConn()
 
 # Extract the tables in the schema
-addresses = db_conn.extract(table="dim_addresses")
-customers = db_conn.extract(table="dim_customers")
-products = db_conn.extract(table="dim_products")
-dates = db_conn.extract(table="dim_dates")
+addresses = db_conn.extract(table="dim_addressess")
+# customers = db_conn.extract(table="dim_customers")
+# products = db_conn.extract(table="dim_products")
+# dates = db_conn.extract(table="dim_dates")
 
-initiate_s3()
+# initiate_s3()

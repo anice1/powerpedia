@@ -1,0 +1,26 @@
+------------------------
+2022-09-18 20:08:26,307 
+------------------------
+ /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/extract.py: could not translate host name "d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com" to address: nodename nor servname provided, or not known
+
+------------------------
+2022-09-18 20:08:26,307 
+------------------------
+ /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/extract.py: None
+------------------------
+2022-09-18 20:08:26,307 
+------------------------
+ /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/extract.py: 'NoneType' object has no attribute 'cursor'
+------------------------
+2022-09-18 20:09:53,666 
+------------------------
+ /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/db_connect.py: could not translate host name "d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com" to address: nodename nor servname provided, or not known
+
+------------------------
+2022-09-18 20:09:53,667 
+------------------------
+ /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/db_connect.py: None
+------------------------
+2022-09-18 20:09:53,667 
+------------------------
+ /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/db_connect.py: 'NoneType' object has no attribute 'cursor'
