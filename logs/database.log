@@ -1,65 +1,173 @@
 ------------------------
-2022-09-16 23:07:27,013 
+2022-09-17 20:34:33,457 
 ------------------------
- __main__: connection to server at "d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com" (3.126.47.113), port 5432 failed: FATAL:  database "d2b_assessmentsd" does not exist
+ loghandler: <connection object at 0x117f98ac0; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0>
+------------------------
+2022-09-17 21:51:22,642 
+------------------------
+ loghandler: could not translate host name "d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com" to address: nodename nor servname provided, or not known
 
 ------------------------
-2022-09-16 23:07:29,010 
+2022-09-17 21:51:22,644 
 ------------------------
- __main__: connection to server at "d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com" (3.126.47.113), port 5432 failed: FATAL:  database "d2b_assessmentsd" does not exist
+ loghandler: None
+------------------------
+2022-09-17 21:54:21,447 
+------------------------
+ loghandler: <connection object at 0x115bc4ac0; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0>
+------------------------
+2022-09-17 21:57:43,235 
+------------------------
+ loghandler: <connection object at 0x116fe8ac0; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0>
+------------------------
+2022-09-17 21:59:17,401 
+------------------------
+ loghandler: <connection object at 0x11ee4cac0; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0>
+------------------------
+2022-09-17 21:59:26,241 
+------------------------
+ loghandler: <connection object at 0x11f288ac0; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0>
+------------------------
+2022-09-17 21:59:26,551 
+------------------------
+ loghandler: relation "if_common.dim_customerss" does not exist
+LINE 1: SELECT * FROM if_common.dim_customerss
+                      ^
+------------------------
+2022-09-17 22:04:40,251 
+------------------------
+ loghandler: could not translate host name "d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com" to address: nodename nor servname provided, or not known
 
 ------------------------
-2022-09-16 23:08:54,939 
+2022-09-17 22:04:40,252 
 ------------------------
- __main__: connection to server at "d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com" (3.126.47.113), port 5432 failed: FATAL:  database "d2b_assessmentsd" does not exist
+ loghandler: None
+------------------------
+2022-09-17 22:05:48,516 
+------------------------
+ loghandler: <connection object at 0x11beb8ac0; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0>
+------------------------
+2022-09-17 22:05:48,877 
+------------------------
+ loghandler: relation "if_common.dim_customerss" does not exist
+LINE 1: SELECT * FROM if_common.dim_customerss
+                      ^
 
 ------------------------
-2022-09-16 23:09:37,578 
+2022-09-17 22:05:48,877 
 ------------------------
- __main__: connection to server at "d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com" (3.126.47.113), port 5432 failed: FATAL:  database "d2b_assessmentsd" does not exist
+ loghandler: relation "if_common.dim_customerss" does not exist
+LINE 1: SELECT * FROM if_common.dim_customerss
+                      ^
 
 ------------------------
-2022-09-16 23:09:46,791 
+2022-09-17 22:10:48,297 
 ------------------------
- __main__: connection to server at "d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com" (3.126.47.113), port 5432 failed: FATAL:  database "d2b_assessmentsd" does not exist
+ root: <connection object at 0x11c66cac0; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0>
+------------------------
+2022-09-17 22:10:48,630 
+------------------------
+ root: relation "if_common.dim_customerss" does not exist
+LINE 1: SELECT * FROM if_common.dim_customerss
+                      ^
 
 ------------------------
-2022-09-16 23:10:31,624 
+2022-09-17 22:10:48,630 
 ------------------------
- __main__: connection to server at "d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com" (3.126.47.113), port 5432 failed: FATAL:  database "d2b_assessmentsd" does not exist
+ root: relation "if_common.dim_customerss" does not exist
+LINE 1: SELECT * FROM if_common.dim_customerss
+                      ^
 
 ------------------------
-2022-09-16 23:11:05,984 
+2022-09-17 22:16:32,925 
 ------------------------
- __main__: connection to server at "d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com" (3.126.47.113), port 5432 failed: FATAL:  database "d2b_assessmentsd" does not exist
+ root: <connection object at 0x117250ac0; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0>
+------------------------
+2022-09-17 22:18:45,082 
+------------------------
+ loghandler: <connection object at 0x11c1acac0; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0>
+------------------------
+2022-09-17 22:19:28,943 
+------------------------
+ loghandler: <connection object at 0x11f0ecac0; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0>
+------------------------
+2022-09-17 22:19:29,287 
+------------------------
+ loghandler: relation "if_common.dim_customerss" does not exist
+LINE 1: SELECT * FROM if_common.dim_customerss
+                      ^
 
 ------------------------
-2022-09-16 23:11:14,600 
+2022-09-17 22:22:15,457 
 ------------------------
- __main__: connection to server at "d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com" (3.126.47.113), port 5432 failed: FATAL:  database "d2b_assessmentsd" does not exist
+ loghandler: <connection object at 0x11c9e4ac0; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0>
+------------------------
+2022-09-17 22:22:16,271 
+------------------------
+ loghandler: relation "if_common.dim_customerss" does not exist
+LINE 1: SELECT * FROM if_common.dim_customerss
+                      ^
 
 ------------------------
-2022-09-16 23:11:56,049 
+2022-09-18 00:36:36,278 
 ------------------------
- __main__: connection to server at "d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com" (3.126.47.113), port 5432 failed: FATAL:  database "d2b_assessmentsd" does not exist
+ loghandler: <connection object at 0x1035f1d20; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0>
+------------------------
+2022-09-18 00:36:48,438 
+------------------------
+ loghandler: <connection object at 0x105d6dd20; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0>
+------------------------
+2022-09-18 00:36:48,735 
+------------------------
+ loghandler: relation "if_common.dim_addressess" does not exist
+LINE 1: SELECT * FROM if_common.dim_addressess
+                      ^
 
 ------------------------
-2022-09-16 23:12:02,881 
+2022-09-18 00:37:51,090 
 ------------------------
- __main__: connection to server at "d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com" (3.126.47.113), port 5432 failed: FATAL:  database "d2b_assessmentsd" does not exist
+ loghandler: <connection object at 0x10af61d20; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0>
+------------------------
+2022-09-18 00:37:51,390 
+------------------------
+ loghandler: relation "if_common.dim_addressess" does not exist
+LINE 1: SELECT * FROM if_common.dim_addressess
+                      ^
 
 ------------------------
-2022-09-16 23:12:24,880 
+2022-09-18 00:40:17,435 
 ------------------------
- __main__: connection to server at "d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com" (3.126.47.113), port 5432 failed: FATAL:  database "d2b_assessmentsd" does not exist
+ loghandler: <connection object at 0x10b9c9d20; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0>
+------------------------
+2022-09-18 00:40:18,027 
+------------------------
+ loghandler: relation "if_common.dim_addressess" does not exist
+LINE 1: SELECT * FROM if_common.dim_addressess
+                      ^
 
 ------------------------
-2022-09-16 23:12:34,474 
+2022-09-18 00:42:51,329 
 ------------------------
- __main__: connection to server at "d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com" (3.126.47.113), port 5432 failed: FATAL:  database "d2b_assessmentsd" does not exist
+ __main__: <connection object at 0x1070b1d20; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0>
+------------------------
+2022-09-18 00:42:51,648 
+------------------------
+ __main__: relation "if_common.dim_addressess" does not exist
+LINE 1: SELECT * FROM if_common.dim_addressess
+                      ^
 
 ------------------------
-2022-09-16 23:17:36,090 
+2022-09-18 00:43:31,048 
 ------------------------
- __main__: connection to server at "d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com" (3.126.47.113), port 5432 failed: FATAL:  database "d2b_assessments" does not exist
+ extract: <connection object at 0x1040f5d20; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0>
+------------------------
+2022-09-18 00:43:31,368 
+------------------------
+ extract: relation "if_common.dim_addressess" does not exist
+LINE 1: SELECT * FROM if_common.dim_addressess
+                      ^
 
+------------------------
+2022-09-18 00:44:33,033 
+------------------------
+ extract: <connection object at 0x10b4c9d20; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0>

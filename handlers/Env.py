@@ -20,5 +20,4 @@ def env(section, key, value=None):
         return config[section][key]
     else:
         config[section][key] = value
-        # write to file config.ini
-        config.write("../config.ini", True)
+        return config
