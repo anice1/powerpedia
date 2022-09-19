@@ -1,7 +1,7 @@
 # Data2Bot-Assessment
 
 ## File Structure
-```bash
+```
 Data2Bot-Assessment
 ├── README.md
 ├── requirements.txt
