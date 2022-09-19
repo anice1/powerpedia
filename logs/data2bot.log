@@ -24,3 +24,134 @@
 2022-09-18 20:09:53,667 
 ------------------------
  /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/db_connect.py: 'NoneType' object has no attribute 'cursor'
+------------------------
+2022-09-19 00:20:19,045 
+------------------------
+ extract.py: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/extract.py: 
+ Could not connect to the endpoint URL: "https://d2b-internal-assessment-bucket.s3.ohio.amazonaws.com/orders_data"
+------------------------
+2022-09-19 00:20:19,045 
+------------------------
+ extract.py: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/extract.py: 
+ Could not connect to the endpoint URL: "https://d2b-internal-assessment-bucket.s3.ohio.amazonaws.com/orders_data"
+------------------------
+2022-09-19 00:41:47,741 
+------------------------
+ db_connect.py: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/extract.py: 
+ <connection object at 0x10873cc10; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0>
+------------------------
+2022-09-19 00:42:10,776 
+------------------------
+ db_connect.py: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/extract.py: 
+ <connection object at 0x10864cc10; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0>
+------------------------
+2022-09-19 01:52:49,056 
+------------------------
+ extract.py: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/extract.py: 
+ Could not connect to the endpoint URL: "https://d2b-internal-assessment-bucket.s3.ohio.amazonaws.com/orders_data"
+------------------------
+2022-09-19 01:58:31,445 
+------------------------
+ extract.py:  /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/extract.py: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/extract.py: 
+ Could not connect to the endpoint URL: "https://d2b-internal-assessment-bucket.s3.ohio.amazonaws.com/orders_data"
+------------------------
+2022-09-19 02:00:20,048 
+------------------------
+ extract.py:  handlers.log_handler: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/extract.py: 
+ Could not connect to the endpoint URL: "https://d2b-internal-assessment-bucket.s3.ohio.amazonaws.com/orders_data"
+------------------------
+2022-09-19 02:02:06,145 
+------------------------
+ extract.py:  /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/extract.py: 
+ Could not connect to the endpoint URL: "https://d2b-internal-assessment-bucket.s3.ohio.amazonaws.com/orders_data"
+------------------------
+2022-09-19 02:03:13,813 
+------------------------
+ db_connect.py:  /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/db_connect.py: 
+ connection to server at "d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com" (3.126.47.113), port 5432 failed: FATAL:  database "<configparser.ConfigParser object at 0x10fd571c0>" does not exist
+
+------------------------
+2022-09-19 02:03:13,813 
+------------------------
+ db_connect.py:  /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/db_connect.py: 
+ None
+------------------------
+2022-09-19 02:03:13,813 
+------------------------
+ db_connect.py:  /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/db_connect.py: 
+ 'NoneType' object has no attribute 'cursor'
+------------------------
+2022-09-19 02:04:11,089 
+------------------------
+ db_connect.py:  /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/db_connect.py: 
+ <connection object at 0x10f921d20; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0>
+------------------------
+2022-09-19 02:07:46,013 
+------------------------
+ extract.py:  
+             initiate_s3: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/extract.py: 
+ Could not connect to the endpoint URL: "https://d2b-internal-assessment-bucket.s3.ohio.amazonaws.com/orders_data"
+------------------------
+2022-09-19 02:08:53,651 
+------------------------
+ extract.py:  
+             initiate_s3: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/extract.py: 
+ Could not connect to the endpoint URL: "https://d2b-internal-assessment-bucket.s3.ohio.amazonaws.com/orders_data"
+------------------------
+2022-09-19 02:08:53,651 
+------------------------
+ extract.py:  
+             initiate_s3: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/extract.py: 
+ Could not connect to the endpoint URL: "https://d2b-internal-assessment-bucket.s3.ohio.amazonaws.com/orders_data"
+------------------------
+2022-09-19 02:10:14,606 
+------------------------
+ extract.py:  
+             initiate_s3: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/extract.py: 
+ Could not connect to the endpoint URL: "https://d2b-internal-assessment-bucket.s3.ohio.amazonaws.com/orders_data"
+------------------------
+2022-09-19 02:10:14,606 
+------------------------
+ extract.py:  
+             initiate_s3: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/extract.py: 
+ Could not connect to the endpoint URL: "https://d2b-internal-assessment-bucket.s3.ohio.amazonaws.com/orders_data"
+------------------------
+2022-09-19 02:11:20,409 
+------------------------
+ extract.py:  
+             initiate_s3: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/extract.py: 
+ Could not connect to the endpoint URL: "https://d2b-internal-assessment-bucket.s3.ohio.amazonaws.com/orders_data"
+------------------------
+2022-09-19 02:11:20,409 
+------------------------
+ extract.py:  
+             initiate_s3: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/extract.py: 
+ Could not connect to the endpoint URL: "https://d2b-internal-assessment-bucket.s3.ohio.amazonaws.com/orders_data"
+------------------------
+2022-09-19 02:15:49,347 
+------------------------
+ extract.py:  
+             
+ Could not connect to the endpoint URL: "https://d2b-internal-assessment-bucket.s3.ohio.amazonaws.com/orders_data" @ 
+  initiate_s3: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/extract.py
+------------------------
+2022-09-19 02:15:49,347 
+------------------------
+ extract.py:  
+             
+ Could not connect to the endpoint URL: "https://d2b-internal-assessment-bucket.s3.ohio.amazonaws.com/orders_data" @ 
+  initiate_s3: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/extract.py
+------------------------
+2022-09-19 02:17:35,099 
+------------------------
+ extract.py:  
+             
+ Could not connect to the endpoint URL: "https://d2b-internal-assessment-bucket.s3.ohio.amazonaws.com/orders_data" 
+  @ initiate_s3: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/extract.py
+------------------------
+2022-09-19 02:17:35,099 
+------------------------
+ extract.py:  
+             
+ Could not connect to the endpoint URL: "https://d2b-internal-assessment-bucket.s3.ohio.amazonaws.com/orders_data" 
+  @ initiate_s3: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/extract.py

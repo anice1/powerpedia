@@ -3,14 +3,15 @@ from handlers.Env import env
 
 
 class LogHandler:
-    def __init__(self, logger_name, log_file=env("LOG", "ERROR_LOG")):
+    def __init__(self, log_file=env("LOG", "ERROR_LOG")):
         # set our database logger
-        self.logger = logging.getLogger(logger_name)
+        self.logger = logging.getLogger(__name__)
         self.logger.setLevel(env("LOG", "LOG_LEVEL"))
 
         # set the log formatter
         self.formatter = logging.Formatter(
-            "------------------------\n%(asctime)s \n------------------------\n %(filename)s: %(name)s: \n %(message)s"
+            "------------------------\n%(asctime)s \n------------------------\n %(filename)s:  \n \
+            \n %(message)s \n  @ %(funcName)s: %(pathname)s"
         )
         # set the file handler
         self.file_handler = logging.FileHandler(filename=log_file)

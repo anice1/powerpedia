@@ -1,18 +1,17 @@
+from asyncio.log import logger
 import psycopg2 as pg
 from handlers.Env import env
 from handlers.log_handler import LogHandler
-import os
 
 
 class DatabaseConn(LogHandler):
-    def __init__(self, logger_name=__file__) -> None:
+    def __init__(self, log_file=env('LOG','ERROR_LOG')) -> None:
         """Establish database connection based on the server settings in config.ini
 
         Args:
-            logger_name (str, optional): the name of the operation. Defaults to __name__.
+            log_file (str, optional): the name or path to the file where error will be logged. Defaults to ERROR_LOG path in config.ini
         """
-        super().__init__(logger_name=logger_name)
-        self.logger.getChild(logger_name)
+        super().__init__(log_file=log_file)
 
         self.conn = None
         # Load connection variables from config.ini
