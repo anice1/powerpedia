@@ -1,5 +1,6 @@
 # Data2Bot-Assessment
-
+## Overview
+A simple data pipeline that easily fetches data from specified database configured in the config.ini file
 ## File Structure
 ```
 Data2Bot-Assessment
