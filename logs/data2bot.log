@@ -729,3 +729,31 @@
              
  list indices must be integers or slices, not str 
   @ download_raw_data: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/extract.py
+------------------------
+2022-09-20 17:56:10,928 
+------------------------
+ db_connect_handler.py:  
+             
+ <connection object at 0x103af1fc0; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/scripts/Handlers/db_connect_handler.py
+------------------------
+2022-09-20 18:02:16,796 
+------------------------
+ db_connect_handler.py:  
+             
+ <connection object at 0x100a09fc0; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/scripts/Handlers/db_connect_handler.py
+------------------------
+2022-09-20 18:03:37,239 
+------------------------
+ db_connect_handler.py:  
+             
+ <connection object at 0x10ea31fc0; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/scripts/Handlers/db_connect_handler.py
+------------------------
+2022-09-20 18:05:19,195 
+------------------------
+ db_connect_handler.py:  
+             
+ <connection object at 0x108595fc0; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/scripts/Handlers/db_connect_handler.py

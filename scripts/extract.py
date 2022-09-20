@@ -41,15 +41,15 @@ def download_raw_data(
         handler.logger.debug(e)
 
 
+download_raw_data(object_name="orders.csv")
+download_raw_data(object_name="reviews.csv")
+download_raw_data(object_name="shipment_deliveries.csv")
+
 # instantiate class
-db_conn = DatabaseConn()
+# db_conn = DatabaseConn()
 
 # # Extract the tables in the schema
 # addresses = db_conn.extract(table="dim_addresses")
 # customers = db_conn.extract(table="dim_customers")
 # products = db_conn.extract(table="dim_products")
 # dates = db_conn.extract(table="dim_dates")
-
-download_raw_data(object_name="orders.csv")
-download_raw_data(object_name="reviews.csv")
-download_raw_data(object_name="shipment_deliveries.csv")

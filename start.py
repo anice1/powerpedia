@@ -1,33 +1,45 @@
-from cgitb import handler
-
 #!/usr/bin/python3
 
-from handlers.db_connect_handler import DatabaseConn
-from handlers.log_handler import LogHandler
+from pprint import pprint
+from providers.SqlServiceProvider import SqlServiceProvider
+import sys
+
+sys.path.append("../Data2Bot-Assessment/scripts/")
+
+from Handlers.db_connect_handler import DatabaseConn
+from Handlers.log_handler import LogHandler
 import glob
 
 
-def execute_sql(filename):
+def execute_sql(filenames):
 
     # Read the sql file
-    file = open(filename, "r")
-    sql_file = file.read()
-    file.close()
+    try:
+        for f in filenames:
+            file = open(f, "r")
+            sql_file = file.read()
+            file.close()
 
-    # all SQL commands (split on ';')
-    commands = sql_file.split(";")
+            # all SQL commands (split on ';')
+            commands = sql_file.strip().split(";")
+            pprint(commands)
+            print(len(commands))
 
-    # instantiate class
-    # conn = DatabaseConn().connect()
-    # for command in commands:
-    #     try:
-    #         cur = conn.cursor()
-    #         cur.execute(command)
-    #     except Exception as e:
-    #         print(": ", e)
+            # # instantiate class
+            # conn = DatabaseConn().connect()
+            # for command in commands:
+            #     try:
+            #         print(f'Running Query...{f}\t')
+            #         cur = conn.cursor()
+            #         cur.execute(command)
+            #     except Exception as e:
+            #         print(": ", e)
+            # print('Successful!')
+            # conn.close()
+    except Exception as e:
+        print(e)
 
 
-path = "../Data2Bot-Assessment/Analysis/"
-sql_files = glob.glob(path + "*.sql")
-
-execute_sql(filename=path + "product_orders_on_holidays.sql")
+# Run sql services
+sql_services = SqlServiceProvider().services()
+execute_sql(sql_services)

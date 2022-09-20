@@ -1,0 +1,1 @@
+SELECT * FROM if_common.dim_dates;
