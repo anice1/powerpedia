@@ -1,11 +1,12 @@
-from asyncio.log import logger
+#!/usr/bin/python3
+
 import psycopg2 as pg
-from handlers.Env import env
-from handlers.log_handler import LogHandler
+from Handlers.env_handler import env
+from Handlers.log_handler import LogHandler
 
 
 class DatabaseConn(LogHandler):
-    def __init__(self, log_file=env('LOG','ERROR_LOG')) -> None:
+    def __init__(self, log_file=env("LOG", "ERROR_LOG")) -> None:
         """Establish database connection based on the server settings in config.ini
 
         Args:
@@ -15,7 +16,6 @@ class DatabaseConn(LogHandler):
 
         self.conn = None
         # Load connection variables from config.ini
-        self.DB_CONNECTION = env("SERVER", "DB_CONNECTION")
         self.DB_HOST = env("SERVER", "DB_HOST")
         self.DB_PORT = env("SERVER", "DB_PORT")
         self.DB_DATABASE = env("SERVER", "DB_DATABASE")
@@ -49,14 +49,14 @@ class DatabaseConn(LogHandler):
         -----------
         table: the name of the table you'd like to extract
         """
-        print(f"Querying {schema}.{table} ... \n")
+        print(f"Querying {schema}.{table} ...", end="")
 
         try:
             conn = self.connect()
             cur = conn.cursor()
             cur.execute(f"""SELECT * FROM {schema}.{table}""")
             result = cur.fetchall()
-            print("\n Successful!")
+            print(" Successful!")
 
             conn.close()
             return result

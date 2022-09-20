@@ -1,0 +1,7 @@
+stages:
+  extract:
+    cmd: ./trans.r rows.txt > columns.txt
+  load:
+    cmd: ./trans.r rows.txt > columns.txt
+  start:
+    cmd: ./trans.r rows.txt > columns.txt

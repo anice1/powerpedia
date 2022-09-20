@@ -155,3 +155,577 @@
              
  Could not connect to the endpoint URL: "https://d2b-internal-assessment-bucket.s3.ohio.amazonaws.com/orders_data" 
   @ initiate_s3: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/extract.py
+------------------------
+2022-09-19 03:19:27,300 
+------------------------
+ db_connect.py:  
+             
+ <connection object at 0x118c313f0; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/handlers/db_connect.py
+------------------------
+2022-09-19 04:29:36,563 
+------------------------
+ extract.py:  
+             
+ Unable to locate credentials 
+  @ initiate_s3: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/extract.py
+------------------------
+2022-09-19 04:29:36,563 
+------------------------
+ extract.py:  
+             
+ Unable to locate credentials 
+  @ initiate_s3: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/extract.py
+------------------------
+2022-09-19 04:31:27,249 
+------------------------
+ extract.py:  
+             
+ Could not connect to the endpoint URL: "https://d2b-internal-assessment-bucket.s3.Global.amazonaws.com/orders_data" 
+  @ initiate_s3: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/extract.py
+------------------------
+2022-09-19 04:31:27,249 
+------------------------
+ extract.py:  
+             
+ Could not connect to the endpoint URL: "https://d2b-internal-assessment-bucket.s3.Global.amazonaws.com/orders_data" 
+  @ initiate_s3: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/extract.py
+------------------------
+2022-09-19 05:59:18,294 
+------------------------
+ db_connect.py:  
+             
+ <connection object at 0x10cf986d0; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/handlers/db_connect.py
+------------------------
+2022-09-19 05:59:51,252 
+------------------------
+ db_connect.py:  
+             
+ <connection object at 0x10bb0c6d0; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/handlers/db_connect.py
+------------------------
+2022-09-19 11:14:51,887 
+------------------------
+ extract.py:  
+             
+ Could not connect to the endpoint URL: "https://d2b-internal-assessment-bucket.s3.Global.amazonaws.com/?prefix=orders_data&encoding-type=url" 
+  @ initiate_s3: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/extract.py
+------------------------
+2022-09-19 11:14:51,887 
+------------------------
+ extract.py:  
+             
+ Could not connect to the endpoint URL: "https://d2b-internal-assessment-bucket.s3.Global.amazonaws.com/?prefix=orders_data&encoding-type=url" 
+  @ initiate_s3: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/extract.py
+------------------------
+2022-09-19 17:47:28,670 
+------------------------
+ extract.py:  
+             
+ download_file() missing 1 required positional argument: 'Filename' 
+  @ download_raw_data: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/extract.py
+------------------------
+2022-09-19 17:47:28,670 
+------------------------
+ extract.py:  
+             
+ download_file() missing 1 required positional argument: 'Filename' 
+  @ download_raw_data: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/extract.py
+------------------------
+2022-09-19 17:48:45,773 
+------------------------
+ extract.py:  
+             
+ An error occurred (404) when calling the HeadObject operation: Not Found 
+  @ download_raw_data: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/extract.py
+------------------------
+2022-09-19 17:48:45,773 
+------------------------
+ extract.py:  
+             
+ An error occurred (404) when calling the HeadObject operation: Not Found 
+  @ download_raw_data: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/extract.py
+------------------------
+2022-09-19 18:15:05,871 
+------------------------
+ extract.py:  
+             
+ [Errno 2] No such file or directory: '../Data2Bot-Assessment/assets/data/raw/orders.csv.9b340EF4' 
+  @ download_raw_data: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/extract.py
+------------------------
+2022-09-19 18:15:05,871 
+------------------------
+ extract.py:  
+             
+ [Errno 2] No such file or directory: '../Data2Bot-Assessment/assets/data/raw/orders.csv.9b340EF4' 
+  @ download_raw_data: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/extract.py
+------------------------
+2022-09-19 19:08:47,725 
+------------------------
+ db_connect.py:  
+             
+ <connection object at 0x10e648c10; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/handlers/db_connect.py
+------------------------
+2022-09-19 19:08:49,870 
+------------------------
+ db_connect.py:  
+             
+ <connection object at 0x10e648d60; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/handlers/db_connect.py
+------------------------
+2022-09-19 19:08:52,060 
+------------------------
+ db_connect.py:  
+             
+ <connection object at 0x10e648c10; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/handlers/db_connect.py
+------------------------
+2022-09-19 19:08:54,070 
+------------------------
+ db_connect.py:  
+             
+ <connection object at 0x10e648d60; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/handlers/db_connect.py
+------------------------
+2022-09-19 19:09:30,653 
+------------------------
+ extract.py:  
+             
+ An error occurred (404) when calling the HeadObject operation: Not Found 
+  @ download_raw_data: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/extract.py
+------------------------
+2022-09-19 19:09:30,653 
+------------------------
+ extract.py:  
+             
+ An error occurred (404) when calling the HeadObject operation: Not Found 
+  @ download_raw_data: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/extract.py
+------------------------
+2022-09-19 19:09:30,653 
+------------------------
+ extract.py:  
+             
+ An error occurred (404) when calling the HeadObject operation: Not Found 
+  @ download_raw_data: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/extract.py
+------------------------
+2022-09-19 19:09:30,653 
+------------------------
+ extract.py:  
+             
+ An error occurred (404) when calling the HeadObject operation: Not Found 
+  @ download_raw_data: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/extract.py
+------------------------
+2022-09-19 19:10:22,574 
+------------------------
+ db_connect.py:  
+             
+ <connection object at 0x108d34c10; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/handlers/db_connect.py
+------------------------
+2022-09-19 19:10:25,128 
+------------------------
+ db_connect.py:  
+             
+ <connection object at 0x108d34d60; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/handlers/db_connect.py
+------------------------
+2022-09-19 19:10:28,169 
+------------------------
+ db_connect.py:  
+             
+ <connection object at 0x108d34c10; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/handlers/db_connect.py
+------------------------
+2022-09-19 19:10:30,177 
+------------------------
+ db_connect.py:  
+             
+ <connection object at 0x108d34d60; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/handlers/db_connect.py
+------------------------
+2022-09-19 19:10:46,006 
+------------------------
+ extract.py:  
+             
+ An error occurred (404) when calling the HeadObject operation: Not Found 
+  @ download_raw_data: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/extract.py
+------------------------
+2022-09-19 19:10:46,006 
+------------------------
+ extract.py:  
+             
+ An error occurred (404) when calling the HeadObject operation: Not Found 
+  @ download_raw_data: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/extract.py
+------------------------
+2022-09-19 19:10:46,006 
+------------------------
+ extract.py:  
+             
+ An error occurred (404) when calling the HeadObject operation: Not Found 
+  @ download_raw_data: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/extract.py
+------------------------
+2022-09-19 19:10:46,006 
+------------------------
+ extract.py:  
+             
+ An error occurred (404) when calling the HeadObject operation: Not Found 
+  @ download_raw_data: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/extract.py
+------------------------
+2022-09-19 19:11:39,486 
+------------------------
+ db_connect.py:  
+             
+ <connection object at 0x106c98c10; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/handlers/db_connect.py
+------------------------
+2022-09-19 19:11:41,437 
+------------------------
+ db_connect.py:  
+             
+ <connection object at 0x106c98d60; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/handlers/db_connect.py
+------------------------
+2022-09-19 19:11:44,483 
+------------------------
+ db_connect.py:  
+             
+ <connection object at 0x106c98c10; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/handlers/db_connect.py
+------------------------
+2022-09-19 19:11:46,211 
+------------------------
+ db_connect.py:  
+             
+ <connection object at 0x106c98d60; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/handlers/db_connect.py
+------------------------
+2022-09-19 19:12:02,332 
+------------------------
+ extract.py:  
+             
+ An error occurred (404) when calling the HeadObject operation: Not Found 
+  @ download_raw_data: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/extract.py
+------------------------
+2022-09-19 19:12:02,332 
+------------------------
+ extract.py:  
+             
+ An error occurred (404) when calling the HeadObject operation: Not Found 
+  @ download_raw_data: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/extract.py
+------------------------
+2022-09-19 19:12:02,332 
+------------------------
+ extract.py:  
+             
+ An error occurred (404) when calling the HeadObject operation: Not Found 
+  @ download_raw_data: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/extract.py
+------------------------
+2022-09-19 19:12:02,332 
+------------------------
+ extract.py:  
+             
+ An error occurred (404) when calling the HeadObject operation: Not Found 
+  @ download_raw_data: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/extract.py
+------------------------
+2022-09-19 19:12:37,005 
+------------------------
+ db_connect.py:  
+             
+ <connection object at 0x107240c10; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/handlers/db_connect.py
+------------------------
+2022-09-19 19:12:38,738 
+------------------------
+ db_connect.py:  
+             
+ <connection object at 0x107240d60; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/handlers/db_connect.py
+------------------------
+2022-09-19 19:12:40,813 
+------------------------
+ db_connect.py:  
+             
+ <connection object at 0x107240c10; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/handlers/db_connect.py
+------------------------
+2022-09-19 19:12:48,822 
+------------------------
+ db_connect.py:  
+             
+ <connection object at 0x10c410c10; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/handlers/db_connect.py
+------------------------
+2022-09-19 19:12:51,135 
+------------------------
+ db_connect.py:  
+             
+ <connection object at 0x10c410d60; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/handlers/db_connect.py
+------------------------
+2022-09-19 19:12:53,903 
+------------------------
+ db_connect.py:  
+             
+ <connection object at 0x10c410c10; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/handlers/db_connect.py
+------------------------
+2022-09-19 19:12:55,527 
+------------------------
+ db_connect.py:  
+             
+ <connection object at 0x10c410d60; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/handlers/db_connect.py
+------------------------
+2022-09-19 19:13:15,971 
+------------------------
+ extract.py:  
+             
+ An error occurred (404) when calling the HeadObject operation: Not Found 
+  @ download_raw_data: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/extract.py
+------------------------
+2022-09-19 19:13:15,971 
+------------------------
+ extract.py:  
+             
+ An error occurred (404) when calling the HeadObject operation: Not Found 
+  @ download_raw_data: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/extract.py
+------------------------
+2022-09-19 19:13:15,971 
+------------------------
+ extract.py:  
+             
+ An error occurred (404) when calling the HeadObject operation: Not Found 
+  @ download_raw_data: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/extract.py
+------------------------
+2022-09-19 19:13:15,971 
+------------------------
+ extract.py:  
+             
+ An error occurred (404) when calling the HeadObject operation: Not Found 
+  @ download_raw_data: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/extract.py
+------------------------
+2022-09-19 19:31:33,867 
+------------------------
+ extract.py:  
+             
+ An error occurred (404) when calling the HeadObject operation: Not Found 
+  @ download_raw_data: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/extract.py
+------------------------
+2022-09-19 19:31:33,867 
+------------------------
+ extract.py:  
+             
+ An error occurred (404) when calling the HeadObject operation: Not Found 
+  @ download_raw_data: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/extract.py
+------------------------
+2022-09-19 19:31:33,867 
+------------------------
+ extract.py:  
+             
+ An error occurred (404) when calling the HeadObject operation: Not Found 
+  @ download_raw_data: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/extract.py
+------------------------
+2022-09-19 19:31:33,867 
+------------------------
+ extract.py:  
+             
+ An error occurred (404) when calling the HeadObject operation: Not Found 
+  @ download_raw_data: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/extract.py
+------------------------
+2022-09-19 19:42:44,581 
+------------------------
+ extract.py:  
+             
+ An error occurred (404) when calling the HeadObject operation: Not Found 
+  @ download_raw_data: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/extract.py
+------------------------
+2022-09-19 19:42:44,581 
+------------------------
+ extract.py:  
+             
+ An error occurred (404) when calling the HeadObject operation: Not Found 
+  @ download_raw_data: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/extract.py
+------------------------
+2022-09-19 19:42:44,581 
+------------------------
+ extract.py:  
+             
+ An error occurred (404) when calling the HeadObject operation: Not Found 
+  @ download_raw_data: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/extract.py
+------------------------
+2022-09-19 19:42:44,581 
+------------------------
+ extract.py:  
+             
+ An error occurred (404) when calling the HeadObject operation: Not Found 
+  @ download_raw_data: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/extract.py
+------------------------
+2022-09-19 19:43:22,469 
+------------------------
+ extract.py:  
+             
+ An error occurred (404) when calling the HeadObject operation: Not Found 
+  @ download_raw_data: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/extract.py
+------------------------
+2022-09-19 19:43:22,469 
+------------------------
+ extract.py:  
+             
+ An error occurred (404) when calling the HeadObject operation: Not Found 
+  @ download_raw_data: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/extract.py
+------------------------
+2022-09-19 19:43:22,469 
+------------------------
+ extract.py:  
+             
+ An error occurred (404) when calling the HeadObject operation: Not Found 
+  @ download_raw_data: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/extract.py
+------------------------
+2022-09-19 19:43:22,469 
+------------------------
+ extract.py:  
+             
+ An error occurred (404) when calling the HeadObject operation: Not Found 
+  @ download_raw_data: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/extract.py
+------------------------
+2022-09-19 19:48:42,570 
+------------------------
+ extract.py:  
+             
+ 'dict' object has no attribute 'Content' 
+  @ download_raw_data: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/extract.py
+------------------------
+2022-09-19 19:48:42,570 
+------------------------
+ extract.py:  
+             
+ 'dict' object has no attribute 'Content' 
+  @ download_raw_data: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/extract.py
+------------------------
+2022-09-19 19:48:43,432 
+------------------------
+ extract.py:  
+             
+ 'dict' object has no attribute 'Content' 
+  @ download_raw_data: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/extract.py
+------------------------
+2022-09-19 19:48:43,432 
+------------------------
+ extract.py:  
+             
+ 'dict' object has no attribute 'Content' 
+  @ download_raw_data: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/extract.py
+------------------------
+2022-09-19 19:48:43,432 
+------------------------
+ extract.py:  
+             
+ 'dict' object has no attribute 'Content' 
+  @ download_raw_data: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/extract.py
+------------------------
+2022-09-19 19:48:44,224 
+------------------------
+ extract.py:  
+             
+ 'dict' object has no attribute 'Content' 
+  @ download_raw_data: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/extract.py
+------------------------
+2022-09-19 19:48:44,224 
+------------------------
+ extract.py:  
+             
+ 'dict' object has no attribute 'Content' 
+  @ download_raw_data: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/extract.py
+------------------------
+2022-09-19 19:48:44,224 
+------------------------
+ extract.py:  
+             
+ 'dict' object has no attribute 'Content' 
+  @ download_raw_data: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/extract.py
+------------------------
+2022-09-19 19:48:44,224 
+------------------------
+ extract.py:  
+             
+ 'dict' object has no attribute 'Content' 
+  @ download_raw_data: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/extract.py
+------------------------
+2022-09-19 19:49:05,120 
+------------------------
+ extract.py:  
+             
+ 'dict' object has no attribute 'Contents' 
+  @ download_raw_data: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/extract.py
+------------------------
+2022-09-19 19:49:05,120 
+------------------------
+ extract.py:  
+             
+ 'dict' object has no attribute 'Contents' 
+  @ download_raw_data: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/extract.py
+------------------------
+2022-09-19 19:49:06,145 
+------------------------
+ extract.py:  
+             
+ 'dict' object has no attribute 'Contents' 
+  @ download_raw_data: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/extract.py
+------------------------
+2022-09-19 19:49:06,145 
+------------------------
+ extract.py:  
+             
+ 'dict' object has no attribute 'Contents' 
+  @ download_raw_data: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/extract.py
+------------------------
+2022-09-19 19:49:06,145 
+------------------------
+ extract.py:  
+             
+ 'dict' object has no attribute 'Contents' 
+  @ download_raw_data: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/extract.py
+------------------------
+2022-09-19 19:49:06,943 
+------------------------
+ extract.py:  
+             
+ 'dict' object has no attribute 'Contents' 
+  @ download_raw_data: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/extract.py
+------------------------
+2022-09-19 19:49:06,943 
+------------------------
+ extract.py:  
+             
+ 'dict' object has no attribute 'Contents' 
+  @ download_raw_data: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/extract.py
+------------------------
+2022-09-19 19:49:06,943 
+------------------------
+ extract.py:  
+             
+ 'dict' object has no attribute 'Contents' 
+  @ download_raw_data: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/extract.py
+------------------------
+2022-09-19 19:49:06,943 
+------------------------
+ extract.py:  
+             
+ 'dict' object has no attribute 'Contents' 
+  @ download_raw_data: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/extract.py
+------------------------
+2022-09-19 19:50:41,974 
+------------------------
+ extract.py:  
+             
+ list indices must be integers or slices, not str 
+  @ download_raw_data: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/extract.py
+------------------------
+2022-09-19 19:50:41,974 
+------------------------
+ extract.py:  
+             
+ list indices must be integers or slices, not str 
+  @ download_raw_data: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/extract.py

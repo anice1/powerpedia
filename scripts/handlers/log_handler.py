@@ -1,5 +1,7 @@
+#!/usr/bin/python3
+
 import logging
-from handlers.Env import env
+from Handlers.env_handler import env
 
 
 class LogHandler:

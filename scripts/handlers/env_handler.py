@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 from configparser import ConfigParser
 
 # read configuraton file
