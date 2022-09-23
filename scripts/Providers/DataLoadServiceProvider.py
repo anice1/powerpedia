@@ -19,13 +19,15 @@ dbc = DatabaseConn()
 
 class DataLoadServiceProvider(Service):
 
-    # name of files in data/raw to upload. Do not include the full file path. You must set service_path=None "
+    # name of files in data/raw to upload.
+    # Do not include the full file path."
     service_list = [
         "orders.csv",
         "reviews.csv",
         "shipment_deliveries.csv",
     ]
 
+    # path to pick the data for upload
     service_path = "../Data2bot-Assessment/data/raw"
 
     def __init__(self) -> None:

@@ -16,13 +16,18 @@ theme:
   palette:
     primary: black
 
+markdown_extensions:
+  - meta
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
 edit_uri: ""
 
 nav:
   - Home: 'index.md'
-  - Handlers: 'handlers'
-  - Providers: 'providers'
-
+  
 extra:
   social:
     - icon: fontawesome/brands/twitter

@@ -17,19 +17,16 @@ from Handlers.log_handler import LogHandler
 from Handlers.service_handler import Service
 from Handlers.db_connect_handler import DatabaseConn
 
-import sys
-
-# sys.path.append("../Data2Bot-Assessment/scripts/")
-
 dbc = DatabaseConn()
 handler = LogHandler()
 
 
 class ExtractDataServiceProvider(Service):
 
-    # object names to download
+    # names of objects to download
     service_list = ["orders.csv", "reviews.csv", "shipment_deliveries.csv"]
 
+    # Path where object will be stored
     service_path = "../Data2bot-Assessment/data/raw"
 
     def __init__(self) -> None:
