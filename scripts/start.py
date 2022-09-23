@@ -1,13 +1,11 @@
 #!/usr/bin/python3
 
-import sys
 import logging
 import typer
 
-sys.path.append("../Data2Bot-Assessment/")
-from providers.AnalyticsServiceProvider import AnalyticsServiceProvider
-from providers.DataLoadServiceProvider import DataLoadServiceProvider
-from providers.ExtractDataServiceProvider import ExtractDataServiceProvider
+from Providers.AnalyticsServiceProvider import AnalyticsServiceProvider
+from Providers.DataLoadServiceProvider import DataLoadServiceProvider
+from Providers.ExtractDataServiceProvider import ExtractDataServiceProvider
 
 
 logging.basicConfig(
