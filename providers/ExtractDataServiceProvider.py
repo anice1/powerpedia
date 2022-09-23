@@ -63,4 +63,4 @@ class ExtractDataServiceProvider(Service):
                 print(e)
                 print("An error occcured, check", handler.file_handler.baseFilename)
                 handler.logger.debug(e)
-        print('Extraction completed! \n')
+        print("Extraction completed! \n")

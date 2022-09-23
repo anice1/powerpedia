@@ -12,7 +12,8 @@ from Handlers.db_connect_handler import DatabaseConn
 
 class AnalyticsServiceProvider(Service):
 
-    # name of service in sql_services e.g. "product_analysis.sql"
+    # name of analytics in sql e.g. "product_analysis.sql"
+
     service_list = ["product_orders_on_holidays.sql", "product_reviews_analytics.sql"]
 
     service_path = "../Data2bot-Assessment/sql"
@@ -39,4 +40,4 @@ class AnalyticsServiceProvider(Service):
             except Exception as e:
                 print(": ", e)
         conn.close()
-        print('Analysis Completed')
+        print("Analysis Completed")

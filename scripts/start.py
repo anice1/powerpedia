@@ -18,6 +18,7 @@ logging.basicConfig(
 
 app = typer.Typer()
 
+
 @app.command()
 def run():
     # Extract data from warehouse

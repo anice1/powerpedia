@@ -57,4 +57,4 @@ class DataLoadServiceProvider(Service):
         except Exception as e:
             print(e)
             dbc.logger.debug(e)
-        print('Upload completed! \n')
+        print("Upload completed! \n")

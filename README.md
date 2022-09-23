@@ -6,9 +6,15 @@ D2b is a simple data pipeline designed to help automate the processes involved i
 
 ## Setup 🔩🪛
 ```bash
+git clone https://github.com/anochima/Data2Bot-Assessment.git
+cd data2bot-assessments
 pip3 install -r configs/requirements.txt
 cp configs/config.ini.example config.ini
 ```
+The above commands will: 
+* Download the project pipeline to you device
+* Install all neccessary packages needed to successfull run the project
+* Create a configuration file for setting up the Database connections, etc.
 
 After running the above script a new configuration file will be added to your file structure `config.ini`. Make sure to setup all necessary configurations with respect to the database.
 
