@@ -1,0 +1,35 @@
+# mkdocs.yml
+site_name: Data2bot Pipeline
+site_url: https://www.data2bots.com
+site_description: D2b is a simple data pipeline designed to help automate the processes involved in extracting, transforming, analysing and exporting data insights carried out by data professionals at Data2bot.
+
+repo_url: https://github.com/anochima/data2bot-assessment/
+repo_name: anochima/data2bot-assessment
+
+theme:
+  name: material
+  logo: https://data2bots.com/wp-content/uploads/2018/11/image_1_8-2.png
+  favicon: https://data2bots.com/wp-content/uploads/2018/11/image_1_8-2.png
+  features:
+    - navigation.instant
+    - navigation.top
+  palette:
+    primary: black
+
+markdown_extensions:
+  - meta
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+edit_uri: ""
+
+extra:
+  social:
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/AcNice_
+    - icon: fontawesome/brands/github
+      link: https://github.com/anochima/data2bot-assessment
+    - icon: fontawesome/brands/facebook
+      link: https://www.facebook.com/chimaobi.nice

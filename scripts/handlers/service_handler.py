@@ -15,5 +15,9 @@ class Service(ABC):
         return super().__init_subclass__(**kwargs)
 
     @abstractclassmethod
-    def services(self):
+    def services(self, *args, **kwargs):
         return ["".join([self.service_path, service]) for service in self.service_list]
+
+    @abstractclassmethod
+    def execute_service(self, *args, **kwargs):
+        return None

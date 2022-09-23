@@ -1,4 +1,4 @@
 /config.ini
 /.vscode
 *__pycache__*
-assets/data/*
+assets/data/raw*

@@ -2,7 +2,7 @@
 ## **Overview** 
 D2b is a simple data pipeline designed to help automate the processes involved in extracting, transforming, analysing and exporting data insights carried out by data professionals at Data2bot. The automation pipeline is designed to abstract complexities and allow the analysts to focus solely on SQL.
 
-<img src='docs/assets/system.svg' alt='System flow'>
+<img src='assets/system.svg' alt='System flow'>
 
 ## Setup 🔩🪛
 ```bash

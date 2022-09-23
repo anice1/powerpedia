@@ -757,3 +757,883 @@
              
  <connection object at 0x108595fc0; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
   @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/scripts/Handlers/db_connect_handler.py
+------------------------
+2022-09-20 23:02:44,729 
+------------------------
+ db_connect_handler.py:  
+             
+ <connection object at 0x109bf2650; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/scripts/Handlers/db_connect_handler.py
+------------------------
+2022-09-20 23:05:35,421 
+------------------------
+ db_connect_handler.py:  
+             
+ <connection object at 0x10d7e6650; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/scripts/Handlers/db_connect_handler.py
+------------------------
+2022-09-20 23:06:01,654 
+------------------------
+ db_connect_handler.py:  
+             
+ <connection object at 0x10abee650; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/scripts/Handlers/db_connect_handler.py
+------------------------
+2022-09-20 23:07:03,020 
+------------------------
+ db_connect_handler.py:  
+             
+ <connection object at 0x10306a650; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/scripts/Handlers/db_connect_handler.py
+------------------------
+2022-09-20 23:07:04,363 
+------------------------
+ db_connect_handler.py:  
+             
+ <connection object at 0x10306aa40; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/scripts/Handlers/db_connect_handler.py
+------------------------
+2022-09-20 23:07:04,363 
+------------------------
+ db_connect_handler.py:  
+             
+ <connection object at 0x10306aa40; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/scripts/Handlers/db_connect_handler.py
+------------------------
+2022-09-20 23:07:05,648 
+------------------------
+ db_connect_handler.py:  
+             
+ <connection object at 0x10306a650; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/scripts/Handlers/db_connect_handler.py
+------------------------
+2022-09-20 23:07:05,648 
+------------------------
+ db_connect_handler.py:  
+             
+ <connection object at 0x10306a650; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/scripts/Handlers/db_connect_handler.py
+------------------------
+2022-09-20 23:07:05,648 
+------------------------
+ db_connect_handler.py:  
+             
+ <connection object at 0x10306a650; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/scripts/Handlers/db_connect_handler.py
+------------------------
+2022-09-20 23:07:06,906 
+------------------------
+ db_connect_handler.py:  
+             
+ <connection object at 0x10306aa40; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/scripts/Handlers/db_connect_handler.py
+------------------------
+2022-09-20 23:07:06,906 
+------------------------
+ db_connect_handler.py:  
+             
+ <connection object at 0x10306aa40; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/scripts/Handlers/db_connect_handler.py
+------------------------
+2022-09-20 23:07:06,906 
+------------------------
+ db_connect_handler.py:  
+             
+ <connection object at 0x10306aa40; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/scripts/Handlers/db_connect_handler.py
+------------------------
+2022-09-20 23:07:06,906 
+------------------------
+ db_connect_handler.py:  
+             
+ <connection object at 0x10306aa40; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/scripts/Handlers/db_connect_handler.py
+------------------------
+2022-09-20 23:43:46,049 
+------------------------
+ db_connect_handler.py:  
+             
+ <connection object at 0x104d0a650; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/scripts/Handlers/db_connect_handler.py
+------------------------
+2022-09-20 23:43:47,968 
+------------------------
+ db_connect_handler.py:  
+             
+ <connection object at 0x104d0aa40; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/scripts/Handlers/db_connect_handler.py
+------------------------
+2022-09-20 23:43:47,968 
+------------------------
+ db_connect_handler.py:  
+             
+ <connection object at 0x104d0aa40; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/scripts/Handlers/db_connect_handler.py
+------------------------
+2022-09-20 23:43:50,130 
+------------------------
+ db_connect_handler.py:  
+             
+ <connection object at 0x104d0a650; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/scripts/Handlers/db_connect_handler.py
+------------------------
+2022-09-20 23:43:50,130 
+------------------------
+ db_connect_handler.py:  
+             
+ <connection object at 0x104d0a650; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/scripts/Handlers/db_connect_handler.py
+------------------------
+2022-09-20 23:43:50,130 
+------------------------
+ db_connect_handler.py:  
+             
+ <connection object at 0x104d0a650; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/scripts/Handlers/db_connect_handler.py
+------------------------
+2022-09-20 23:43:52,498 
+------------------------
+ db_connect_handler.py:  
+             
+ <connection object at 0x104d0aa40; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/scripts/Handlers/db_connect_handler.py
+------------------------
+2022-09-20 23:43:52,498 
+------------------------
+ db_connect_handler.py:  
+             
+ <connection object at 0x104d0aa40; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/scripts/Handlers/db_connect_handler.py
+------------------------
+2022-09-20 23:43:52,498 
+------------------------
+ db_connect_handler.py:  
+             
+ <connection object at 0x104d0aa40; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/scripts/Handlers/db_connect_handler.py
+------------------------
+2022-09-20 23:43:52,498 
+------------------------
+ db_connect_handler.py:  
+             
+ <connection object at 0x104d0aa40; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/scripts/Handlers/db_connect_handler.py
+------------------------
+2022-09-20 23:45:52,291 
+------------------------
+ db_connect_handler.py:  
+             
+ <connection object at 0x10c1d6650; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/scripts/Handlers/db_connect_handler.py
+------------------------
+2022-09-20 23:45:53,919 
+------------------------
+ db_connect_handler.py:  
+             
+ <connection object at 0x10c1d6a40; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/scripts/Handlers/db_connect_handler.py
+------------------------
+2022-09-20 23:45:53,919 
+------------------------
+ db_connect_handler.py:  
+             
+ <connection object at 0x10c1d6a40; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/scripts/Handlers/db_connect_handler.py
+------------------------
+2022-09-20 23:45:55,647 
+------------------------
+ db_connect_handler.py:  
+             
+ <connection object at 0x10c1d6650; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/scripts/Handlers/db_connect_handler.py
+------------------------
+2022-09-20 23:45:55,647 
+------------------------
+ db_connect_handler.py:  
+             
+ <connection object at 0x10c1d6650; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/scripts/Handlers/db_connect_handler.py
+------------------------
+2022-09-20 23:45:55,647 
+------------------------
+ db_connect_handler.py:  
+             
+ <connection object at 0x10c1d6650; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/scripts/Handlers/db_connect_handler.py
+------------------------
+2022-09-20 23:45:57,771 
+------------------------
+ db_connect_handler.py:  
+             
+ <connection object at 0x10c1d6a40; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/scripts/Handlers/db_connect_handler.py
+------------------------
+2022-09-20 23:45:57,771 
+------------------------
+ db_connect_handler.py:  
+             
+ <connection object at 0x10c1d6a40; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/scripts/Handlers/db_connect_handler.py
+------------------------
+2022-09-20 23:45:57,771 
+------------------------
+ db_connect_handler.py:  
+             
+ <connection object at 0x10c1d6a40; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/scripts/Handlers/db_connect_handler.py
+------------------------
+2022-09-20 23:45:57,771 
+------------------------
+ db_connect_handler.py:  
+             
+ <connection object at 0x10c1d6a40; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/scripts/Handlers/db_connect_handler.py
+------------------------
+2022-09-20 23:46:32,172 
+------------------------
+ db_connect_handler.py:  
+             
+ <connection object at 0x1068da650; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/scripts/Handlers/db_connect_handler.py
+------------------------
+2022-09-20 23:46:33,733 
+------------------------
+ db_connect_handler.py:  
+             
+ <connection object at 0x1068daa40; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/scripts/Handlers/db_connect_handler.py
+------------------------
+2022-09-20 23:46:33,733 
+------------------------
+ db_connect_handler.py:  
+             
+ <connection object at 0x1068daa40; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/scripts/Handlers/db_connect_handler.py
+------------------------
+2022-09-20 23:46:35,356 
+------------------------
+ db_connect_handler.py:  
+             
+ <connection object at 0x1068da650; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/scripts/Handlers/db_connect_handler.py
+------------------------
+2022-09-20 23:46:35,356 
+------------------------
+ db_connect_handler.py:  
+             
+ <connection object at 0x1068da650; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/scripts/Handlers/db_connect_handler.py
+------------------------
+2022-09-20 23:46:35,356 
+------------------------
+ db_connect_handler.py:  
+             
+ <connection object at 0x1068da650; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/scripts/Handlers/db_connect_handler.py
+------------------------
+2022-09-20 23:46:37,278 
+------------------------
+ db_connect_handler.py:  
+             
+ <connection object at 0x1068daa40; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/scripts/Handlers/db_connect_handler.py
+------------------------
+2022-09-20 23:46:37,278 
+------------------------
+ db_connect_handler.py:  
+             
+ <connection object at 0x1068daa40; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/scripts/Handlers/db_connect_handler.py
+------------------------
+2022-09-20 23:46:37,278 
+------------------------
+ db_connect_handler.py:  
+             
+ <connection object at 0x1068daa40; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/scripts/Handlers/db_connect_handler.py
+------------------------
+2022-09-20 23:46:37,278 
+------------------------
+ db_connect_handler.py:  
+             
+ <connection object at 0x1068daa40; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/scripts/Handlers/db_connect_handler.py
+------------------------
+2022-09-20 23:48:28,015 
+------------------------
+ db_connect_handler.py:  
+             
+ <connection object at 0x10c866650; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/scripts/Handlers/db_connect_handler.py
+------------------------
+2022-09-20 23:48:30,282 
+------------------------
+ db_connect_handler.py:  
+             
+ <connection object at 0x10c866a40; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/scripts/Handlers/db_connect_handler.py
+------------------------
+2022-09-20 23:48:30,282 
+------------------------
+ db_connect_handler.py:  
+             
+ <connection object at 0x10c866a40; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/scripts/Handlers/db_connect_handler.py
+------------------------
+2022-09-20 23:48:32,295 
+------------------------
+ db_connect_handler.py:  
+             
+ <connection object at 0x10c866650; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/scripts/Handlers/db_connect_handler.py
+------------------------
+2022-09-20 23:48:32,295 
+------------------------
+ db_connect_handler.py:  
+             
+ <connection object at 0x10c866650; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/scripts/Handlers/db_connect_handler.py
+------------------------
+2022-09-20 23:48:32,295 
+------------------------
+ db_connect_handler.py:  
+             
+ <connection object at 0x10c866650; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/scripts/Handlers/db_connect_handler.py
+------------------------
+2022-09-20 23:48:33,987 
+------------------------
+ db_connect_handler.py:  
+             
+ <connection object at 0x10c866a40; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/scripts/Handlers/db_connect_handler.py
+------------------------
+2022-09-20 23:48:33,987 
+------------------------
+ db_connect_handler.py:  
+             
+ <connection object at 0x10c866a40; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/scripts/Handlers/db_connect_handler.py
+------------------------
+2022-09-20 23:48:33,987 
+------------------------
+ db_connect_handler.py:  
+             
+ <connection object at 0x10c866a40; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/scripts/Handlers/db_connect_handler.py
+------------------------
+2022-09-20 23:48:33,987 
+------------------------
+ db_connect_handler.py:  
+             
+ <connection object at 0x10c866a40; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/scripts/Handlers/db_connect_handler.py
+------------------------
+2022-09-20 23:51:10,139 
+------------------------
+ db_connect_handler.py:  
+             
+ <connection object at 0x100892650; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/scripts/Handlers/db_connect_handler.py
+------------------------
+2022-09-20 23:51:11,802 
+------------------------
+ db_connect_handler.py:  
+             
+ <connection object at 0x100892a40; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/scripts/Handlers/db_connect_handler.py
+------------------------
+2022-09-20 23:51:11,802 
+------------------------
+ db_connect_handler.py:  
+             
+ <connection object at 0x100892a40; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/scripts/Handlers/db_connect_handler.py
+------------------------
+2022-09-20 23:51:13,398 
+------------------------
+ db_connect_handler.py:  
+             
+ <connection object at 0x100892650; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/scripts/Handlers/db_connect_handler.py
+------------------------
+2022-09-20 23:51:13,398 
+------------------------
+ db_connect_handler.py:  
+             
+ <connection object at 0x100892650; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/scripts/Handlers/db_connect_handler.py
+------------------------
+2022-09-20 23:51:13,398 
+------------------------
+ db_connect_handler.py:  
+             
+ <connection object at 0x100892650; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/scripts/Handlers/db_connect_handler.py
+------------------------
+2022-09-20 23:51:15,205 
+------------------------
+ db_connect_handler.py:  
+             
+ <connection object at 0x100892a40; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/scripts/Handlers/db_connect_handler.py
+------------------------
+2022-09-20 23:51:15,205 
+------------------------
+ db_connect_handler.py:  
+             
+ <connection object at 0x100892a40; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/scripts/Handlers/db_connect_handler.py
+------------------------
+2022-09-20 23:51:15,205 
+------------------------
+ db_connect_handler.py:  
+             
+ <connection object at 0x100892a40; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/scripts/Handlers/db_connect_handler.py
+------------------------
+2022-09-20 23:51:15,205 
+------------------------
+ db_connect_handler.py:  
+             
+ <connection object at 0x100892a40; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/scripts/Handlers/db_connect_handler.py
+------------------------
+2022-09-20 23:52:10,338 
+------------------------
+ db_connect_handler.py:  
+             
+ <connection object at 0x1026c6650; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/scripts/Handlers/db_connect_handler.py
+------------------------
+2022-09-20 23:52:12,316 
+------------------------
+ db_connect_handler.py:  
+             
+ <connection object at 0x1026c6a40; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/scripts/Handlers/db_connect_handler.py
+------------------------
+2022-09-20 23:52:12,316 
+------------------------
+ db_connect_handler.py:  
+             
+ <connection object at 0x1026c6a40; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/scripts/Handlers/db_connect_handler.py
+------------------------
+2022-09-20 23:52:14,138 
+------------------------
+ db_connect_handler.py:  
+             
+ <connection object at 0x1026c6650; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/scripts/Handlers/db_connect_handler.py
+------------------------
+2022-09-20 23:52:14,138 
+------------------------
+ db_connect_handler.py:  
+             
+ <connection object at 0x1026c6650; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/scripts/Handlers/db_connect_handler.py
+------------------------
+2022-09-20 23:52:14,138 
+------------------------
+ db_connect_handler.py:  
+             
+ <connection object at 0x1026c6650; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/scripts/Handlers/db_connect_handler.py
+------------------------
+2022-09-20 23:52:16,336 
+------------------------
+ db_connect_handler.py:  
+             
+ <connection object at 0x1026c6a40; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/scripts/Handlers/db_connect_handler.py
+------------------------
+2022-09-20 23:52:16,336 
+------------------------
+ db_connect_handler.py:  
+             
+ <connection object at 0x1026c6a40; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/scripts/Handlers/db_connect_handler.py
+------------------------
+2022-09-20 23:52:16,336 
+------------------------
+ db_connect_handler.py:  
+             
+ <connection object at 0x1026c6a40; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/scripts/Handlers/db_connect_handler.py
+------------------------
+2022-09-20 23:52:16,336 
+------------------------
+ db_connect_handler.py:  
+             
+ <connection object at 0x1026c6a40; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/scripts/Handlers/db_connect_handler.py
+------------------------
+2022-09-21 00:19:57,452 
+------------------------
+ db_connect_handler.py:  
+             
+ <connection object at 0x10df5e650; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/scripts/Handlers/db_connect_handler.py
+------------------------
+2022-09-21 00:20:00,207 
+------------------------
+ db_connect_handler.py:  
+             
+ <connection object at 0x10df5ea40; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/scripts/Handlers/db_connect_handler.py
+------------------------
+2022-09-21 00:20:00,207 
+------------------------
+ db_connect_handler.py:  
+             
+ <connection object at 0x10df5ea40; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/scripts/Handlers/db_connect_handler.py
+------------------------
+2022-09-21 00:20:02,379 
+------------------------
+ db_connect_handler.py:  
+             
+ <connection object at 0x10df5e650; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/scripts/Handlers/db_connect_handler.py
+------------------------
+2022-09-21 00:20:02,379 
+------------------------
+ db_connect_handler.py:  
+             
+ <connection object at 0x10df5e650; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/scripts/Handlers/db_connect_handler.py
+------------------------
+2022-09-21 00:20:02,379 
+------------------------
+ db_connect_handler.py:  
+             
+ <connection object at 0x10df5e650; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/scripts/Handlers/db_connect_handler.py
+------------------------
+2022-09-21 00:20:05,151 
+------------------------
+ db_connect_handler.py:  
+             
+ <connection object at 0x10df5ea40; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/scripts/Handlers/db_connect_handler.py
+------------------------
+2022-09-21 00:20:05,151 
+------------------------
+ db_connect_handler.py:  
+             
+ <connection object at 0x10df5ea40; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/scripts/Handlers/db_connect_handler.py
+------------------------
+2022-09-21 00:20:05,151 
+------------------------
+ db_connect_handler.py:  
+             
+ <connection object at 0x10df5ea40; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/scripts/Handlers/db_connect_handler.py
+------------------------
+2022-09-21 00:20:05,151 
+------------------------
+ db_connect_handler.py:  
+             
+ <connection object at 0x10df5ea40; dsn: 'user=acnice6032 password=xxx dbname=d2b_assessment host=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com port=5432', closed: 0> 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/scripts/Handlers/db_connect_handler.py
+------------------------
+2022-09-21 00:27:14,243 
+------------------------
+ db_connect_handler.py:  
+             
+ connection to server at "d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com" (3.126.47.113), port 5432 failed: FATAL:  database "d2b_assessments" does not exist
+ 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/Handlers/db_connect_handler.py
+------------------------
+2022-09-21 00:27:16,843 
+------------------------
+ db_connect_handler.py:  
+             
+ connection to server at "d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com" (3.126.47.113), port 5432 failed: FATAL:  database "d2b_assessments" does not exist
+ 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/Handlers/db_connect_handler.py
+------------------------
+2022-09-21 00:27:16,843 
+------------------------
+ db_connect_handler.py:  
+             
+ connection to server at "d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com" (3.126.47.113), port 5432 failed: FATAL:  database "d2b_assessments" does not exist
+ 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/Handlers/db_connect_handler.py
+------------------------
+2022-09-21 00:27:18,002 
+------------------------
+ db_connect_handler.py:  
+             
+ connection to server at "d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com" (3.126.47.113), port 5432 failed: FATAL:  database "d2b_assessments" does not exist
+ 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/Handlers/db_connect_handler.py
+------------------------
+2022-09-21 00:27:18,002 
+------------------------
+ db_connect_handler.py:  
+             
+ connection to server at "d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com" (3.126.47.113), port 5432 failed: FATAL:  database "d2b_assessments" does not exist
+ 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/Handlers/db_connect_handler.py
+------------------------
+2022-09-21 00:27:18,002 
+------------------------
+ db_connect_handler.py:  
+             
+ connection to server at "d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com" (3.126.47.113), port 5432 failed: FATAL:  database "d2b_assessments" does not exist
+ 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/Handlers/db_connect_handler.py
+------------------------
+2022-09-21 00:27:19,553 
+------------------------
+ db_connect_handler.py:  
+             
+ connection to server at "d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com" (3.126.47.113), port 5432 failed: FATAL:  database "d2b_assessments" does not exist
+ 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/Handlers/db_connect_handler.py
+------------------------
+2022-09-21 00:27:19,553 
+------------------------
+ db_connect_handler.py:  
+             
+ connection to server at "d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com" (3.126.47.113), port 5432 failed: FATAL:  database "d2b_assessments" does not exist
+ 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/Handlers/db_connect_handler.py
+------------------------
+2022-09-21 00:27:19,553 
+------------------------
+ db_connect_handler.py:  
+             
+ connection to server at "d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com" (3.126.47.113), port 5432 failed: FATAL:  database "d2b_assessments" does not exist
+ 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/Handlers/db_connect_handler.py
+------------------------
+2022-09-21 00:27:19,553 
+------------------------
+ db_connect_handler.py:  
+             
+ connection to server at "d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com" (3.126.47.113), port 5432 failed: FATAL:  database "d2b_assessments" does not exist
+ 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/Handlers/db_connect_handler.py
+------------------------
+2022-09-22 14:59:54,575 
+------------------------
+ db_connect_handler.py:  
+             
+ could not translate host name "d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com" to address: nodename nor servname provided, or not known
+ 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/Handlers/db_connect_handler.py
+------------------------
+2022-09-22 16:32:01,701 
+------------------------
+ db_connect_handler.py:  
+             
+ could not translate host name "d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com" to address: nodename nor servname provided, or not known
+ 
+  @ connect: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/Handlers/db_connect_handler.py
+------------------------
+2022-09-22 16:34:09,363 
+------------------------
+ load.py:  
+             
+ 'dict' object has no attribute 'iterrows' 
+  @ load_data: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/load.py
+------------------------
+2022-09-22 16:34:26,299 
+------------------------
+ load.py:  
+             
+ 'int' object has no attribute 'close' 
+  @ load_data: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/load.py
+------------------------
+2022-09-22 16:34:50,578 
+------------------------
+ load.py:  
+             
+ 'int' object has no attribute 'close' 
+  @ load_data: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/load.py
+------------------------
+2022-09-22 16:47:51,637 
+------------------------
+ load.py:  
+             
+ tuple indices must be integers or slices, not str 
+  @ load_data: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/load.py
+------------------------
+2022-09-22 23:53:25,941 
+------------------------
+ load.py:  
+             
+ name 'os' is not defined 
+  @ load_data: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/load.py
+------------------------
+2022-09-23 00:56:38,885 
+------------------------
+ ExtractDataServiceProvider.py:  
+             
+ An error occurred (404) when calling the HeadObject operation: Not Found 
+  @ execute_service: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/providers/ExtractDataServiceProvider.py
+------------------------
+2022-09-23 00:56:38,885 
+------------------------
+ ExtractDataServiceProvider.py:  
+             
+ An error occurred (404) when calling the HeadObject operation: Not Found 
+  @ execute_service: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/providers/ExtractDataServiceProvider.py
+------------------------
+2022-09-23 00:56:38,885 
+------------------------
+ ExtractDataServiceProvider.py:  
+             
+ An error occurred (404) when calling the HeadObject operation: Not Found 
+  @ execute_service: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/providers/ExtractDataServiceProvider.py
+------------------------
+2022-09-23 00:56:38,944 
+------------------------
+ DataLoadServiceProvider.py:  
+             
+ [Errno 2] No such file or directory: '../Data2bot-Assessment/data/raw//Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/data/raw/orders.csv' 
+  @ execute_service: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/providers/DataLoadServiceProvider.py
+------------------------
+2022-09-23 00:56:38,944 
+------------------------
+ DataLoadServiceProvider.py:  
+             
+ [Errno 2] No such file or directory: '../Data2bot-Assessment/data/raw//Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/data/raw/orders.csv' 
+  @ execute_service: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/providers/DataLoadServiceProvider.py
+------------------------
+2022-09-23 00:56:38,944 
+------------------------
+ DataLoadServiceProvider.py:  
+             
+ [Errno 2] No such file or directory: '../Data2bot-Assessment/data/raw//Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/data/raw/orders.csv' 
+  @ execute_service: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/providers/DataLoadServiceProvider.py
+------------------------
+2022-09-23 00:59:21,230 
+------------------------
+ DataLoadServiceProvider.py:  
+             
+ local variable 'table_name' referenced before assignment 
+  @ execute_service: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/providers/DataLoadServiceProvider.py
+------------------------
+2022-09-23 00:59:21,230 
+------------------------
+ DataLoadServiceProvider.py:  
+             
+ local variable 'table_name' referenced before assignment 
+  @ execute_service: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/providers/DataLoadServiceProvider.py
+------------------------
+2022-09-23 00:59:21,230 
+------------------------
+ DataLoadServiceProvider.py:  
+             
+ local variable 'table_name' referenced before assignment 
+  @ execute_service: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/providers/DataLoadServiceProvider.py
+------------------------
+2022-09-23 01:00:49,833 
+------------------------
+ DataLoadServiceProvider.py:  
+             
+ local variable 'table_name' referenced before assignment 
+  @ execute_service: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/providers/DataLoadServiceProvider.py
+------------------------
+2022-09-23 01:00:49,833 
+------------------------
+ DataLoadServiceProvider.py:  
+             
+ local variable 'table_name' referenced before assignment 
+  @ execute_service: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/providers/DataLoadServiceProvider.py
+------------------------
+2022-09-23 01:00:49,833 
+------------------------
+ DataLoadServiceProvider.py:  
+             
+ local variable 'table_name' referenced before assignment 
+  @ execute_service: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/providers/DataLoadServiceProvider.py
+------------------------
+2022-09-23 01:19:31,271 
+------------------------
+ ExtractDataServiceProvider.py:  
+             
+ An error occurred (404) when calling the HeadObject operation: Not Found 
+  @ execute_service: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/providers/ExtractDataServiceProvider.py
+------------------------
+2022-09-23 01:19:31,271 
+------------------------
+ ExtractDataServiceProvider.py:  
+             
+ An error occurred (404) when calling the HeadObject operation: Not Found 
+  @ execute_service: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/providers/ExtractDataServiceProvider.py
+------------------------
+2022-09-23 01:19:31,271 
+------------------------
+ ExtractDataServiceProvider.py:  
+             
+ An error occurred (404) when calling the HeadObject operation: Not Found 
+  @ execute_service: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/providers/ExtractDataServiceProvider.py
+------------------------
+2022-09-23 01:56:11,853 
+------------------------
+ ExtractDataServiceProvider.py:  
+             
+ An error occurred (404) when calling the HeadObject operation: Not Found 
+  @ execute_service: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/providers/ExtractDataServiceProvider.py
+------------------------
+2022-09-23 01:56:11,853 
+------------------------
+ ExtractDataServiceProvider.py:  
+             
+ An error occurred (404) when calling the HeadObject operation: Not Found 
+  @ execute_service: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/providers/ExtractDataServiceProvider.py
+------------------------
+2022-09-23 01:56:11,853 
+------------------------
+ ExtractDataServiceProvider.py:  
+             
+ An error occurred (404) when calling the HeadObject operation: Not Found 
+  @ execute_service: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/providers/ExtractDataServiceProvider.py
+------------------------
+2022-09-23 01:56:50,367 
+------------------------
+ ExtractDataServiceProvider.py:  
+             
+ 'Content' 
+  @ execute_service: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/providers/ExtractDataServiceProvider.py
+------------------------
+2022-09-23 01:56:50,367 
+------------------------
+ ExtractDataServiceProvider.py:  
+             
+ 'Content' 
+  @ execute_service: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/providers/ExtractDataServiceProvider.py
+------------------------
+2022-09-23 01:56:50,367 
+------------------------
+ ExtractDataServiceProvider.py:  
+             
+ 'Content' 
+  @ execute_service: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/providers/ExtractDataServiceProvider.py
+------------------------
+2022-09-23 01:57:14,253 
+------------------------
+ ExtractDataServiceProvider.py:  
+             
+ An error occurred (404) when calling the HeadObject operation: Not Found 
+  @ execute_service: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/providers/ExtractDataServiceProvider.py
+------------------------
+2022-09-23 01:57:14,253 
+------------------------
+ ExtractDataServiceProvider.py:  
+             
+ An error occurred (404) when calling the HeadObject operation: Not Found 
+  @ execute_service: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/providers/ExtractDataServiceProvider.py
+------------------------
+2022-09-23 01:57:14,253 
+------------------------
+ ExtractDataServiceProvider.py:  
+             
+ An error occurred (404) when calling the HeadObject operation: Not Found 
+  @ execute_service: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/providers/ExtractDataServiceProvider.py
