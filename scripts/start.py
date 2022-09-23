@@ -4,7 +4,7 @@ import sys
 import logging
 import typer
 
-sys.path.append("../Data2Bot-Assessment/scripts")
+# sys.path.append("../Data2Bot-Assessment/scripts")
 from Providers.AnalyticsServiceProvider import AnalyticsServiceProvider
 from Providers.DataLoadServiceProvider import DataLoadServiceProvider
 from Providers.ExtractDataServiceProvider import ExtractDataServiceProvider

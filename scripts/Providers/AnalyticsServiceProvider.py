@@ -5,7 +5,7 @@
  """
 import sys
 
-# sys.path.append("../Data2Bot-Assessment/scripts/")
+sys.path.append("../Data2Bot-Assessment/scripts/")
 from Handlers.service_handler import Service
 from Handlers.db_connect_handler import DatabaseConn
 
