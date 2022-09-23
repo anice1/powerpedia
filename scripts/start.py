@@ -28,7 +28,7 @@ def run():
     DataLoadServiceProvider().execute_service()
 
     # Perform registered analytics
-    AnalyticsServiceProvider().execute_service()
+    # AnalyticsServiceProvider().execute_service()
 
 
 if __name__ == "__main__":
