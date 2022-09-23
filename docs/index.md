@@ -35,3 +35,6 @@ To run the pipeline, simply run the following command in your terminal.
 ```bash
 python3 scripts/start.py
 ```
+
+## Documentation
+For help run `mkdocs serve` on terminal
