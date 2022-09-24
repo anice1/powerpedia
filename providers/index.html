@@ -17,7 +17,7 @@
     
     
       
-        <title>Providers - Data2bot Pipeline</title>
+        <title>Service Providers - Data2bot Pipeline</title>
       
     
     
@@ -69,6 +69,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#service-providers" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -97,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Providers
+              Service Providers
             
           </span>
         </div>
@@ -237,7 +242,22 @@
   
     <li class="md-nav__item">
       <a href="." class="md-nav__link">
-        Providers
+        Service Providers
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../recommendations" class="md-nav__link">
+        Recommendations
       </a>
     </li>
   
@@ -260,6 +280,37 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#extracting-data-from-warehouse" class="md-nav__link">
+    Extracting Data From Warehouse
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dataload-service-provider" class="md-nav__link">
+    DataLoad Service Provider
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#analytics-service-provider" class="md-nav__link">
+    Analytics Service Provider
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -274,9 +325,53 @@
                   
 
 
-  <h1>Providers</h1>
+<h1 id="service-providers">Service Providers</h1>
+<h2 id="extracting-data-from-warehouse">Extracting Data From Warehouse</h2>
+<div class="highlight"><pre><span></span><code><span class="c1"># scripts/Providers/ExtractDataServiceProvider.py</span>
 
+<span class="k">class</span> <span class="nc">ExtractDataServiceProvider</span><span class="p">(</span><span class="n">Service</span><span class="p">):</span>
 
+    <span class="c1"># names of objects to download</span>
+    <span class="n">service_list</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="s2">&quot;orders.csv&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;reviews.csv&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;shipment_deliveries.csv&quot;</span>
+        <span class="s2">&quot;...&quot;</span>
+    <span class="p">]</span>
+
+    <span class="c1"># path where object will be stored</span>
+    <span class="n">service_path</span> <span class="o">=</span> <span class="s2">&quot;../Data2bot-Assessment/data/raw&quot;</span>
+</code></pre></div>
+<h2 id="dataload-service-provider">DataLoad Service Provider</h2>
+<div class="highlight"><pre><span></span><code><span class="c1"># scripts/Providers/DataLoadServiceProvider.py</span>
+
+<span class="k">class</span> <span class="nc">DataLoadServiceProvider</span><span class="p">(</span><span class="n">Service</span><span class="p">):</span>
+
+    <span class="c1"># name of files in data/raw to upload. </span>
+    <span class="c1"># Don&#39;t include the full file path. </span>
+    <span class="c1"># You must set service_path=None &quot;</span>
+    <span class="n">service_list</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="s2">&quot;orders.csv&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;reviews.csv&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;shipment_deliveries.csv&quot;</span><span class="p">,</span>
+    <span class="p">]</span>
+
+    <span class="n">service_path</span> <span class="o">=</span> <span class="s2">&quot;../Data2bot-Assessment/data/raw&quot;</span>
+</code></pre></div>
+<h2 id="analytics-service-provider">Analytics Service Provider</h2>
+<div class="highlight"><pre><span></span><code><span class="c1"># scripts/Providers/AnalyticsServiceProvider.py</span>
+
+<span class="k">class</span> <span class="nc">AnalyticsServiceProvider</span><span class="p">(</span><span class="n">Service</span><span class="p">):</span>
+
+    <span class="c1"># name of analytics in /SQL e.g. &quot;product_analysis.sql&quot;</span>
+    <span class="n">service_list</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="s2">&quot;analytics1.sql&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;analytics2.sql&quot;</span><span class="p">,</span>
+        <span class="s1">&#39;...&#39;</span>
+    <span class="p">]</span>
+
+    <span class="n">service_path</span> <span class="o">=</span> <span class="s2">&quot;../Data2bot-Assessment/sql&quot;</span>
+</code></pre></div>
 
 
 
