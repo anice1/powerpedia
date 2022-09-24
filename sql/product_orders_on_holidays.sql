@@ -31,25 +31,25 @@ INSERT INTO
         tt_order_hol_nov,
         tt_order_hol_dec
     )
-SELECT ords.order_date,
-    COUNT(CASE WHEN ords.month_of_the_year_num = 1) jan,
-    COUNT(CASE WHEN ords.month_of_the_year_num = 2) feb,
-    COUNT(CASE WHEN ords.month_of_the_year_num = 3) mar, 
-    COUNT(CASE WHEN ords.month_of_the_year_num = 4) apr, 
-    COUNT(CASE WHEN ords.month_of_the_year_num = 5) may, 
-    COUNT(CASE WHEN ords.month_of_the_year_num = 6) jun, 
-    COUNT(CASE WHEN ords.month_of_the_year_num = 7) jul, 
-    COUNT(CASE WHEN ords.month_of_the_year_num = 8) aug,
-    COUNT(CASE WHEN ords.month_of_the_year_num = 9) sep, 
-    COUNT(CASE WHEN ords.month_of_the_year_num = 10) oct, 
-    COUNT(CASE WHEN ords.month_of_the_year_num = 11) nov,
-    COUNT(CASE WHEN ords.month_of_the_year_num = 12) decc
+SELECT GETDATE() AS ingestion_date,
+    COUNT(CASE WHEN ords.month_of_the_year_num = 1) AS jan,
+    COUNT(CASE WHEN ords.month_of_the_year_num = 2) AS feb,
+    COUNT(CASE WHEN ords.month_of_the_year_num = 3) AS mar, 
+    COUNT(CASE WHEN ords.month_of_the_year_num = 4) AS apr, 
+    COUNT(CASE WHEN ords.month_of_the_year_num = 5) AS  may, 
+    COUNT(CASE WHEN ords.month_of_the_year_num = 6) AS jun, 
+    COUNT(CASE WHEN ords.month_of_the_year_num = 7) AS jul, 
+    COUNT(CASE WHEN ords.month_of_the_year_num = 8) AS aug,
+    COUNT(CASE WHEN ords.month_of_the_year_num = 9) AS sep, 
+    COUNT(CASE WHEN ords.month_of_the_year_num = 10) AS oct, 
+    COUNT(CASE WHEN ords.month_of_the_year_num = 11) AS nov,
+    COUNT(CASE WHEN ords.month_of_the_year_num = 12) AS decc
 
-FROM if_common.dim_dates dt
-    JOIN acnice6032_staging.orders ords ON TO_DATE(ords.order_date, 'YYYY-MM-DD') <= dt.calendar_dt;
+FROM acnice6032_staging.orders ords
+    JOIN if_common.dim_dates dt ON TO_DATE(ords.order_date, 'YYYY-MM-DD') <= dt.calendar_dt;
 GROUP BY
     dt.month_of_the_year_num
 HAVING
     dt.working_day = 'false'
     AND (dt.day_of_the_week_num BETWEEN 1 AND 5)
-    AND (YEAR(ords.order_date) = YEAR(GETDATE())) - 1;
+    AND (YEAR(ords.order_date) = YEAR(NOW()) - 1);
