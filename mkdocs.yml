@@ -27,6 +27,9 @@ edit_uri: ""
 
 nav:
   - Home: 'index.md'
+  - Handlers: handlers
+  - Service Providers: providers
+  - Recommendations: recommendations
   
 extra:
   social:

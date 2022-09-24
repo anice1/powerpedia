@@ -2,17 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://www.data2bots.com/</loc>
-         <lastmod>2022-09-23</lastmod>
+         <lastmod>2022-09-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.data2bots.com/handlers/</loc>
-         <lastmod>2022-09-23</lastmod>
+         <lastmod>2022-09-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.data2bots.com/providers/</loc>
-         <lastmod>2022-09-23</lastmod>
+         <lastmod>2022-09-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.data2bots.com/recommendations/</loc>
+         <lastmod>2022-09-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>

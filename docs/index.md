@@ -1,6 +1,6 @@
 # D2b Data Pipeline
 ## **Overview**
-D2b is a simple data pipeline designed to help automate the processes involved in extracting, transforming, analysing and exporting data insights carried out by data professionals at Data2bot. The automation pipeline is designed to abstract complexities and allow the analysts to focus solely on SQL.
+D2b is a simple data pipeline designed to help automate the processes involved in extracting, transforming, analysing and exporting data insights carried out by data professionals at Data2bot. The automation pipeline is designed to abstract complexities and allow analysts to focus solely on SQL.
 
 <img src='assets/system.svg' alt='System flow'>
 
@@ -26,7 +26,7 @@ After running the above script, a new configuration file will be added to the pr
 
 
 Note ℹ️: The `config.ini` file is intended to abstract valuable information regarding database connection. 
-Hence informations added here will be ignored during deployment.
+Hence, informations added here will be ignored during deployment.
 
 
 ```MD
@@ -45,10 +45,10 @@ DB_ANALYTICS_SCHEMA =
 S3_WAREHOUSE_BUCKET_NAME =
 
 ```
-### **config.ini:** Retrieving configuration variables
+### Retrieving configuration data from config.ini
 To access the configuration variables into your python script. Import `env` function from `handlers.env_handler`.
 
-The env() function sets or returns config file section, key value `env('SECTION', 'KEY', 'VALUE')`
+The env() function sets or returns config file section, key value `env('SECTION', 'KEY', 'VALUE')`.
 
 * **section:** The config file section e.g SERVER
 * **key:** A key in the selected section
@@ -136,5 +136,3 @@ python3 scripts/start.py
 
 ## Documentation
 To read the documentation, run `mkdocs serve` on terminal
-
-# Handlers

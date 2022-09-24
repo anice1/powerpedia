@@ -69,6 +69,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#handlers" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -237,7 +242,22 @@
   
     <li class="md-nav__item">
       <a href="../providers" class="md-nav__link">
-        Providers
+        Service Providers
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../recommendations" class="md-nav__link">
+        Recommendations
       </a>
     </li>
   
@@ -260,6 +280,44 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#database-connection-handler" class="md-nav__link">
+    Database Connection Handler
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#env-connection-handler" class="md-nav__link">
+    Env Connection Handler
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#service-handler" class="md-nav__link">
+    Service Handler
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#log-handler" class="md-nav__link">
+    Log Handler
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -274,9 +332,109 @@
                   
 
 
-  <h1>Handlers</h1>
+<h1 id="handlers">Handlers</h1>
+<h2 id="database-connection-handler">Database Connection Handler</h2>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">DatabaseConn</span><span class="p">(</span><span class="n">LogHandler</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">log_file</span><span class="o">=</span><span class="n">env</span><span class="p">(</span><span class="s2">&quot;LOG&quot;</span><span class="p">,</span> <span class="s2">&quot;ERROR_LOG&quot;</span><span class="p">))</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Establish database connection based on the server settings in config.ini</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            log_file (str, optional): the name or path to the file where error will be logged. Defaults to ERROR_LOG path in config.ini</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">log_file</span><span class="o">=</span><span class="n">log_file</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">conn</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="c1"># Load connection variables from config.ini</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">DB_HOST</span> <span class="o">=</span> <span class="n">env</span><span class="p">(</span><span class="s2">&quot;SERVER&quot;</span><span class="p">,</span> <span class="s2">&quot;DB_HOST&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">DB_PORT</span> <span class="o">=</span> <span class="n">env</span><span class="p">(</span><span class="s2">&quot;SERVER&quot;</span><span class="p">,</span> <span class="s2">&quot;DB_PORT&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">DB_DATABASE</span> <span class="o">=</span> <span class="n">env</span><span class="p">(</span><span class="s2">&quot;SERVER&quot;</span><span class="p">,</span> <span class="s2">&quot;DB_DATABASE&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">DB_USERNAME</span> <span class="o">=</span> <span class="n">env</span><span class="p">(</span><span class="s2">&quot;SERVER&quot;</span><span class="p">,</span> <span class="s2">&quot;DB_USERNAME&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">DB_PASSWORD</span> <span class="o">=</span> <span class="n">env</span><span class="p">(</span><span class="s2">&quot;SERVER&quot;</span><span class="p">,</span> <span class="s2">&quot;DB_PASSWORD&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">connect</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># Establish a connection with the db</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">conn</span> <span class="o">=</span> <span class="n">pg</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span>
+                <span class="n">host</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">DB_HOST</span><span class="p">,</span>
+                <span class="n">dbname</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">DB_DATABASE</span><span class="p">,</span>
+                <span class="n">user</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">DB_USERNAME</span><span class="p">,</span>
+                <span class="n">password</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">DB_PASSWORD</span><span class="p">,</span>
+                <span class="n">port</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">DB_PORT</span><span class="p">,</span>
+            <span class="p">)</span>
+
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="c1"># log error to file</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">error</span><span class="p">()</span>
+
+        <span class="c1"># self.logger.info(self.conn)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">conn</span>
+</code></pre></div>
+<h2 id="env-connection-handler">Env Connection Handler</h2>
+<div class="highlight"><pre><span></span><code><span class="c1"># read configuraton file</span>
+<span class="n">config_file</span> <span class="o">=</span> <span class="s2">&quot;../Data2bot-Assessment/config.ini&quot;</span>
+<span class="n">config</span> <span class="o">=</span> <span class="n">ConfigParser</span><span class="p">()</span>
+<span class="n">config</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">config_file</span><span class="p">)</span>
 
 
+<span class="k">def</span> <span class="nf">env</span><span class="p">(</span><span class="n">section</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Sets or returns config file section, key value</span>
+
+<span class="sd">    parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    section: The config file section</span>
+<span class="sd">    key: A key in the selected section</span>
+<span class="sd">    value: desired value for the selected key, if not set, returns the key&#39;s current value</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">config</span><span class="p">[</span><span class="n">section</span><span class="p">][</span><span class="n">key</span><span class="p">]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">config</span><span class="p">[</span><span class="n">section</span><span class="p">][</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span>
+        <span class="k">return</span> <span class="n">config</span>
+</code></pre></div>
+<h2 id="service-handler">Service Handler</h2>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Service</span><span class="p">(</span><span class="n">ABC</span><span class="p">):</span>
+
+    <span class="n">service_list</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">service_path</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="k">def</span> <span class="nf">__init_subclass__</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">required</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;service_list&quot;</span><span class="p">,</span> <span class="s2">&quot;service_path&quot;</span><span class="p">):</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">required</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span>
+                    <span class="sa">f</span><span class="s2">&quot;Can&#39;t instantiate class </span><span class="si">{</span><span class="bp">cls</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2"> without </span><span class="si">{</span><span class="n">required</span><span class="si">}</span><span class="s2"> attribute defined&quot;</span>
+                <span class="p">)</span>
+        <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">__init_subclass__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+    <span class="nd">@abstractclassmethod</span>
+    <span class="k">def</span> <span class="nf">services</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">[</span><span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="bp">self</span><span class="o">.</span><span class="n">service_path</span><span class="p">,</span> <span class="n">service</span><span class="p">])</span> <span class="k">for</span> <span class="n">service</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">service_list</span><span class="p">]</span>
+
+    <span class="nd">@abstractclassmethod</span>
+    <span class="k">def</span> <span class="nf">execute_service</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="k">return</span> <span class="kc">None</span>
+</code></pre></div>
+<h2 id="log-handler">Log Handler</h2>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">Handlers.env_handler</span> <span class="kn">import</span> <span class="n">env</span>
+
+
+<span class="k">class</span> <span class="nc">LogHandler</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">log_file</span><span class="o">=</span><span class="n">env</span><span class="p">(</span><span class="s2">&quot;LOG&quot;</span><span class="p">,</span> <span class="s2">&quot;ERROR_LOG&quot;</span><span class="p">)):</span>
+        <span class="c1"># set our database logger</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="n">env</span><span class="p">(</span><span class="s2">&quot;LOG&quot;</span><span class="p">,</span> <span class="s2">&quot;LOG_LEVEL&quot;</span><span class="p">))</span>
+
+        <span class="c1"># set the log formatter</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">formatter</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">Formatter</span><span class="p">(</span>
+            <span class="s2">&quot;------------------------</span><span class="se">\n</span><span class="si">%(asctime)s</span><span class="s2"> </span><span class="se">\n</span><span class="s2">------------------------</span><span class="se">\n</span><span class="s2"> </span><span class="si">%(filename)s</span><span class="s2">:  </span><span class="se">\n</span><span class="s2"> </span><span class="se">\</span>
+<span class="s2">            </span><span class="se">\n</span><span class="s2"> </span><span class="si">%(message)s</span><span class="s2"> </span><span class="se">\n</span><span class="s2">  @ </span><span class="si">%(funcName)s</span><span class="s2">: </span><span class="si">%(pathname)s</span><span class="s2">&quot;</span>
+        <span class="p">)</span>
+        <span class="c1"># set the file handler</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">file_handler</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">FileHandler</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="n">log_file</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">file_handler</span><span class="o">.</span><span class="n">setFormatter</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">formatter</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">addHandler</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">file_handler</span><span class="p">)</span>
+</code></pre></div>
 
 
 

@@ -100,7 +100,6 @@ class DataLoadServiceProvider(Service):
 
     # name of files in data/raw to upload. 
     # Don't include the full file path. 
-    # You must set service_path=None "
     service_list = [
         "orders.csv",
         "reviews.csv",

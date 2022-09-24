@@ -1637,3 +1637,93 @@
              
  An error occurred (404) when calling the HeadObject operation: Not Found 
   @ execute_service: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/../Data2Bot-Assessment/providers/ExtractDataServiceProvider.py
+------------------------
+2022-09-24 16:08:14,024 
+------------------------
+ ExtractDataServiceProvider.py:  
+             
+ Could not connect to the endpoint URL: "https://d2b-internal-assessment-bucket.s3.amazonaws.com/orders_data/orders.csv" 
+  @ execute_service: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/Providers/ExtractDataServiceProvider.py
+------------------------
+2022-09-24 16:08:14,024 
+------------------------
+ ExtractDataServiceProvider.py:  
+             
+ Could not connect to the endpoint URL: "https://d2b-internal-assessment-bucket.s3.amazonaws.com/orders_data/orders.csv" 
+  @ execute_service: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/Providers/ExtractDataServiceProvider.py
+------------------------
+2022-09-24 16:08:14,024 
+------------------------
+ ExtractDataServiceProvider.py:  
+             
+ Could not connect to the endpoint URL: "https://d2b-internal-assessment-bucket.s3.amazonaws.com/orders_data/orders.csv" 
+  @ execute_service: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/Providers/ExtractDataServiceProvider.py
+------------------------
+2022-09-24 16:08:23,907 
+------------------------
+ ExtractDataServiceProvider.py:  
+             
+ Could not connect to the endpoint URL: "https://d2b-internal-assessment-bucket.s3.amazonaws.com/orders_data/reviews.csv" 
+  @ execute_service: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/Providers/ExtractDataServiceProvider.py
+------------------------
+2022-09-24 16:08:23,907 
+------------------------
+ ExtractDataServiceProvider.py:  
+             
+ Could not connect to the endpoint URL: "https://d2b-internal-assessment-bucket.s3.amazonaws.com/orders_data/reviews.csv" 
+  @ execute_service: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/Providers/ExtractDataServiceProvider.py
+------------------------
+2022-09-24 16:08:23,907 
+------------------------
+ ExtractDataServiceProvider.py:  
+             
+ Could not connect to the endpoint URL: "https://d2b-internal-assessment-bucket.s3.amazonaws.com/orders_data/reviews.csv" 
+  @ execute_service: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/Providers/ExtractDataServiceProvider.py
+------------------------
+2022-09-24 16:08:33,919 
+------------------------
+ ExtractDataServiceProvider.py:  
+             
+ Could not connect to the endpoint URL: "https://d2b-internal-assessment-bucket.s3.amazonaws.com/orders_data/shipment_deliveries.csv" 
+  @ execute_service: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/Providers/ExtractDataServiceProvider.py
+------------------------
+2022-09-24 16:08:33,919 
+------------------------
+ ExtractDataServiceProvider.py:  
+             
+ Could not connect to the endpoint URL: "https://d2b-internal-assessment-bucket.s3.amazonaws.com/orders_data/shipment_deliveries.csv" 
+  @ execute_service: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/Providers/ExtractDataServiceProvider.py
+------------------------
+2022-09-24 16:08:33,919 
+------------------------
+ ExtractDataServiceProvider.py:  
+             
+ Could not connect to the endpoint URL: "https://d2b-internal-assessment-bucket.s3.amazonaws.com/orders_data/shipment_deliveries.csv" 
+  @ execute_service: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/Providers/ExtractDataServiceProvider.py
+------------------------
+2022-09-24 16:08:33,973 
+------------------------
+ DataLoadServiceProvider.py:  
+             
+ (psycopg2.OperationalError) could not translate host name "d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com" to address: nodename nor servname provided, or not known
+
+(Background on this error at: https://sqlalche.me/e/14/e3q8) 
+  @ execute_service: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/Providers/DataLoadServiceProvider.py
+------------------------
+2022-09-24 16:08:33,973 
+------------------------
+ DataLoadServiceProvider.py:  
+             
+ (psycopg2.OperationalError) could not translate host name "d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com" to address: nodename nor servname provided, or not known
+
+(Background on this error at: https://sqlalche.me/e/14/e3q8) 
+  @ execute_service: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/Providers/DataLoadServiceProvider.py
+------------------------
+2022-09-24 16:08:33,973 
+------------------------
+ DataLoadServiceProvider.py:  
+             
+ (psycopg2.OperationalError) could not translate host name "d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com" to address: nodename nor servname provided, or not known
+
+(Background on this error at: https://sqlalche.me/e/14/e3q8) 
+  @ execute_service: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/Providers/DataLoadServiceProvider.py
