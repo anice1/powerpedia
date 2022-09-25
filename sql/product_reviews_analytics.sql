@@ -13,3 +13,7 @@ CREATE TABLE
         pct_early_shipments FLOAT NOT NULL,
         pct_late_shipments FLOAT NOT NULL
     );
+
+SELECT pro.product_name 
+FROM 
+if_common.dim_products
