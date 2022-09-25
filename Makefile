@@ -5,7 +5,6 @@ SHELL = /bin/bash
 .PHONY: style
 style:
 	black .
-	flake8
 
 # Environment
 .PHONY: venv

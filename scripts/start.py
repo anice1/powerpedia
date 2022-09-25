@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 import logging
-import sys
+# import sys
 
 import typer
 
