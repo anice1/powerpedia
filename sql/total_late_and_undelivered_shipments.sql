@@ -5,8 +5,7 @@ CREATE TABLE
         tt_undelivered_items INT NOT NULL
     );
 
-DO $$
-BEGIN
+DO $$ BEGIN
 INSERT INTO
     acnice6032_analytics.agg_shipments (
         ingestion_date,
@@ -44,4 +43,5 @@ GROUP BY ing_dt;
 EXCEPTION WHEN unique_violation THEN RAISE NOTICE 'row skipped';
 
 END;
+
 $$;

@@ -1,24 +1,23 @@
 """
- Here is where you can register all sql services you'd like to run during automation. 
+ Here is where you can register all sql services you'd like to run during
+ automation.
  These sql files are loaded into the Kernel. Now create something great!
 
  """
 
+import sys
 from pprint import pprint
+
 import boto3
 from botocore import UNSIGNED
 from botocore.client import Config
 
-import sys
-
-sys.path.append("../Data2Bot-Assessment/scripts/")
+sys.path.append("../data2bot/scripts/")
 from Handlers.env_handler import env
 from Handlers.log_handler import LogHandler
 from Handlers.service_handler import Service
-from Handlers.db_connect_handler import DatabaseConn
 
-dbc = DatabaseConn()
-handler = LogHandler()
+handler = LogHandler("logs/extract.log")
 
 
 class ExtractDataServiceProvider(Service):
@@ -27,7 +26,7 @@ class ExtractDataServiceProvider(Service):
     service_list = ["orders.csv", "reviews.csv", "shipment_deliveries.csv"]
 
     # Path where object will be stored
-    service_path = "../Data2bot-Assessment/data/raw"
+    service_path = "../data2bot/data/raw"
 
     def __init__(self) -> None:
         print("Extracting Data...")

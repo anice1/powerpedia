@@ -4,17 +4,18 @@
 
  """
 import os
-import pandas as pd
-from sqlalchemy import create_engine
 
-import sys
+# import sys
+
+import pandas as pd
 
 # sys.path.append("../Data2Bot-Assessment/scripts/")
 from Handlers.env_handler import env
+from Handlers.log_handler import LogHandler
 from Handlers.service_handler import Service
-from Handlers.db_connect_handler import DatabaseConn
+from sqlalchemy import create_engine
 
-dbc = DatabaseConn()
+logger = LogHandler(log_file="logs/dataload.log")
 
 
 class DataLoadServiceProvider(Service):
@@ -28,7 +29,7 @@ class DataLoadServiceProvider(Service):
     ]
 
     # path to pick the data for upload
-    service_path = "../Data2bot-Assessment/data/raw"
+    service_path = "../data2bot/data/raw"
 
     def __init__(self) -> None:
         print("Uploading Raw Data...")
@@ -58,5 +59,5 @@ class DataLoadServiceProvider(Service):
                 print(f"{table_name} records seeded successfuly")
         except Exception as e:
             print(e)
-            dbc.logger.debug(e)
+            logger.logger.error(e)
         print("Upload completed! \n")

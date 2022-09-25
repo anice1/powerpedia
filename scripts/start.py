@@ -1,17 +1,18 @@
 #!/usr/bin/python3
 
-import sys
 import logging
+import sys
+
 import typer
 
 # sys.path.append("../Data2Bot-Assessment/scripts")
 from Providers.AnalyticsServiceProvider import AnalyticsServiceProvider
 from Providers.DataLoadServiceProvider import DataLoadServiceProvider
+from Providers.ExportDataServiceProvider import ExportDataServiceProvider
 from Providers.ExtractDataServiceProvider import ExtractDataServiceProvider
 
-
 logging.basicConfig(
-    filename="../Data2Bot-Assessment/logs/runtime.log",
+    filename="../data2bot/logs/runtime.log",
     format="%(asctime)s:  %(filename)s: %(message)s: %(funcName)s: @ %(pathname)s",
     level=logging.DEBUG,
 )
@@ -28,7 +29,10 @@ def run():
     DataLoadServiceProvider().execute_service()
 
     # Perform registered analytics
-    # AnalyticsServiceProvider().execute_service()
+    AnalyticsServiceProvider().execute_service()
+
+    # Export analytics to warehouse
+    # ExportDataServiceProvider().execute_service()
 
 
 if __name__ == "__main__":

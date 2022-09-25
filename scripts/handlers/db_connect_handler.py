@@ -37,8 +37,6 @@ class DatabaseConn(LogHandler):
             # log error to file
             self.logger.debug(e)
             self.error()
-
-        # self.logger.info(self.conn)
         return self.conn
 
     def extract(self, table, schema=env("SERVER", "DB_DEFAULT_SCHEMA")):

@@ -3,7 +3,7 @@
 from configparser import ConfigParser
 
 # read configuraton file
-config_file = "../Data2bot-Assessment/config.ini"
+config_file = "../data2bot/config.ini"
 config = ConfigParser()
 config.read(config_file)
 
@@ -16,7 +16,8 @@ def env(section, key, value=None):
     ----------
     section: The config file section
     key: A key in the selected section
-    value: desired value for the selected key, if not set, returns the key's current value
+    value: desired value for the selected key, if not set, returns the key's
+    current value.
     """
     if value is None:
         return config[section][key]

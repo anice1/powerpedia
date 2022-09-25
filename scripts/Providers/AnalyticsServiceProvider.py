@@ -1,22 +1,30 @@
 """
- Here is where you can register all sql services you'd like to run during automation. 
+ Here is where you can register all sql services you'd like to run during
+ automation. 
  These sql files are loaded into the Kernel. Now create something great!
 
- """
-import sys
+"""
+# import sys
 
-# sys.path.append("../Data2Bot-Assessment/scripts/")
+# sys.path.append("../data2bot/scripts/")
 from Handlers.service_handler import Service
 from Handlers.db_connect_handler import DatabaseConn
+
+from Handlers.log_handler import LogHandler
+
+logger = LogHandler(log_file="logs/analytics.log")
 
 
 class AnalyticsServiceProvider(Service):
 
     # name of analytics in sql e.g. "product_analysis.sql"
+    service_list = [
+        "product_orders_on_holidays.sql",
+        "total_late_and_undelivered_shipments.sql",
+        "product_reviews_analytics.sql",
+    ]
 
-    service_list = ["product_orders_on_holidays.sql", "product_reviews_analytics.sql"]
-
-    service_path = "../Data2bot-Assessment/sql"
+    service_path = "../data2bot/sql"
 
     def __init__(self) -> None:
         print("Running Analysis...")
@@ -39,5 +47,6 @@ class AnalyticsServiceProvider(Service):
                 print("Successful! \n")
             except Exception as e:
                 print(": ", e)
+                logger.logger.error(e)
         conn.close()
         print("Analysis Completed")

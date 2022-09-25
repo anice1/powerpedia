@@ -1727,3 +1727,11 @@
 
 (Background on this error at: https://sqlalche.me/e/14/e3q8) 
   @ execute_service: /Users/cosmoremit/Documents/AcNice/Data2Bot-Assessment/scripts/Providers/DataLoadServiceProvider.py
+------------------------
+2022-09-25 19:24:35,866 
+------------------------
+ db_connect_handler.py:  
+             
+ could not translate host name "d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com" to address: nodename nor servname provided, or not known
+ 
+  @ connect: /Users/cosmoremit/Documents/AcNice/data2bot/scripts/Handlers/db_connect_handler.py
