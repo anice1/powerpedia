@@ -13,6 +13,7 @@ venv:
 	source ~/data2bot/bin/activate && \
 	python3 -m pip install pip setuptools wheel && \
 	python3 -m pip install -e .
+	cp configs/config.ini.example config.ini
 
 # Cleaning
 .PHONY: clean

@@ -16,15 +16,30 @@ CREATE TABLE
     );
 
 -- SELECT COUNT(rev) AS num_reviews(
-
-SELECT
-    pro.product_name,
-    COUNT(rev),
-    ords.order_date,
-    dt.working_day
-FROM
-    acnice6032_staging.reviews rev
-    JOIN if_common.dim_products pro ON rev.product_id = pro.product_id
-    JOIN acnice6032_staging.orders ords ON pro.product_id = ords.product_id
-    JOIN if_common.dim_dates dt ON TO_DATE(ords.order_date, 'YYYY-MM-DD') <= dt.calendar_dt
-GROUP BY product_name, ords.order_date, dt.working_day;
+SELECT *, dt.working_day
+FROM (
+        SELECT
+            pro.product_name,
+            NULL AS review,
+            NULL AS order_date
+        FROM
+            if_common.dim_products pro
+        UNION ALL
+        SELECT
+            NULL AS product_name,
+            rev.review,
+            NULL AS order_date
+        FROM
+            acnice6032_staging.reviews rev
+        UNION ALL
+        SELECT
+            NULL AS product_name,
+            NULL AS review,
+            ords.order_date
+        FROM
+            acnice6032_staging.orders ords
+    ) pp_info
+    JOIN if_common.dim_dates dt ON dt.calendar_dt = TO_DATE(
+        pp_info.order_date,
+        'YYYY-MM-DD'
+    );
