@@ -1,17 +1,17 @@
-# D2b Data Pipeline
+# **D2b Data Pipeline**
 ## **Overview**
 D2b is a simple data pipeline designed to help automate the processes involved in extracting, transforming, analysing and exporting data insights carried out by data professionals at Data2bot. The automation pipeline is designed to abstract complexities and allow analysts to focus solely on SQL.
 
 <img src='assets/system.svg' alt='System flow'>
 
-## Key Implementation Tools
-🏁  <a href='https://python.org'> Python </a> <br>
-🏁   <a href='https://www.postgresql.org'> Postgresql </a> <br>
-🏁  <a href='https://squidfunk.github.io/mkdocs-material/getting-started/'> Makedoc </a><br>
-🏁  <a href='https://www.gnu.org/software/make/manual/make.html'> GNU Makefile </a><br>
-🏁  <a href='https://www.github.com'> Github Actions </a>
+## **Key Implementation Tools**
+✅ &nbsp; &nbsp;  <a href='https://python.org'> Python </a> <br>
+✅ &nbsp; &nbsp;  <a href='https://www.postgresql.org'> Postgresql </a> <br>
+✅ &nbsp; &nbsp;  <a href='https://squidfunk.github.io/mkdocs-material/getting-started/'> Makedoc </a><br>
+✅ &nbsp; &nbsp;  <a href='https://www.gnu.org/software/make/manual/make.html'> GNU Makefile </a><br>
+✅ &nbsp; &nbsp;  <a href='https://www.github.com'> Github Actions </a>
 
-## Installation and setup 🔩🪛
+## **Installation and setup** 🔩🪛
 Clone the repository.
 ```bash 
 git clone https://github.com/anochima/data2bot.git
@@ -75,8 +75,10 @@ new_username = env('SERVER', 'DB_USERNAME', 'user')
 print(new_username)  #output: user
 
 ```
-## Importing Data 🏬
+## **Importing Data** 🏬
 There are 2 ways to import data currently;
+
+`["DB", "WAREHOUSE"]`
 
 ```python
 # /scripts/start.py
@@ -106,7 +108,7 @@ These "import froms" can be modified in the config.ini configuration file.
 DATA_STORES = ["DB", "WAREHOUSE"]
 ```
 
-## Exporting Data ⬆️
+## **Exporting Data** ⬆️
 
 ```python
 # /scripts/start.py
@@ -131,7 +133,7 @@ export_service.execute_service()
 
 ```
 
-## Running SQL Queries
+## **Running SQL Queries**
 All external SQL queries are stored inside the `/SQL` directory.
 
 For an external query to be executed, it must be registered inside the <a href="https://github.com/anochima/data2bot/blob/master/providers/AnalyticsServiceProvider.py" target='_blank'> Analytics Service Provider</a> class.
@@ -150,11 +152,11 @@ class AnalyticsServiceProvider(Service):
 
     service_path = "../Data2bot/sql"
 ```
-## Running the Pipeline ⚡️
+## **Running the Pipeline** ⚡️
 To run the pipeline, simply run the following command in your terminal.
 ```bash
 make run
 ```
 
-## Documentation
+## **Documentation**
 To read the documentation, run `mkdocs serve` on terminal

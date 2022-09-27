@@ -2,7 +2,7 @@
 ## **Overview**
 D2b is a simple data pipeline designed to help automate the processes involved in extracting, transforming, analysing and exporting data insights carried out by data professionals at Data2bot. The automation pipeline is designed to abstract complexities and allow analysts to focus solely on SQL.
 
-To read the full documentation check <a href='https://anochima.github.io/d2b-docs/'>d2b-docs</a> or run `mkdocs serve` on terminal.
+To read the full documentation check <a href='https://anice1.github.io/d2b-docs/'>d2b-docs</a> or run `mkdocs serve` on terminal.
 
 <img src='docs/assets/system.svg' alt='System flow'>
 

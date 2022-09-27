@@ -1,6 +1,9 @@
-# Handlers 
+# **Handlers** 
 
-## Database Connection Handler
+## **Database Connection Handler**
+The database handler establishes necessary connection with the database based on information provided in the config.ini file.
+
+All errors encountered during the course of connection are logged to logs/data2bot.log
 ```python
 class DatabaseConn(LogHandler):
     def __init__(self, log_file=env("LOG", "ERROR_LOG")) -> None:
@@ -39,7 +42,7 @@ class DatabaseConn(LogHandler):
         return self.conn
 ```
 
-## Env Connection Handler
+## **Env Connection Handler**
 
 ```python
 # scripts/handlers/env_handler.py
@@ -69,7 +72,7 @@ def env(section, key, value=None):
 
 ```
 
-## Service Handler
+## **Service Handler**
 ```python
 
 class Service(ABC):

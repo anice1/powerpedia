@@ -6,17 +6,18 @@ APP_AUTHOR = "Anosike Chimaobi Nice"
 
 [SERVER]
 DB_CONNECTION=pgsql
-DB_HOST=localhost
+DB_HOST=d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com
 DB_PORT=5432
-DB_DATABASE=postgres
-DB_USERNAME=root
-DB_PASSWORD=''
+DB_DATABASE=d2b_assessment
+DB_USERNAME=acnice6032
+DB_PASSWORD=K8awgbnTpw
 
-DB_DEFAULT_SCHEMA = 
-DB_STAGING_SCHEMA = 
-DB_ANALYTICS_SCHEMA =  
+DB_DEFAULT_SCHEMA = if_common
+DB_STAGING_SCHEMA = acnice6032_staging
+DB_ANALYTICS_SCHEMA = acnice6032_analytics 
 
-S3_WAREHOUSE_BUCKET_NAME = 
+S3_WAREHOUSE_BUCKET_NAME = d2b-internal-assessment-bucket
+DATA_STORES = ["DB", "WAREHOUSE"]
 
 [LOG]
 ERROR_LOG=logs/data2bot.log

@@ -1,10 +1,10 @@
 # mkdocs.yml
 site_name: Data2bot Pipeline
-site_url: https://www.data2bots.com
+site_url: https://anice1.github.io/d2b-docs/
 site_description: D2b is a simple data pipeline designed to help automate the processes involved in extracting, transforming, analysing and exporting data insights carried out by data professionals at Data2bot.
 
-repo_url: https://github.com/anochima/data2bot-assessment/
-repo_name: anochima/data2bot-assessment
+repo_url: https://github.com/anice1/data2bot/
+repo_name: anice1/data2bot
 
 theme:
   name: material
@@ -26,10 +26,10 @@ markdown_extensions:
 edit_uri: ""
 
 nav:
-  - Home: 'index.md'
-  - Handlers: handlers
-  - Service Providers: providers
-  - Recommendations: recommendations
+  - 🏠 &nbsp; Home: 'index.md'
+  - 🔑 &nbsp; Handlers: handlers
+  - ✅ &nbsp; Service Providers: providers
+  - 📝 &nbsp; Recommendations: recommendations
   
 extra:
   social:
