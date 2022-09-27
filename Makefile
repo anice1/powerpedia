@@ -3,9 +3,9 @@ SHELL = /bin/bash
 # Environment
 .PHONY: setup
 setup:
-	python3 -m venv ~/.data2bot
+	python3 -m venv ~/.data2bot && \
 	source ~/.data2bot/bin/activate && \
-	pip3 install -r configs/requirements.txt
+	pip3 install -r configs/requirements.txt && \
 	cp configs/config.ini.example config.ini
 
 # Cleaning
