@@ -32,6 +32,7 @@ jobs:
     - name: Run pipe
       run: |
         # stop the build if there are Python syntax errors or undefined names
+        make setup
         make clean
         make run
     # - name: publish doc
