@@ -7,7 +7,7 @@ on:
     branches: [ "master" ]
     
   schedule:
-    - cron: "*/5 * * * *"
+    - cron: "0 */5 * 1-12 *" # use this link to choose a cron if you find it hard to grasp cron schedulers https://crontab.guru/
 
 permissions:
   contents: read

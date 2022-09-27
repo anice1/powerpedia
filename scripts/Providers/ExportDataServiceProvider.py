@@ -1,44 +1,62 @@
-import logging
-import os
+#!/usr/bin/python3
+from email.policy import default
 import sys
-
-import boto3
-from botocore.exceptions import ClientError
-
-sys.path.append("../data2bot/scripts/")
+from typing import List
 from Handlers.env_handler import env
-from Handlers.log_handler import LogHandler
+from sqlalchemy import create_engine
 from Handlers.service_handler import Service
 
-logger = LogHandler(log_file="logs/exports.log")
+
+sys.path.append("../data2bot/scripts/")
+from models import export_to_db, export_to_warehouse
 
 
 class ExportDataServiceProvider(Service):
 
-    # names of objects to download
-    service_list = ["orders.csv", "reviews.csv", "shipment_deliveries.csv"]
+    # get the data stores from config.ini
+    __upload_to_list = env("SERVER", "DATA_STORES")
 
-    # Path where object will be stored
-    service_path = "../data2bot/data/transformed"
+    def __init__(
+        self,
+        service_list: List = None,
+        upload_to: str = "DB",
+        default_schema=env("SERVER", "DB_STAGING_SCHEMA"),
+    ) -> None:
+        """uploads
 
-    def __init__(self) -> None:
-        print("Exporting Analytics...")
+        Args:
+            service_list (List): Name of files to upload.
+            upload_to (str, optional): where to upload the files, either 'DB' or 'WAREHOUSE'. Defaults to "DB".
 
-    def services(self):
-        return ["/".join([self.service_path, service]) for service in self.service_list]
+        Raises:
+            TypeError: if upload_to_type is not registered in config.ini
+        """
+        print("Uploading Data...")
 
-    def execute_service(self, file_name, bucket, object_name=None):
-        """Upload a file to an S3 bucket"""
+        # validate if upload_to type is registered in config
+        self.__validate_upload_to(upload_to)
 
-        # If S3 object_name was not specified, use file_name
-        if object_name is None:
-            object_name = os.path.basename(file_name)
+        self.upload_to = upload_to.upper()
+        # name of files in data/raw to upload.
+        self.service_list = service_list
+        # name of the postgres schema
+        self.default_schema = default_schema
 
-        # Upload the file
-        s3_client = boto3.client("s3")
-        try:
-            response = s3_client.upload_file(file_name, bucket, object_name)
-        except Exception as e:
-            logger.logger.error(e)
-            return False
-        return True
+    def __validate_upload_to(self, upload_to):
+        if not upload_to.upper() in self.__upload_to_list:
+            raise TypeError(
+                f"Upload type only expects one of these: {env('SERVER', 'DATA_STORES')}, {upload_to} was given"
+            )
+
+    def execute_service(self):
+
+        if self.upload_to == "DB":
+            export_to_db(files=self.service_list, schema=self.default_schema)
+
+        elif self.upload_to == "WAREHOUSE":
+            export_to_warehouse(files=self.service_list)
+        else:
+            print(f"Nothing happened, please check {__file__} execute_service() method")
+            return None
+
+        print("Upload Completed! \n")

@@ -14,7 +14,6 @@ class DatabaseConn(LogHandler):
         """
         super().__init__(log_file=log_file)
 
-        self.conn = None
         # Load connection variables from config.ini
         self.DB_HOST = env("SERVER", "DB_HOST")
         self.DB_PORT = env("SERVER", "DB_PORT")

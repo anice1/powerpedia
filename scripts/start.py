@@ -1,39 +1,46 @@
 #!/usr/bin/python3
 
-import logging
-
-# import sys
-
 import typer
-
-# sys.path.append("../Data2Bot-Assessment/scripts")
 from Providers.AnalyticsServiceProvider import AnalyticsServiceProvider
-from Providers.DataLoadServiceProvider import DataLoadServiceProvider
 from Providers.ExportDataServiceProvider import ExportDataServiceProvider
-from Providers.ExtractDataServiceProvider import ExtractDataServiceProvider
-
-logging.basicConfig(
-    filename="../data2bot/logs/runtime.log",
-    format="%(asctime)s:  %(filename)s: %(message)s: %(funcName)s: @ %(pathname)s",
-    level=logging.DEBUG,
-)
+from Providers.ImportDataServiceProvider import ImportDataServiceProvider
 
 app = typer.Typer()
+analytics_service = AnalyticsServiceProvider()
+
+
+def import_from_warehouse():
+    import_service = ImportDataServiceProvider()
+    import_service.service_list = [
+        "orders.csv",
+        "reviews.csv",
+        "shipment_deliveries.csv",
+    ]
+    import_service.import_from = "WAREHOUSE"
+    return import_service.execute_service()
+
+
+def export_data_to_db():
+    export_service = ExportDataServiceProvider()
+    export_service.service_list = [
+        "/Users/cosmoremit/Documents/AcNice/data2bot/data/raw/orders.csv",
+        "/Users/cosmoremit/Documents/AcNice/data2bot/data/raw/reviews.csv",
+        "/Users/cosmoremit/Documents/AcNice/data2bot/data/raw/shipment_deliveries.csv",
+    ]
+    export_service.upload_to = "DB"
+    return export_service.execute_service()
 
 
 @app.command()
 def run():
     # Extract data from warehouse
-    ExtractDataServiceProvider().execute_service()
+    import_from_warehouse()
 
     # Load data into DB
-    DataLoadServiceProvider().execute_service()
+    export_data_to_db()
 
     # Perform registered analytics
-    AnalyticsServiceProvider().execute_service()
-
-    # Export analytics to warehouse
-    # ExportDataServiceProvider().execute_service()
+    analytics_service.execute_service()
 
 
 if __name__ == "__main__":

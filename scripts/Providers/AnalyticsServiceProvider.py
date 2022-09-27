@@ -1,16 +1,17 @@
+#!/usr/bin/python3
 """
  Here is where you can register all sql services you'd like to run during
  automation. 
  These sql files are loaded into the Kernel. Now create something great!
 
 """
-# import sys
+import sys
 
-# sys.path.append("../data2bot/scripts/")
+sys.path.append("../data2bot/scripts/")
+from Handlers.log_handler import LogHandler
 from Handlers.service_handler import Service
 from Handlers.db_connect_handler import DatabaseConn
 
-from Handlers.log_handler import LogHandler
 
 logger = LogHandler(log_file="logs/analytics.log")
 
