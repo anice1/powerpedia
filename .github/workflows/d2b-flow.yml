@@ -33,9 +33,8 @@ jobs:
       run: |
         # stop the build if there are Python syntax errors or undefined names
         make clean
-        make style
         make run
-    - name: publish doc
-      run: |
-        pip install mkdocs-material
-        mkdocs gh-deploy --force
+    # - name: publish doc
+    #   run: |
+    #     pip install mkdocs-material
+    #     mkdocs gh-deploy --force
