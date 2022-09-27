@@ -9,7 +9,7 @@ from Handlers.log_handler import LogHandler
 from Handlers.service_handler import Service
 from models import import_from_warehouse, import_from_db
 
-handler = LogHandler("logs/extract.log")
+handler = LogHandler("logs/import.log")
 
 
 class ImportDataServiceProvider(Service):
@@ -24,7 +24,6 @@ class ImportDataServiceProvider(Service):
             service_list (names of objects to import, optional): _description_. Defaults to None.
             import_from (str, optional): _description_. Defaults to "DB".
         """
-        print("------" * 30)
         print("Importing Data...")
 
         # validate if import_from is registered in config

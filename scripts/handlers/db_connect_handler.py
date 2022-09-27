@@ -23,8 +23,9 @@ class DatabaseConn(LogHandler):
 
     def connect(self):
         # Establish a connection with the db
+        conn = None
         try:
-            self.conn = pg.connect(
+            conn = pg.connect(
                 host=self.DB_HOST,
                 dbname=self.DB_DATABASE,
                 user=self.DB_USERNAME,
@@ -36,7 +37,7 @@ class DatabaseConn(LogHandler):
             # log error to file
             self.logger.debug(e)
             self.error()
-        return self.conn
+        return conn
 
     def extract(self, table, schema=env("SERVER", "DB_DEFAULT_SCHEMA")):
         """

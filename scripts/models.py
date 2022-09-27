@@ -14,10 +14,10 @@ logger = LogHandler(log_file="logs/models.log")
 
 
 def export_to_db(files: List, schema=env("SERVER", "DB_STAGING_SCHEMA")):
-    """_summary_
+    """Exports files to database
 
     Args:
-        files (List): _description_
+        files (List): A list of filepaths
         schema (_type_, optional): _description_. Defaults to env("SERVER", "DB_STAGING_SCHEMA").
     """
     try:

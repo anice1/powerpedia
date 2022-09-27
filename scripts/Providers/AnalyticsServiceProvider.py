@@ -6,6 +6,7 @@
 
 """
 import sys
+from typing import List
 
 sys.path.append("../data2bot/scripts/")
 from Handlers.log_handler import LogHandler
@@ -27,7 +28,10 @@ class AnalyticsServiceProvider(Service):
 
     service_path = "../data2bot/sql"
 
-    def __init__(self) -> None:
+    def __init__(self, service_list: List = None) -> None:
+
+        # name of files in data/raw to upload.
+        self.service_list = service_list
         print("Running Analysis...")
 
     def services(self):

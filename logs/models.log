@@ -1,0 +1,114 @@
+------------------------
+2022-09-27 20:31:59,915 
+------------------------
+ models.py:  
+             
+ Could not connect to the endpoint URL: "https://d2b-internal-assessment-bucket.s3.amazonaws.com/orders_data/orders.csv" 
+  @ import_from_warehouse: /Users/cosmoremit/Documents/AcNice/data2bot/scripts/models.py
+------------------------
+2022-09-27 20:32:05,336 
+------------------------
+ models.py:  
+             
+ Could not connect to the endpoint URL: "https://d2b-internal-assessment-bucket.s3.amazonaws.com/orders_data/reviews.csv" 
+  @ import_from_warehouse: /Users/cosmoremit/Documents/AcNice/data2bot/scripts/models.py
+------------------------
+2022-09-27 20:32:17,234 
+------------------------
+ models.py:  
+             
+ Could not connect to the endpoint URL: "https://d2b-internal-assessment-bucket.s3.amazonaws.com/orders_data/shipment_deliveries.csv" 
+  @ import_from_warehouse: /Users/cosmoremit/Documents/AcNice/data2bot/scripts/models.py
+------------------------
+2022-09-27 20:32:17,285 
+------------------------
+ models.py:  
+             
+ (psycopg2.OperationalError) could not translate host name "d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com" to address: nodename nor servname provided, or not known
+
+(Background on this error at: https://sqlalche.me/e/14/e3q8) 
+  @ export_to_db: /Users/cosmoremit/Documents/AcNice/data2bot/scripts/models.py
+------------------------
+2022-09-27 20:32:17,287 
+------------------------
+ db_connect_handler.py:  
+             
+ could not translate host name "d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com" to address: nodename nor servname provided, or not known
+ 
+  @ connect: /Users/cosmoremit/Documents/AcNice/data2bot/scripts/Handlers/db_connect_handler.py
+------------------------
+2022-09-27 20:34:28,623 
+------------------------
+ models.py:  
+             
+ Could not connect to the endpoint URL: "https://d2b-internal-assessment-bucket.s3.amazonaws.com/orders_data/orders.csv" 
+  @ import_from_warehouse: /Users/cosmoremit/Documents/AcNice/data2bot/scripts/models.py
+------------------------
+2022-09-27 20:34:41,444 
+------------------------
+ models.py:  
+             
+ Could not connect to the endpoint URL: "https://d2b-internal-assessment-bucket.s3.amazonaws.com/orders_data/reviews.csv" 
+  @ import_from_warehouse: /Users/cosmoremit/Documents/AcNice/data2bot/scripts/models.py
+------------------------
+2022-09-27 20:34:48,115 
+------------------------
+ models.py:  
+             
+ Could not connect to the endpoint URL: "https://d2b-internal-assessment-bucket.s3.amazonaws.com/orders_data/shipment_deliveries.csv" 
+  @ import_from_warehouse: /Users/cosmoremit/Documents/AcNice/data2bot/scripts/models.py
+------------------------
+2022-09-27 20:34:48,152 
+------------------------
+ models.py:  
+             
+ (psycopg2.OperationalError) could not translate host name "d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com" to address: nodename nor servname provided, or not known
+
+(Background on this error at: https://sqlalche.me/e/14/e3q8) 
+  @ export_to_db: /Users/cosmoremit/Documents/AcNice/data2bot/scripts/models.py
+------------------------
+2022-09-27 20:34:48,155 
+------------------------
+ db_connect_handler.py:  
+             
+ could not translate host name "d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com" to address: nodename nor servname provided, or not known
+ 
+  @ connect: /Users/cosmoremit/Documents/AcNice/data2bot/scripts/Handlers/db_connect_handler.py
+------------------------
+2022-09-27 20:36:55,629 
+------------------------
+ models.py:  
+             
+ Could not connect to the endpoint URL: "https://d2b-internal-assessment-bucket.s3.amazonaws.com/orders_data/orders.csv" 
+  @ import_from_warehouse: /Users/cosmoremit/Documents/AcNice/data2bot/scripts/models.py
+------------------------
+2022-09-27 20:37:04,131 
+------------------------
+ models.py:  
+             
+ Could not connect to the endpoint URL: "https://d2b-internal-assessment-bucket.s3.amazonaws.com/orders_data/reviews.csv" 
+  @ import_from_warehouse: /Users/cosmoremit/Documents/AcNice/data2bot/scripts/models.py
+------------------------
+2022-09-27 20:37:13,992 
+------------------------
+ models.py:  
+             
+ Could not connect to the endpoint URL: "https://d2b-internal-assessment-bucket.s3.amazonaws.com/orders_data/shipment_deliveries.csv" 
+  @ import_from_warehouse: /Users/cosmoremit/Documents/AcNice/data2bot/scripts/models.py
+------------------------
+2022-09-27 20:37:14,044 
+------------------------
+ models.py:  
+             
+ (psycopg2.OperationalError) could not translate host name "d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com" to address: nodename nor servname provided, or not known
+
+(Background on this error at: https://sqlalche.me/e/14/e3q8) 
+  @ export_to_db: /Users/cosmoremit/Documents/AcNice/data2bot/scripts/models.py
+------------------------
+2022-09-27 20:37:14,060 
+------------------------
+ db_connect_handler.py:  
+             
+ could not translate host name "d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com" to address: nodename nor servname provided, or not known
+ 
+  @ connect: /Users/cosmoremit/Documents/AcNice/data2bot/scripts/Handlers/db_connect_handler.py
