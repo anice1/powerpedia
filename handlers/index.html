@@ -371,8 +371,10 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">conn</span>
 </code></pre></div>
 <h2 id="env-connection-handler">Env Connection Handler</h2>
-<div class="highlight"><pre><span></span><code><span class="c1"># read configuraton file</span>
-<span class="n">config_file</span> <span class="o">=</span> <span class="s2">&quot;../Data2bot-Assessment/config.ini&quot;</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># scripts/handlers/env_handler.py</span>
+
+<span class="c1"># read configuraton file</span>
+<span class="n">config_file</span> <span class="o">=</span> <span class="s2">&quot;../data2bot/config.ini&quot;</span>
 <span class="n">config</span> <span class="o">=</span> <span class="n">ConfigParser</span><span class="p">()</span>
 <span class="n">config</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">config_file</span><span class="p">)</span>
 
@@ -385,7 +387,8 @@
 <span class="sd">    ----------</span>
 <span class="sd">    section: The config file section</span>
 <span class="sd">    key: A key in the selected section</span>
-<span class="sd">    value: desired value for the selected key, if not set, returns the key&#39;s current value</span>
+<span class="sd">    value: desired value for the selected key, if not set, returns the key&#39;s</span>
+<span class="sd">    current value.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">config</span><span class="p">[</span><span class="n">section</span><span class="p">][</span><span class="n">key</span><span class="p">]</span>
