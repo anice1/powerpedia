@@ -20,22 +20,10 @@ logger = LogHandler(log_file="logs/analytics.log")
 class AnalyticsServiceProvider(Service):
 
     # name of analytics in sql e.g. "product_analysis.sql"
-    service_list = [
-        "product_orders_on_holidays.sql",
-        "total_late_and_undelivered_shipments.sql",
-        "product_reviews_analytics.sql",
-    ]
-
-    service_path = "../data2bot/sql"
-
     def __init__(self, service_list: List = None) -> None:
 
         # name of files in data/raw to upload.
         self.service_list = service_list
-        print("Running Analysis...")
-
-    def services(self):
-        return ["/".join([self.service_path, service]) for service in self.service_list]
 
     def execute_service(self):
         # Read the sql file
@@ -43,7 +31,8 @@ class AnalyticsServiceProvider(Service):
         conn = conn.connect()
         conn.autocommit = True
 
-        for f in self.services():
+        print("Running Analysis...")
+        for f in self.service_list:
             try:
                 # instantiate class
                 print(f"Running Query... {f}\t")

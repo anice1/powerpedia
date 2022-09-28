@@ -1,0 +1,7 @@
+------------------------
+2022-09-27 23:49:39,468 
+------------------------
+ models.py:  
+             
+ [Errno 2] No such file or directory: '../data/raw/shipment_deliveries.csv' 
+  @ export_to_db: /Users/cosmoremit/Documents/AcNice/data2bot/scripts/models.py

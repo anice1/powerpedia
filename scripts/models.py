@@ -44,8 +44,17 @@ def export_to_db(files: List, schema=env("SERVER", "DB_STAGING_SCHEMA")):
         logger.logger.error(e)
 
 
-def export_to_warehouse(files: List, bucket=env("SERVER", "S3_WAREHOUSE_BUCKET_NAME")):
+def export_to_warehouse(files: List=None, bucket=env("SERVER", "S3_WAREHOUSE_BUCKET_NAME")):
     """Upload a file to an Warehouse bucket"""
+
+    engine = create_engine(
+        f"postgresql+psycopg2://{env('SERVER','DB_USERNAME')}:{env('SERVER','DB_PASSWORD')}@{env('SERVER','DB_HOST')}/{env('SERVER','DB_DATABASE')}"
+    )
+    pd.read_sql_query(
+        '''
+        SELECT * FROM acnice6032_analytics.tables
+        '''
+    )
 
     for file in files:
         object_name = os.path.basename(file)

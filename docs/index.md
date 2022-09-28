@@ -139,18 +139,21 @@ All external SQL queries are stored inside the `/SQL` directory.
 For an external query to be executed, it must be registered inside the <a href="https://github.com/anochima/data2bot/blob/master/providers/AnalyticsServiceProvider.py" target='_blank'> Analytics Service Provider</a> class.
 
 ```python
-# scripts/Providers/AnalyticsServiceProvider.py
+# scripts/start.py
+from Providers.AnalyticsServiceProvider import AnalyticsServiceProvider
 
-class AnalyticsServiceProvider(Service):
+analytics_service = AnalyticsServiceProvider()
 
-    # name of analytics in /SQL e.g. "product_analysis.sql"
-    service_list = [
-        "analytics1.sql",
-        "analytics2.sql",
-        '...'
-    ]
+# list of analytics scripts in /sql to run e.g. "product_analysis.sql"
+analytics_service.service_list = [
+    "../data2bot/sql/product_orders_on_holidays.sql",
+    "../data2bot/sql/total_late_and_undelivered_shipments.sql",
+    "../data2bot/sql/product_reviews_analytics.sql",
+]
 
-    service_path = "../Data2bot/sql"
+# start running analysis
+analytics_service.execute_service()
+
 ```
 ## **Running the Pipeline** ⚡️
 To run the pipeline, simply run the following command in your terminal.
