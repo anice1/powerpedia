@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://www.data2bots.com/</loc>
-         <lastmod>2022-09-27</lastmod>
+         <loc>https://anice1.github.io/d2b-docs/</loc>
+         <lastmod>2022-09-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.data2bots.com/handlers/</loc>
-         <lastmod>2022-09-27</lastmod>
+         <loc>https://anice1.github.io/d2b-docs/handlers/</loc>
+         <lastmod>2022-09-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.data2bots.com/providers/</loc>
-         <lastmod>2022-09-27</lastmod>
+         <loc>https://anice1.github.io/d2b-docs/providers/</loc>
+         <lastmod>2022-09-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.data2bots.com/recommendations/</loc>
-         <lastmod>2022-09-27</lastmod>
+         <loc>https://anice1.github.io/d2b-docs/recommendations/</loc>
+         <lastmod>2022-09-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
