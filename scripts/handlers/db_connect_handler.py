@@ -1,29 +1,34 @@
 #!/usr/bin/python3
 
+from typing import Type
 import psycopg2 as pg
+from sqlalchemy import create_engine
 from Handlers.env_handler import env
-from Handlers.log_handler import LogHandler
 
 
-class DatabaseConn(LogHandler):
-    def __init__(self, log_file=env("LOG", "ERROR_LOG")) -> None:
+class DatabaseConn:
+    def __init__(self, connector=env("SERVER", "DB_CONNECTOR")) -> None:
         """Establish database connection based on the server settings in config.ini
 
         Args:
-            log_file (str, optional): the name or path to the file where error will be logged. Defaults to ERROR_LOG path in config.ini
+            log_file (str, optional): The name or path to the file where error will be logged. Defaults to ERROR_LOG path in config.ini
+            connection (str, optional): The database connector, Default to DB_CONNECTOR in config.ini
         """
-        super().__init__(log_file=log_file)
-
         # Load connection variables from config.ini
         self.DB_HOST = env("SERVER", "DB_HOST")
         self.DB_PORT = env("SERVER", "DB_PORT")
         self.DB_DATABASE = env("SERVER", "DB_DATABASE")
         self.DB_USERNAME = env("SERVER", "DB_USERNAME")
         self.DB_PASSWORD = env("SERVER", "DB_PASSWORD")
+        self.connector = connector
 
-    def connect(self):
+    def alchemy(self):
+        return create_engine(
+            f"postgresql+psycopg2://{self.DB_USERNAME}:{self.DB_PASSWORD}@{self.DB_HOST}/{self.DB_DATABASE}"
+        )
+
+    def pg(self):
         # Establish a connection with the db
-        conn = None
         try:
             conn = pg.connect(
                 host=self.DB_HOST,
@@ -32,36 +37,43 @@ class DatabaseConn(LogHandler):
                 password=self.DB_PASSWORD,
                 port=self.DB_PORT,
             )
-
+            return conn
         except Exception as e:
-            # log error to file
-            self.logger.debug(e)
-            self.error()
+            print(e)
+
+    def connect(self):
+        conn = None
+        if self.connector.lower() == "alchemy":
+            conn = self.alchemy()
+        elif self.connector.lower() == "pg":
+            conn = self.pg()
+        else:
+            raise TypeError("Invalid connector, expects either pg or alchemy")
         return conn
 
-    def extract(self, table, schema=env("SERVER", "DB_DEFAULT_SCHEMA")):
-        """
-        Queries and export data from specified schema table
+    # def extract(self, table, schema=env("SERVER", "DB_DEFAULT_SCHEMA")):
+    #     """
+    #     Queries and export data from specified schema table
 
-        parameters:
-        -----------
-        table: the name of the table you'd like to extract
-        """
-        print(f"Querying {schema}.{table} ...", end="")
+    #     parameters:
+    #     -----------
+    #     table: the name of the table you'd like to extract
+    #     """
+    #     print(f"Querying {schema}.{table} ...", end="")
 
-        try:
-            conn = self.connect()
-            cur = conn.cursor()
-            cur.execute(f"""SELECT * FROM {schema}.{table}""")
-            result = cur.fetchall()
-            print(" Successful!")
+    #     try:
+    #         conn = self.__connect()
+    #         cur = conn.cursor()
+    #         cur.execute(f"""SELECT * FROM {schema}.{table}""")
+    #         result = cur.fetchall()
+    #         print(" Successful!")
 
-            conn.close()
-            return result
+    #         conn.close()
+    #         return result
 
-        except Exception as e:
-            self.logger.debug(e)
-            self.error()
+    #     except Exception as e:
+    #         self.logger.debug(e)
+    #         self.error()
 
-    def error(self):
-        print("An error occcured, check", self.file_handler.baseFilename)
+    # def __error(self):
+    #     print("An error occcured, check", self.file_handler.baseFilename)

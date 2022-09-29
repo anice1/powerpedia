@@ -7,10 +7,14 @@ from typing import List
 from botocore import UNSIGNED
 from botocore.client import Config
 from Handlers.env_handler import env
-from sqlalchemy import create_engine
+from sqlalchemy import create_engine, inspect
 from Handlers.log_handler import LogHandler
+from Handlers.db_connect_handler import DatabaseConn
 
 logger = LogHandler(log_file="logs/models.log")
+
+conn = DatabaseConn(connector="alchemy")
+engine = conn.connect()
 
 
 def export_to_db(files: List, schema=env("SERVER", "DB_STAGING_SCHEMA")):
@@ -21,9 +25,6 @@ def export_to_db(files: List, schema=env("SERVER", "DB_STAGING_SCHEMA")):
         schema (_type_, optional): _description_. Defaults to env("SERVER", "DB_STAGING_SCHEMA").
     """
     try:
-        engine = create_engine(
-            f"postgresql+psycopg2://{env('SERVER','DB_USERNAME')}:{env('SERVER','DB_PASSWORD')}@{env('SERVER','DB_HOST')}/{env('SERVER','DB_DATABASE')}"
-        )
         for file in files:
             # Get the table name
             table_name = os.path.split(file)[-1].split(".")[0]
@@ -42,30 +43,36 @@ def export_to_db(files: List, schema=env("SERVER", "DB_STAGING_SCHEMA")):
     except Exception as e:
         print(e)
         logger.logger.error(e)
+    print("------" * 20)
 
 
-def export_to_warehouse(files: List=None, bucket=env("SERVER", "S3_WAREHOUSE_BUCKET_NAME")):
+def export_to_warehouse(
+    table_names: List = ['agg_public_holiday','agg_shipments','best_performing_product'],
+    schema=env('SERVER', 'DB_ANALYTICS_SCHEMA'),
+    bucket=env("SERVER", "S3_WAREHOUSE_BUCKET_NAME")
+):
     """Upload a file to an Warehouse bucket"""
 
-    engine = create_engine(
-        f"postgresql+psycopg2://{env('SERVER','DB_USERNAME')}:{env('SERVER','DB_PASSWORD')}@{env('SERVER','DB_HOST')}/{env('SERVER','DB_DATABASE')}"
-    )
-    pd.read_sql_query(
-        '''
-        SELECT * FROM acnice6032_analytics.tables
-        '''
-    )
+    for table in table_names:
+        query = pd.read_sql_query(f"""SELECT * FROM {schema}.{table}""", con=engine)
+        df = pd.DataFrame(query)
+        df.to_csv(f'../data2bot/data/transformed/{table}.csv', index=False)
 
-    for file in files:
+    upload_path = '../data2bot/data/transformed'
+    for file in os.listdir('../data2bot/data/transformed'):
         object_name = os.path.basename(file)
+        file = '/'.join([upload_path, object_name])
 
         # Upload the file
-        s3_client = boto3.client("s3")
+        s3_client = boto3.client("s3", config=Config(signature_version=UNSIGNED))
         try:
-            response = s3_client.upload_file(file, bucket, object_name)
             print(f"uploading... {file}")
+            response = s3_client.upload_file(file, bucket, object_name)
         except Exception as e:
             logger.logger.error(e)
+            print(e)
+    print("------" * 20)
+
 
 
 def import_from_db(files: List):
@@ -88,15 +95,16 @@ def import_from_warehouse(
     path: path where downloaded file will be stored
     """
 
-    for object_name in object_names:
-        save_path = "/".join([path, object_name])
-        object_path = "/".join([prefix, object_name])
-        try:
+    try:
+        for object_name in object_names:
+            save_path = "/".join([path, object_name])
+            object_path = "/".join([prefix, object_name])
             s3 = boto3.client("s3", config=Config(signature_version=UNSIGNED))
             # response = s3.list_objects(Bucket=bucket_name, Prefix=prefix)
             s3.download_file(bucket_name, object_path, save_path)
             print(f"{object_name} imported successfully")
-        except Exception as e:
-            print(e)
-            print("An error occcured, check", logger.file_handler.baseFilename)
-            logger.logger.debug(e)
+    except Exception as e:
+        print(e)
+        print("An error occcured, check", logger.file_handler.baseFilename)
+        logger.logger.debug(e)
+    print("------" * 20)

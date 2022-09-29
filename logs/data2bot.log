@@ -1,0 +1,126 @@
+------------------------
+2022-09-28 23:23:37,561 
+------------------------
+ models.py:  
+             
+ 'DatabaseConn' object has no attribute 'cursor' 
+  @ export_to_db: /Users/cosmoremit/Documents/AcNice/data2bot/scripts/models.py
+------------------------
+2022-09-28 23:23:39,551 
+------------------------
+ AnalyticsServiceProvider.py:  
+             
+ 'DatabaseConn' object has no attribute 'cursor' 
+  @ execute_service: /Users/cosmoremit/Documents/AcNice/data2bot/scripts/Providers/AnalyticsServiceProvider.py
+------------------------
+2022-09-28 23:23:39,552 
+------------------------
+ AnalyticsServiceProvider.py:  
+             
+ 'DatabaseConn' object has no attribute 'cursor' 
+  @ execute_service: /Users/cosmoremit/Documents/AcNice/data2bot/scripts/Providers/AnalyticsServiceProvider.py
+------------------------
+2022-09-28 23:23:39,552 
+------------------------
+ AnalyticsServiceProvider.py:  
+             
+ 'DatabaseConn' object has no attribute 'cursor' 
+  @ execute_service: /Users/cosmoremit/Documents/AcNice/data2bot/scripts/Providers/AnalyticsServiceProvider.py
+------------------------
+2022-09-28 23:27:24,452 
+------------------------
+ models.py:  
+             
+ Execution failed on sql 'SELECT name FROM sqlite_master WHERE type='table' AND name=?;': syntax error at or near ";"
+LINE 1: ...ELECT name FROM sqlite_master WHERE type='table' AND name=?;
+                                                                      ^
+ 
+  @ export_to_db: /Users/cosmoremit/Documents/AcNice/data2bot/scripts/models.py
+------------------------
+2022-09-28 23:31:30,613 
+------------------------
+ models.py:  
+             
+ 'NoneType' object has no attribute 'cursor' 
+  @ export_to_db: /Users/cosmoremit/Documents/AcNice/data2bot/scripts/models.py
+------------------------
+2022-09-28 23:50:40,347 
+------------------------
+ models.py:  
+             
+ Execution failed on sql 'SELECT name FROM sqlite_master WHERE type='table' AND name=?;': syntax error at or near ";"
+LINE 1: ...ELECT name FROM sqlite_master WHERE type='table' AND name=?;
+                                                                      ^
+ 
+  @ export_to_db: /Users/cosmoremit/Documents/AcNice/data2bot/scripts/models.py
+------------------------
+2022-09-28 23:51:26,826 
+------------------------
+ models.py:  
+             
+ 'NoneType' object has no attribute 'cursor' 
+  @ export_to_db: /Users/cosmoremit/Documents/AcNice/data2bot/scripts/models.py
+------------------------
+2022-09-28 23:53:56,162 
+------------------------
+ models.py:  
+             
+ 'NoneType' object has no attribute 'cursor' 
+  @ export_to_db: /Users/cosmoremit/Documents/AcNice/data2bot/scripts/models.py
+------------------------
+2022-09-28 23:57:09,133 
+------------------------
+ models.py:  
+             
+ Execution failed on sql 'SELECT name FROM sqlite_master WHERE type='table' AND name=?;': syntax error at or near ";"
+LINE 1: ...ELECT name FROM sqlite_master WHERE type='table' AND name=?;
+                                                                      ^
+ 
+  @ export_to_db: /Users/cosmoremit/Documents/AcNice/data2bot/scripts/models.py
+------------------------
+2022-09-28 23:58:30,251 
+------------------------
+ models.py:  
+             
+ Execution failed on sql 'SELECT name FROM sqlite_master WHERE type='table' AND name=?;': syntax error at or near ";"
+LINE 1: ...ELECT name FROM sqlite_master WHERE type='table' AND name=?;
+                                                                      ^
+ 
+  @ export_to_db: /Users/cosmoremit/Documents/AcNice/data2bot/scripts/models.py
+------------------------
+2022-09-28 23:59:36,649 
+------------------------
+ models.py:  
+             
+ Execution failed on sql 'SELECT name FROM sqlite_master WHERE type='table' AND name=?;': syntax error at or near ";"
+LINE 1: ...ELECT name FROM sqlite_master WHERE type='table' AND name=?;
+                                                                      ^
+ 
+  @ export_to_db: /Users/cosmoremit/Documents/AcNice/data2bot/scripts/models.py
+------------------------
+2022-09-29 01:05:14,064 
+------------------------
+ models.py:  
+             
+ Execution failed on sql 'SELECT name FROM sqlite_master WHERE type='table' AND name=?;': syntax error at or near ";"
+LINE 1: ...ELECT name FROM sqlite_master WHERE type='table' AND name=?;
+                                                                      ^
+ 
+  @ export_to_db: /Users/cosmoremit/Documents/AcNice/data2bot/scripts/models.py
+------------------------
+2022-09-29 01:09:33,324 
+------------------------
+ models.py:  
+             
+ [Errno 2] No such file or directory: '../data/raw/shipment_deliveries.csv' 
+  @ export_to_db: /Users/cosmoremit/Documents/AcNice/data2bot/scripts/models.py
+------------------------
+2022-09-29 01:15:11,847 
+------------------------
+ models.py:  
+             
+ Execution failed on sql 'SELECT name FROM sqlite_master WHERE type='table' AND name=?;': syntax error at or near ";"
+LINE 1: ...ELECT name FROM sqlite_master WHERE type='table' AND name=?;
+                                                                      ^
+ 
+  @ export_to_db: /Users/cosmoremit/Documents/AcNice/data2bot/scripts/models.py

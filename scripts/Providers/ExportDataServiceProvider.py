@@ -20,7 +20,7 @@ class ExportDataServiceProvider(Service):
         self,
         service_list: List = None,
         upload_to: str = "DB",
-        default_schema=env("SERVER", "DB_STAGING_SCHEMA"),
+        schema=env("SERVER", "DB_STAGING_SCHEMA"),
     ) -> None:
         """uploads
 
@@ -40,7 +40,7 @@ class ExportDataServiceProvider(Service):
         # name of files in data/raw to upload.
         self.service_list = service_list
         # name of the postgres schema
-        self.default_schema = default_schema
+        self.default_schema = schema
 
     def __validate_upload_to(self, upload_to):
         if not upload_to.upper() in self.__upload_to_list:
@@ -49,14 +49,12 @@ class ExportDataServiceProvider(Service):
             )
 
     def execute_service(self):
-
         if self.upload_to == "DB":
             export_to_db(files=self.service_list, schema=self.default_schema)
 
         elif self.upload_to == "WAREHOUSE":
-            export_to_warehouse(files=self.service_list)
+            export_to_warehouse(table_names=self.service_list)
         else:
-            print(f"Nothing happened, please check {__file__} execute_service() method")
-            return None
+            raise TypeError(f"Nothing happened, please check {__file__} execute_service() method")
 
         print("Upload Completed! \n")

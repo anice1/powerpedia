@@ -5,3 +5,249 @@
              
  [Errno 2] No such file or directory: '../data/raw/shipment_deliveries.csv' 
   @ export_to_db: /Users/cosmoremit/Documents/AcNice/data2bot/scripts/models.py
+------------------------
+2022-09-28 23:23:37,561 
+------------------------
+ models.py:  
+             
+ 'DatabaseConn' object has no attribute 'cursor' 
+  @ export_to_db: /Users/cosmoremit/Documents/AcNice/data2bot/scripts/models.py
+------------------------
+2022-09-28 23:23:39,551 
+------------------------
+ AnalyticsServiceProvider.py:  
+             
+ 'DatabaseConn' object has no attribute 'cursor' 
+  @ execute_service: /Users/cosmoremit/Documents/AcNice/data2bot/scripts/Providers/AnalyticsServiceProvider.py
+------------------------
+2022-09-28 23:23:39,552 
+------------------------
+ AnalyticsServiceProvider.py:  
+             
+ 'DatabaseConn' object has no attribute 'cursor' 
+  @ execute_service: /Users/cosmoremit/Documents/AcNice/data2bot/scripts/Providers/AnalyticsServiceProvider.py
+------------------------
+2022-09-28 23:23:39,552 
+------------------------
+ AnalyticsServiceProvider.py:  
+             
+ 'DatabaseConn' object has no attribute 'cursor' 
+  @ execute_service: /Users/cosmoremit/Documents/AcNice/data2bot/scripts/Providers/AnalyticsServiceProvider.py
+------------------------
+2022-09-28 23:27:24,452 
+------------------------
+ models.py:  
+             
+ Execution failed on sql 'SELECT name FROM sqlite_master WHERE type='table' AND name=?;': syntax error at or near ";"
+LINE 1: ...ELECT name FROM sqlite_master WHERE type='table' AND name=?;
+                                                                      ^
+ 
+  @ export_to_db: /Users/cosmoremit/Documents/AcNice/data2bot/scripts/models.py
+------------------------
+2022-09-28 23:31:30,613 
+------------------------
+ models.py:  
+             
+ 'NoneType' object has no attribute 'cursor' 
+  @ export_to_db: /Users/cosmoremit/Documents/AcNice/data2bot/scripts/models.py
+------------------------
+2022-09-28 23:50:40,347 
+------------------------
+ models.py:  
+             
+ Execution failed on sql 'SELECT name FROM sqlite_master WHERE type='table' AND name=?;': syntax error at or near ";"
+LINE 1: ...ELECT name FROM sqlite_master WHERE type='table' AND name=?;
+                                                                      ^
+ 
+  @ export_to_db: /Users/cosmoremit/Documents/AcNice/data2bot/scripts/models.py
+------------------------
+2022-09-28 23:51:26,826 
+------------------------
+ models.py:  
+             
+ 'NoneType' object has no attribute 'cursor' 
+  @ export_to_db: /Users/cosmoremit/Documents/AcNice/data2bot/scripts/models.py
+------------------------
+2022-09-28 23:53:56,162 
+------------------------
+ models.py:  
+             
+ 'NoneType' object has no attribute 'cursor' 
+  @ export_to_db: /Users/cosmoremit/Documents/AcNice/data2bot/scripts/models.py
+------------------------
+2022-09-28 23:57:09,133 
+------------------------
+ models.py:  
+             
+ Execution failed on sql 'SELECT name FROM sqlite_master WHERE type='table' AND name=?;': syntax error at or near ";"
+LINE 1: ...ELECT name FROM sqlite_master WHERE type='table' AND name=?;
+                                                                      ^
+ 
+  @ export_to_db: /Users/cosmoremit/Documents/AcNice/data2bot/scripts/models.py
+------------------------
+2022-09-28 23:58:30,251 
+------------------------
+ models.py:  
+             
+ Execution failed on sql 'SELECT name FROM sqlite_master WHERE type='table' AND name=?;': syntax error at or near ";"
+LINE 1: ...ELECT name FROM sqlite_master WHERE type='table' AND name=?;
+                                                                      ^
+ 
+  @ export_to_db: /Users/cosmoremit/Documents/AcNice/data2bot/scripts/models.py
+------------------------
+2022-09-28 23:59:36,649 
+------------------------
+ models.py:  
+             
+ Execution failed on sql 'SELECT name FROM sqlite_master WHERE type='table' AND name=?;': syntax error at or near ";"
+LINE 1: ...ELECT name FROM sqlite_master WHERE type='table' AND name=?;
+                                                                      ^
+ 
+  @ export_to_db: /Users/cosmoremit/Documents/AcNice/data2bot/scripts/models.py
+------------------------
+2022-09-29 01:05:14,064 
+------------------------
+ models.py:  
+             
+ Execution failed on sql 'SELECT name FROM sqlite_master WHERE type='table' AND name=?;': syntax error at or near ";"
+LINE 1: ...ELECT name FROM sqlite_master WHERE type='table' AND name=?;
+                                                                      ^
+ 
+  @ export_to_db: /Users/cosmoremit/Documents/AcNice/data2bot/scripts/models.py
+------------------------
+2022-09-29 01:09:33,324 
+------------------------
+ models.py:  
+             
+ [Errno 2] No such file or directory: '../data/raw/shipment_deliveries.csv' 
+  @ export_to_db: /Users/cosmoremit/Documents/AcNice/data2bot/scripts/models.py
+------------------------
+2022-09-29 01:15:11,847 
+------------------------
+ models.py:  
+             
+ Execution failed on sql 'SELECT name FROM sqlite_master WHERE type='table' AND name=?;': syntax error at or near ";"
+LINE 1: ...ELECT name FROM sqlite_master WHERE type='table' AND name=?;
+                                                                      ^
+ 
+  @ export_to_db: /Users/cosmoremit/Documents/AcNice/data2bot/scripts/models.py
+------------------------
+2022-09-29 01:29:40,367 
+------------------------
+ models.py:  
+             
+ (psycopg2.OperationalError) server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+
+[SQL: 
+            SELECT t.typname as "name",
+               -- no enum defaults in 8.4 at least
+               -- t.typdefault as "default",
+               pg_catalog.pg_type_is_visible(t.oid) as "visible",
+               n.nspname as "schema",
+               e.enumlabel as "label"
+            FROM pg_catalog.pg_type t
+                 LEFT JOIN pg_catalog.pg_namespace n ON n.oid = t.typnamespace
+                 LEFT JOIN pg_catalog.pg_enum e ON t.oid = e.enumtypid
+            WHERE t.typtype = 'e'
+        ORDER BY "schema", "name", e.oid]
+(Background on this error at: https://sqlalche.me/e/14/e3q8) 
+  @ export_to_db: /Users/cosmoremit/Documents/AcNice/data2bot/scripts/models.py
+------------------------
+2022-09-29 05:23:55,405 
+------------------------
+ models.py:  
+             
+ [Errno 2] No such file or directory: '..data2bot/data/raw/shipment_deliveries.csv' 
+  @ export_to_db: /Users/cosmoremit/Documents/AcNice/data2bot/scripts/models.py
+------------------------
+2022-09-29 06:09:02,832 
+------------------------
+ models.py:  
+             
+ [Errno 2] No such file or directory: 'best_performing_product.csv' 
+  @ export_to_warehouse: /Users/cosmoremit/Documents/AcNice/data2bot/scripts/models.py
+------------------------
+2022-09-29 06:09:04,851 
+------------------------
+ models.py:  
+             
+ [Errno 2] No such file or directory: 'agg_shipments.csv' 
+  @ export_to_warehouse: /Users/cosmoremit/Documents/AcNice/data2bot/scripts/models.py
+------------------------
+2022-09-29 06:09:05,864 
+------------------------
+ models.py:  
+             
+ [Errno 2] No such file or directory: 'agg_public_holiday.csv' 
+  @ export_to_warehouse: /Users/cosmoremit/Documents/AcNice/data2bot/scripts/models.py
+------------------------
+2022-09-29 06:14:33,007 
+------------------------
+ models.py:  
+             
+ [Errno 2] No such file or directory: 'best_performing_product.csv' 
+  @ export_to_warehouse: /Users/cosmoremit/Documents/AcNice/data2bot/scripts/models.py
+------------------------
+2022-09-29 06:14:35,060 
+------------------------
+ models.py:  
+             
+ [Errno 2] No such file or directory: 'agg_shipments.csv' 
+  @ export_to_warehouse: /Users/cosmoremit/Documents/AcNice/data2bot/scripts/models.py
+------------------------
+2022-09-29 06:14:36,088 
+------------------------
+ models.py:  
+             
+ [Errno 2] No such file or directory: 'agg_public_holiday.csv' 
+  @ export_to_warehouse: /Users/cosmoremit/Documents/AcNice/data2bot/scripts/models.py
+------------------------
+2022-09-29 06:17:14,298 
+------------------------
+ models.py:  
+             
+ [Errno 2] No such file or directory: 'best_performing_product.csv' 
+  @ export_to_warehouse: /Users/cosmoremit/Documents/AcNice/data2bot/scripts/models.py
+------------------------
+2022-09-29 06:17:16,323 
+------------------------
+ models.py:  
+             
+ [Errno 2] No such file or directory: 'agg_shipments.csv' 
+  @ export_to_warehouse: /Users/cosmoremit/Documents/AcNice/data2bot/scripts/models.py
+------------------------
+2022-09-29 06:17:17,338 
+------------------------
+ models.py:  
+             
+ [Errno 2] No such file or directory: 'agg_public_holiday.csv' 
+  @ export_to_warehouse: /Users/cosmoremit/Documents/AcNice/data2bot/scripts/models.py
+------------------------
+2022-09-29 06:20:14,825 
+------------------------
+ models.py:  
+             
+ Unable to locate credentials 
+  @ export_to_warehouse: /Users/cosmoremit/Documents/AcNice/data2bot/scripts/models.py
+------------------------
+2022-09-29 06:20:16,846 
+------------------------
+ models.py:  
+             
+ Unable to locate credentials 
+  @ export_to_warehouse: /Users/cosmoremit/Documents/AcNice/data2bot/scripts/models.py
+------------------------
+2022-09-29 06:20:17,862 
+------------------------
+ models.py:  
+             
+ Unable to locate credentials 
+  @ export_to_warehouse: /Users/cosmoremit/Documents/AcNice/data2bot/scripts/models.py

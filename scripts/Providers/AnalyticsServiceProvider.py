@@ -27,7 +27,7 @@ class AnalyticsServiceProvider(Service):
 
     def execute_service(self):
         # Read the sql file
-        conn = DatabaseConn()
+        conn = DatabaseConn(connector="pg")
         conn = conn.connect()
         conn.autocommit = True
 
@@ -43,4 +43,5 @@ class AnalyticsServiceProvider(Service):
                 print(": ", e)
                 logger.logger.error(e)
         conn.close()
-        print("Analysis Completed")
+        print("------" * 20)
+        print("Analysis Completed \n")
