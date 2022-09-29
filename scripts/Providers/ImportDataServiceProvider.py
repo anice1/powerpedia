@@ -3,7 +3,7 @@
 import sys
 from typing import List
 
-sys.path.append("../data2bot/scripts/")
+sys.path.append("../scripts/")
 from Handlers.env_handler import env
 from Handlers.log_handler import LogHandler
 from Handlers.service_handler import Service

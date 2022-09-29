@@ -8,7 +8,7 @@
 import sys
 from typing import List
 
-sys.path.append("../data2bot/scripts/")
+sys.path.append("../scripts/")
 from Handlers.log_handler import LogHandler
 from Handlers.service_handler import Service
 from Handlers.db_connect_handler import DatabaseConn
