@@ -16,30 +16,59 @@ CREATE TABLE
     );
 
 -- SELECT COUNT(rev) AS num_reviews(
-SELECT *, dt.working_day
+SELECT
+    DATE(NOW()) ingestion_date,
+    product_name,
+    tt_review_point, (
+        pct_one_star_review / tt_review_point :: float
+    ) * 100 pct_one_star_review, (
+        pct_two_star_review / tt_review_point :: float
+    ) * 100 pct_two_star_review, (
+        pct_three_star_review / tt_review_point :: float
+    ) * 100 pct_three_star_review, (
+        pct_four_star_review / tt_review_point :: float
+    ) * 100 pct_four_star_review, (
+        pct_five_star_review / tt_review_point :: float
+    ) * 100 pct_five_star_review
 FROM (
         SELECT
             pro.product_name,
-            NULL AS review,
-            NULL AS order_date
+            SUM(rev.review) AS tt_review_point,
+            SUM(
+                CASE
+                    WHEN rev.review = 1 THEN 1
+                END
+            ) AS pct_one_star_review,
+            SUM(
+                CASE
+                    WHEN rev.review = 2 THEN 2
+                END
+            ) AS pct_two_star_review,
+            SUM(
+                CASE
+                    WHEN rev.review = 3 THEN 3
+                END
+            ) AS pct_three_star_review,
+            SUM(
+                CASE
+                    WHEN rev.review = 4 THEN 4
+                END
+            ) AS pct_four_star_review,
+            SUM(
+                CASE
+                    WHEN rev.review = 5 THEN 5
+                END
+            ) AS pct_five_star_review
         FROM
             if_common.dim_products pro
-        UNION ALL
-        SELECT
-            NULL AS product_name,
-            rev.review,
-            NULL AS order_date
-        FROM
-            acnice6032_staging.reviews rev
-        UNION ALL
-        SELECT
-            NULL AS product_name,
-            NULL AS review,
-            ords.order_date
-        FROM
-            acnice6032_staging.orders ords
-    ) pp_info
-    JOIN if_common.dim_dates dt ON dt.calendar_dt = TO_DATE(
-        pp_info.order_date,
-        'YYYY-MM-DD'
-    );
+            JOIN acnice6032_staging.reviews rev ON pro.product_id = rev.product_id
+        GROUP BY
+            product_name
+    ) p_rev
+ORDER BY
+    tt_review_point,
+    pct_one_star_review,
+    pct_two_star_review,
+    pct_three_star_review,
+    pct_four_star_review,
+    pct_five_star_review DESC
