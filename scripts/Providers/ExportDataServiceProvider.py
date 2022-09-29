@@ -42,17 +42,17 @@ class ExportDataServiceProvider(Service):
         # name of the postgres schema
         self.default_schema = schema
 
-    def __validate_upload_to(self, upload_to):
-        if not upload_to.upper() in self.__upload_to_list:
+    def __validate_upload_to(self, export_to):
+        if not export_to.upper() in self.__upload_to_list:
             raise TypeError(
-                f"Upload type only expects one of these: {env('SERVER', 'DATA_STORES')}, {upload_to} was given"
+                f"Upload type only expects one of these: {env('SERVER', 'DATA_STORES')}, {export_to} was given"
             )
 
     def execute_service(self):
-        if self.upload_to == "DB":
+        if self.export_to == "DB":
             export_to_db(files=self.service_list, schema=self.default_schema)
 
-        elif self.upload_to == "WAREHOUSE":
+        elif self.export_to == "WAREHOUSE":
             export_to_warehouse(table_names=self.service_list)
         else:
             raise TypeError(
