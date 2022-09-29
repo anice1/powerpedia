@@ -336,41 +336,50 @@
 <h2 id="database-connection-handler"><strong>Database Connection Handler</strong></h2>
 <p>The database handler establishes necessary connection with the database based on information provided in the config.ini file.</p>
 <p>All errors encountered during the course of connection are logged to logs/data2bot.log
-<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">DatabaseConn</span><span class="p">(</span><span class="n">LogHandler</span><span class="p">):</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">log_file</span><span class="o">=</span><span class="n">env</span><span class="p">(</span><span class="s2">&quot;LOG&quot;</span><span class="p">,</span> <span class="s2">&quot;ERROR_LOG&quot;</span><span class="p">))</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">DatabaseConn</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">connector</span><span class="o">=</span><span class="n">env</span><span class="p">(</span><span class="s2">&quot;SERVER&quot;</span><span class="p">,</span> <span class="s2">&quot;DB_CONNECTOR&quot;</span><span class="p">))</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;Establish database connection based on the server settings in config.ini</span>
 
 <span class="sd">        Args:</span>
-<span class="sd">            log_file (str, optional): the name or path to the file where error will be logged. Defaults to ERROR_LOG path in config.ini</span>
+<span class="sd">            log_file (str, optional): The name or path to the file where error will be logged. Defaults to ERROR_LOG path in config.ini</span>
+<span class="sd">            connection (str, optional): The database connector, Default to DB_CONNECTOR in config.ini</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">log_file</span><span class="o">=</span><span class="n">log_file</span><span class="p">)</span>
-
-        <span class="bp">self</span><span class="o">.</span><span class="n">conn</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="c1"># Load connection variables from config.ini</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">DB_HOST</span> <span class="o">=</span> <span class="n">env</span><span class="p">(</span><span class="s2">&quot;SERVER&quot;</span><span class="p">,</span> <span class="s2">&quot;DB_HOST&quot;</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">DB_PORT</span> <span class="o">=</span> <span class="n">env</span><span class="p">(</span><span class="s2">&quot;SERVER&quot;</span><span class="p">,</span> <span class="s2">&quot;DB_PORT&quot;</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">DB_DATABASE</span> <span class="o">=</span> <span class="n">env</span><span class="p">(</span><span class="s2">&quot;SERVER&quot;</span><span class="p">,</span> <span class="s2">&quot;DB_DATABASE&quot;</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">DB_USERNAME</span> <span class="o">=</span> <span class="n">env</span><span class="p">(</span><span class="s2">&quot;SERVER&quot;</span><span class="p">,</span> <span class="s2">&quot;DB_USERNAME&quot;</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">DB_PASSWORD</span> <span class="o">=</span> <span class="n">env</span><span class="p">(</span><span class="s2">&quot;SERVER&quot;</span><span class="p">,</span> <span class="s2">&quot;DB_PASSWORD&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">connector</span> <span class="o">=</span> <span class="n">connector</span>
 
-    <span class="k">def</span> <span class="nf">connect</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__alchemy</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">create_engine</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;postgresql+psycopg2://</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">DB_USERNAME</span><span class="si">}</span><span class="s2">:</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">DB_PASSWORD</span><span class="si">}</span><span class="s2">@</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">DB_HOST</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">DB_DATABASE</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__pg</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># Establish a connection with the db</span>
         <span class="k">try</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">conn</span> <span class="o">=</span> <span class="n">pg</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span>
+            <span class="n">conn</span> <span class="o">=</span> <span class="n">pg</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span>
                 <span class="n">host</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">DB_HOST</span><span class="p">,</span>
                 <span class="n">dbname</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">DB_DATABASE</span><span class="p">,</span>
                 <span class="n">user</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">DB_USERNAME</span><span class="p">,</span>
                 <span class="n">password</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">DB_PASSWORD</span><span class="p">,</span>
                 <span class="n">port</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">DB_PORT</span><span class="p">,</span>
             <span class="p">)</span>
-
+            <span class="k">return</span> <span class="n">conn</span>
         <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-            <span class="c1"># log error to file</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">error</span><span class="p">()</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
 
-        <span class="c1"># self.logger.info(self.conn)</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">conn</span>
+    <span class="k">def</span> <span class="nf">connect</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">conn</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">connector</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;alchemy&quot;</span><span class="p">:</span>
+            <span class="n">conn</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__alchemy</span><span class="p">()</span>
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">connector</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;pg&quot;</span><span class="p">:</span>
+            <span class="n">conn</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__pg</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid connector, expects either pg or alchemy&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">conn</span>
 </code></pre></div></p>
 <h2 id="env-connection-handler"><strong>Env Connection Handler</strong></h2>
 <div class="highlight"><pre><span></span><code><span class="c1"># scripts/handlers/env_handler.py</span>
@@ -421,8 +430,8 @@
         <span class="k">return</span> <span class="kc">None</span>
 </code></pre></div>
 <h2 id="log-handler">Log Handler</h2>
+<p>The log handler control how logs are formatted.
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">Handlers.env_handler</span> <span class="kn">import</span> <span class="n">env</span>
-
 
 <span class="k">class</span> <span class="nc">LogHandler</span><span class="p">:</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">log_file</span><span class="o">=</span><span class="n">env</span><span class="p">(</span><span class="s2">&quot;LOG&quot;</span><span class="p">,</span> <span class="s2">&quot;ERROR_LOG&quot;</span><span class="p">)):</span>
@@ -439,7 +448,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">file_handler</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">FileHandler</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="n">log_file</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">file_handler</span><span class="o">.</span><span class="n">setFormatter</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">formatter</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">addHandler</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">file_handler</span><span class="p">)</span>
-</code></pre></div>
+</code></pre></div></p>
 
 
 

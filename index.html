@@ -557,15 +557,12 @@ S3_WAREHOUSE_BUCKET_NAME =
 <div class="highlight"><pre><span></span><code><span class="c1"># /scripts/start.py</span>
 <span class="kn">from</span> <span class="nn">Providers.ImportDataServiceProvider</span> <span class="kn">import</span> <span class="n">ImportDataServiceProvider</span>
 
-<span class="n">import_service</span> <span class="o">=</span> <span class="n">ImportDataServiceProvider</span><span class="p">()</span>
+<span class="n">import_service</span> <span class="o">=</span> <span class="n">ImportDataServiceProvider</span><span class="p">(</span><span class="n">import_from</span> <span class="o">=</span> <span class="s2">&quot;WAREHOUSE&quot;</span><span class="p">)</span>
 
 <span class="sd">&#39;&#39;&#39; Specify where to import where to import the files, either &#39;DB&#39; or &#39;WAREHOUSE&#39;. </span>
 <span class="sd">If not set, defaults to &quot;DB&quot; &#39;&#39;&#39;</span>
 
-<span class="n">import_service</span><span class="o">.</span><span class="n">import_from</span> <span class="o">=</span> <span class="s2">&quot;WAREHOUSE&quot;</span>
-
 <span class="c1"># A list of files/object names to import</span>
-
 <span class="n">import_service</span><span class="o">.</span><span class="n">service_list</span> <span class="o">=</span> <span class="p">[</span>
     <span class="s2">&quot;orders.csv&quot;</span><span class="p">,</span>
     <span class="s2">&quot;reviews.csv&quot;</span><span class="p">,</span>
@@ -579,15 +576,13 @@ S3_WAREHOUSE_BUCKET_NAME =
 <div class="highlight"><pre><span></span><code>DATA_STORES = [&quot;DB&quot;, &quot;WAREHOUSE&quot;]
 </code></pre></div></p>
 <h2 id="exporting-data"><strong>Exporting Data</strong> ⬆️</h2>
-<div class="highlight"><pre><span></span><code><span class="c1"># /scripts/start.py</span>
+<p><div class="highlight"><pre><span></span><code><span class="c1"># /scripts/start.py</span>
 <span class="kn">from</span> <span class="nn">Providers.ExportDataServiceProvider</span> <span class="kn">import</span> <span class="n">ExportDataServiceProvider</span>
 
-<span class="n">export_service</span> <span class="o">=</span> <span class="n">ExportDataServiceProvider</span><span class="p">()</span>
+<span class="n">export_service</span> <span class="o">=</span> <span class="n">ExportDataServiceProvider</span><span class="p">(</span><span class="n">export_to</span> <span class="o">=</span> <span class="s2">&quot;DB&quot;</span><span class="p">)</span>
 
 <span class="sd">&#39;&#39;&#39; Specify where to export the files to, either &#39;DB&#39; or &#39;WAREHOUSE&#39;. </span>
 <span class="sd">If not set, defaults to &quot;DB&quot; &#39;&#39;&#39;</span>
-
-<span class="n">export_service</span><span class="o">.</span><span class="n">upload_to</span> <span class="o">=</span> <span class="s2">&quot;DB&quot;</span>
 
 <span class="c1"># A list of files/object names to export</span>
 <span class="n">export_service</span><span class="o">.</span><span class="n">service_list</span> <span class="o">=</span> <span class="p">[</span>
@@ -599,6 +594,24 @@ S3_WAREHOUSE_BUCKET_NAME =
 <span class="c1"># start the export</span>
 <span class="n">export_service</span><span class="o">.</span><span class="n">execute_service</span><span class="p">()</span>
 </code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># /scripts/start.py</span>
+<span class="kn">from</span> <span class="nn">Providers.ExportDataServiceProvider</span> <span class="kn">import</span> <span class="n">ExportDataServiceProvider</span>
+
+<span class="n">export_service</span> <span class="o">=</span> <span class="n">ExportDataServiceProvider</span><span class="p">(</span><span class="n">export_to</span> <span class="o">=</span> <span class="s2">&quot;WAREHOUSE&quot;</span><span class="p">)</span>
+
+<span class="sd">&#39;&#39;&#39; Specify where to export the files to, either &#39;DB&#39; or &#39;WAREHOUSE&#39;. </span>
+<span class="sd">If not set, defaults to &quot;DB&quot; &#39;&#39;&#39;</span>
+
+<span class="c1"># A list of files/object names to export</span>
+<span class="n">export_service</span><span class="o">.</span><span class="n">service_list</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;../data2bot/data/transformed/orders.csv&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;../data2bot/data/raw/reviews.csv&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;../data2bot/data/raw/shipment_deliveries.csv&quot;</span><span class="p">,</span>
+<span class="p">]</span>
+
+<span class="c1"># start the export</span>
+<span class="n">export_service</span><span class="o">.</span><span class="n">execute_service</span><span class="p">()</span>
+</code></pre></div></p>
 <h2 id="running-sql-queries"><strong>Running SQL Queries</strong></h2>
 <p>All external SQL queries are stored inside the <code>/SQL</code> directory.</p>
 <p>For an external query to be executed, it must be registered inside the <a href="https://github.com/anochima/data2bot/blob/master/providers/AnalyticsServiceProvider.py" target='_blank'> Analytics Service Provider</a> class.</p>
@@ -620,7 +633,8 @@ S3_WAREHOUSE_BUCKET_NAME =
 <h2 id="running-the-pipeline"><strong>Running the Pipeline</strong> ⚡️</h2>
 <p>To run the pipeline, simply run the following command in your terminal.
 <div class="highlight"><pre><span></span><code>make run
-</code></pre></div></p>
+</code></pre></div>
+<img src='assets/run.png'/></p>
 <h2 id="documentation"><strong>Documentation</strong></h2>
 <p>To read the documentation, run <code>mkdocs serve</code> on terminal</p>
 

@@ -290,15 +290,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#extracting-data-from-warehouse" class="md-nav__link">
-    Extracting Data From Warehouse
+  <a href="#import-data-service-provider" class="md-nav__link">
+    Import Data Service Provider
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#dataload-service-provider" class="md-nav__link">
-    DataLoad Service Provider
+  <a href="#export-data-service-provider" class="md-nav__link">
+    Export Data Service Provider
   </a>
   
 </li>
@@ -326,37 +326,62 @@
 
 
 <h1 id="service-providers">Service Providers</h1>
-<h2 id="extracting-data-from-warehouse">Extracting Data From Warehouse</h2>
-<div class="highlight"><pre><span></span><code><span class="c1"># scripts/Providers/ExtractDataServiceProvider.py</span>
+<h2 id="import-data-service-provider">Import Data Service Provider</h2>
+<div class="highlight"><pre><span></span><code><span class="c1"># scripts/Providers/ImportDataServiceProvider.py</span>
+<span class="k">class</span> <span class="nc">ImportDataServiceProvider</span><span class="p">(</span><span class="n">Service</span><span class="p">):</span>
 
-<span class="k">class</span> <span class="nc">ExtractDataServiceProvider</span><span class="p">(</span><span class="n">Service</span><span class="p">):</span>
+    <span class="c1"># get the data stores from config.ini</span>
+    <span class="n">__import_froms</span> <span class="o">=</span> <span class="n">env</span><span class="p">(</span><span class="s2">&quot;SERVER&quot;</span><span class="p">,</span> <span class="s2">&quot;DATA_STORES&quot;</span><span class="p">)</span>
 
-    <span class="c1"># names of objects to download</span>
-    <span class="n">service_list</span> <span class="o">=</span> <span class="p">[</span>
-        <span class="s2">&quot;orders.csv&quot;</span><span class="p">,</span> 
-        <span class="s2">&quot;reviews.csv&quot;</span><span class="p">,</span> 
-        <span class="s2">&quot;shipment_deliveries.csv&quot;</span>
-        <span class="s2">&quot;...&quot;</span>
-    <span class="p">]</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">service_list</span><span class="p">:</span> <span class="n">List</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">import_from</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;DB&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Imports data from provided source, Database or Warehouse</span>
 
-    <span class="c1"># path where object will be stored</span>
-    <span class="n">service_path</span> <span class="o">=</span> <span class="s2">&quot;../Data2bot-Assessment/data/raw&quot;</span>
+<span class="sd">        Args:</span>
+<span class="sd">            service_list (names of objects to import, optional): _description_. Defaults to None.</span>
+<span class="sd">            import_from (str, optional): specifies where to import/download data from DB|WAREHOUSE. Defaults to &quot;DB&quot;.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Importing Data...&quot;</span><span class="p">)</span>
+
+        <span class="c1"># validate if import_from is registered in config</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__validate_import_from</span><span class="p">(</span><span class="n">import_from</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">import_from</span> <span class="o">=</span> <span class="n">import_from</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+
+        <span class="c1"># names of objects to import</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">service_list</span> <span class="o">=</span> <span class="n">service_list</span>
 </code></pre></div>
-<h2 id="dataload-service-provider">DataLoad Service Provider</h2>
-<div class="highlight"><pre><span></span><code><span class="c1"># scripts/Providers/DataLoadServiceProvider.py</span>
+<h2 id="export-data-service-provider">Export Data Service Provider</h2>
+<div class="highlight"><pre><span></span><code><span class="c1"># scripts/Providers/ImportDataServiceProvider.py</span>
+<span class="k">class</span> <span class="nc">ExportDataServiceProvider</span><span class="p">(</span><span class="n">Service</span><span class="p">):</span>
 
-<span class="k">class</span> <span class="nc">DataLoadServiceProvider</span><span class="p">(</span><span class="n">Service</span><span class="p">):</span>
+    <span class="c1"># get the data stores from config.ini</span>
+    <span class="n">__upload_to_list</span> <span class="o">=</span> <span class="n">env</span><span class="p">(</span><span class="s2">&quot;SERVER&quot;</span><span class="p">,</span> <span class="s2">&quot;DATA_STORES&quot;</span><span class="p">)</span>
 
-    <span class="c1"># name of files in data/raw to upload. </span>
-    <span class="c1"># Don&#39;t include the full file path. </span>
-    <span class="c1"># You must set service_path=None &quot;</span>
-    <span class="n">service_list</span> <span class="o">=</span> <span class="p">[</span>
-        <span class="s2">&quot;orders.csv&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;reviews.csv&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;shipment_deliveries.csv&quot;</span><span class="p">,</span>
-    <span class="p">]</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">service_list</span><span class="p">:</span> <span class="n">List</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">export_to</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;DB&quot;</span><span class="p">,</span>
+        <span class="n">schema</span><span class="o">=</span><span class="n">env</span><span class="p">(</span><span class="s2">&quot;SERVER&quot;</span><span class="p">,</span> <span class="s2">&quot;DB_STAGING_SCHEMA&quot;</span><span class="p">),</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;uploads</span>
 
-    <span class="n">service_path</span> <span class="o">=</span> <span class="s2">&quot;../Data2bot-Assessment/data/raw&quot;</span>
+<span class="sd">        Args:</span>
+<span class="sd">            service_list (List): Name of files to upload.</span>
+<span class="sd">            upload_to (str, optional): where to upload the files, either &#39;DB&#39; or &#39;WAREHOUSE&#39;. Defaults to &quot;DB&quot;.</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">            TypeError: if upload_to_type is not registered in config.ini</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Uploading Data...&quot;</span><span class="p">)</span>
+
+        <span class="c1"># validate if upload_to type is registered in config</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__validate_upload_to</span><span class="p">(</span><span class="n">upload_to</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">export_to</span> <span class="o">=</span> <span class="n">export_to</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+        <span class="c1"># name of files in data/raw to upload.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">service_list</span> <span class="o">=</span> <span class="n">service_list</span>
+        <span class="c1"># name of the postgres schema</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">default_schema</span> <span class="o">=</span> <span class="n">schema</span>
 </code></pre></div>
 <h2 id="analytics-service-provider">Analytics Service Provider</h2>
 <div class="highlight"><pre><span></span><code><span class="c1"># scripts/Providers/AnalyticsServiceProvider.py</span>
