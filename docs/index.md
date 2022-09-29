@@ -84,15 +84,12 @@ There are 2 ways to import data currently;
 # /scripts/start.py
 from Providers.ImportDataServiceProvider import ImportDataServiceProvider
 
-import_service = ImportDataServiceProvider()
+import_service = ImportDataServiceProvider(import_from = "WAREHOUSE")
 
 ''' Specify where to import where to import the files, either 'DB' or 'WAREHOUSE'. 
 If not set, defaults to "DB" '''
 
-import_service.import_from = "WAREHOUSE"
-
 # A list of files/object names to import
-
 import_service.service_list = [
     "orders.csv",
     "reviews.csv",
@@ -114,16 +111,34 @@ DATA_STORES = ["DB", "WAREHOUSE"]
 # /scripts/start.py
 from Providers.ExportDataServiceProvider import ExportDataServiceProvider
 
-export_service = ExportDataServiceProvider()
+export_service = ExportDataServiceProvider(export_to = "DB")
 
 ''' Specify where to export the files to, either 'DB' or 'WAREHOUSE'. 
 If not set, defaults to "DB" '''
 
-export_service.upload_to = "DB"
-
 # A list of files/object names to export
 export_service.service_list = [
     "../data2bot/data/raw/orders.csv",
+    "../data2bot/data/raw/reviews.csv",
+    "../data2bot/data/raw/shipment_deliveries.csv",
+]
+
+# start the export
+export_service.execute_service()
+
+```
+```python
+# /scripts/start.py
+from Providers.ExportDataServiceProvider import ExportDataServiceProvider
+
+export_service = ExportDataServiceProvider(export_to = "WAREHOUSE")
+
+''' Specify where to export the files to, either 'DB' or 'WAREHOUSE'. 
+If not set, defaults to "DB" '''
+
+# A list of files/object names to export
+export_service.service_list = [
+    "../data2bot/data/transformed/orders.csv",
     "../data2bot/data/raw/reviews.csv",
     "../data2bot/data/raw/shipment_deliveries.csv",
 ]
@@ -160,6 +175,7 @@ To run the pipeline, simply run the following command in your terminal.
 ```bash
 make run
 ```
+<img src='assets/run.png'/>
 
 ## **Documentation**
 To read the documentation, run `mkdocs serve` on terminal

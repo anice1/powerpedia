@@ -20,23 +20,14 @@ def import_from_warehouse():
 
 
 def export_data_to_db():
-    export_service = ExportDataServiceProvider()
+    export_service = ExportDataServiceProvider(export_to="DB")
     export_service.service_list = [
         "../data2bot/data/raw/orders.csv",
         "../data2bot/data/raw/reviews.csv",
         "../data2bot/data/raw/shipment_deliveries.csv",
     ]
-    export_service.upload_to = "DB"
     return export_service.execute_service()
 
-def export_data_to_warehouse():
-    export_service = ExportDataServiceProvider(upload_to='WAREHOUSE')
-    export_service.service_list = [
-        'agg_public_holiday', 
-        'agg_shipments', 
-        'best_performing_product'
-    ]
-    export_service.execute_service()
 
 def start_analysis():
     analytics_service = AnalyticsServiceProvider()
@@ -44,10 +35,21 @@ def start_analysis():
     analytics_service.service_list = [
         "../data2bot/sql/product_orders_on_holidays.sql",
         "../data2bot/sql/total_late_and_undelivered_shipments.sql",
-        "../data2bot/sql/product_reviews_analytics.sql",
+        "../data2bot/sql/best_performing_product.sql",
     ]
     analytics_service.execute_service()
+
+
+def export_data_to_warehouse():
+    export_service = ExportDataServiceProvider(export_to="WAREHOUSE")
     
+    # table names to export
+    export_service.service_list = [
+        "agg_public_holiday",
+        "agg_shipments",
+        "best_performing_product",
+    ]
+    export_service.execute_service()
 
 
 @app.command()
@@ -64,6 +66,7 @@ def run():
 
     # Import transfored to from db
     export_data_to_warehouse()
+
 
 if __name__ == "__main__":
     app()

@@ -1,41 +1,68 @@
 
 # Service Providers
-## Extracting Data From Warehouse
+## Import Data Service Provider
 
 ```python
-# scripts/Providers/ExtractDataServiceProvider.py
+# scripts/Providers/ImportDataServiceProvider.py
+class ImportDataServiceProvider(Service):
 
-class ExtractDataServiceProvider(Service):
+    # get the data stores from config.ini
+    __import_froms = env("SERVER", "DATA_STORES")
 
-    # names of objects to download
-    service_list = [
-        "orders.csv", 
-        "reviews.csv", 
-        "shipment_deliveries.csv"
-        "..."
-    ]
+    def __init__(self, service_list: List = None, import_from: str = "DB") -> None:
+        """Imports data from provided source, Database or Warehouse
 
-    # path where object will be stored
-    service_path = "../Data2bot-Assessment/data/raw"
+        Args:
+            service_list (names of objects to import, optional): _description_. Defaults to None.
+            import_from (str, optional): specifies where to import/download data from DB|WAREHOUSE. Defaults to "DB".
+        """
+        print("Importing Data...")
+
+        # validate if import_from is registered in config
+        self.__validate_import_from(import_from)
+
+        self.import_from = import_from.upper()
+
+        # names of objects to import
+        self.service_list = service_list
 
 ```
-## DataLoad Service Provider
+## Export Data Service Provider
 
 ```python
-# scripts/Providers/DataLoadServiceProvider.py
+# scripts/Providers/ImportDataServiceProvider.py
+class ExportDataServiceProvider(Service):
 
-class DataLoadServiceProvider(Service):
+    # get the data stores from config.ini
+    __upload_to_list = env("SERVER", "DATA_STORES")
 
-    # name of files in data/raw to upload. 
-    # Don't include the full file path. 
-    # You must set service_path=None "
-    service_list = [
-        "orders.csv",
-        "reviews.csv",
-        "shipment_deliveries.csv",
-    ]
+    def __init__(
+        self,
+        service_list: List = None,
+        export_to: str = "DB",
+        schema=env("SERVER", "DB_STAGING_SCHEMA"),
+    ) -> None:
+        """uploads
 
-    service_path = "../Data2bot-Assessment/data/raw"
+        Args:
+            service_list (List): Name of files to upload.
+            upload_to (str, optional): where to upload the files, either 'DB' or 'WAREHOUSE'. Defaults to "DB".
+
+        Raises:
+            TypeError: if upload_to_type is not registered in config.ini
+        """
+        print("Uploading Data...")
+
+        # validate if upload_to type is registered in config
+        self.__validate_upload_to(upload_to)
+
+        self.export_to = export_to.upper()
+        # name of files in data/raw to upload.
+        self.service_list = service_list
+        # name of the postgres schema
+        self.default_schema = schema
+
+
 ```
 
 ## Analytics Service Provider

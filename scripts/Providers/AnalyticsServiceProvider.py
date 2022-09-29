@@ -16,6 +16,9 @@ from Handlers.db_connect_handler import DatabaseConn
 
 logger = LogHandler(log_file="logs/analytics.log")
 
+conn = DatabaseConn(connector="pg")
+conn = conn.connect()
+conn.autocommit = True
 
 class AnalyticsServiceProvider(Service):
 
@@ -27,10 +30,6 @@ class AnalyticsServiceProvider(Service):
 
     def execute_service(self):
         # Read the sql file
-        conn = DatabaseConn(connector="pg")
-        conn = conn.connect()
-        conn.autocommit = True
-
         print("Running Analysis...")
         for f in self.service_list:
             try:

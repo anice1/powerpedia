@@ -47,21 +47,25 @@ def export_to_db(files: List, schema=env("SERVER", "DB_STAGING_SCHEMA")):
 
 
 def export_to_warehouse(
-    table_names: List = ['agg_public_holiday','agg_shipments','best_performing_product'],
-    schema=env('SERVER', 'DB_ANALYTICS_SCHEMA'),
-    bucket=env("SERVER", "S3_WAREHOUSE_BUCKET_NAME")
+    table_names: List = [
+        "agg_public_holiday",
+        "agg_shipments",
+        "best_performing_product",
+    ],
+    schema=env("SERVER", "DB_ANALYTICS_SCHEMA"),
+    bucket=env("SERVER", "S3_WAREHOUSE_BUCKET_NAME"),
 ):
     """Upload a file to an Warehouse bucket"""
 
     for table in table_names:
         query = pd.read_sql_query(f"""SELECT * FROM {schema}.{table}""", con=engine)
         df = pd.DataFrame(query)
-        df.to_csv(f'../data2bot/data/transformed/{table}.csv', index=False)
+        df.to_csv(f"../data2bot/data/transformed/{table}.csv", index=False)
 
-    upload_path = '../data2bot/data/transformed'
-    for file in os.listdir('../data2bot/data/transformed'):
+    upload_path = "../data2bot/data/transformed"
+    for file in os.listdir("../data2bot/data/transformed"):
         object_name = os.path.basename(file)
-        file = '/'.join([upload_path, object_name])
+        file = "/".join([upload_path, object_name])
 
         # Upload the file
         s3_client = boto3.client("s3", config=Config(signature_version=UNSIGNED))
@@ -72,7 +76,6 @@ def export_to_warehouse(
             logger.logger.error(e)
             print(e)
     print("------" * 20)
-
 
 
 def import_from_db(files: List):

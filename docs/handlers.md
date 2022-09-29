@@ -5,41 +5,50 @@ The database handler establishes necessary connection with the database based on
 
 All errors encountered during the course of connection are logged to logs/data2bot.log
 ```python
-class DatabaseConn(LogHandler):
-    def __init__(self, log_file=env("LOG", "ERROR_LOG")) -> None:
+class DatabaseConn:
+    def __init__(self, connector=env("SERVER", "DB_CONNECTOR")) -> None:
         """Establish database connection based on the server settings in config.ini
 
         Args:
-            log_file (str, optional): the name or path to the file where error will be logged. Defaults to ERROR_LOG path in config.ini
+            log_file (str, optional): The name or path to the file where error will be logged. Defaults to ERROR_LOG path in config.ini
+            connection (str, optional): The database connector, Default to DB_CONNECTOR in config.ini
         """
-        super().__init__(log_file=log_file)
-
-        self.conn = None
         # Load connection variables from config.ini
         self.DB_HOST = env("SERVER", "DB_HOST")
         self.DB_PORT = env("SERVER", "DB_PORT")
         self.DB_DATABASE = env("SERVER", "DB_DATABASE")
         self.DB_USERNAME = env("SERVER", "DB_USERNAME")
         self.DB_PASSWORD = env("SERVER", "DB_PASSWORD")
+        self.connector = connector
 
-    def connect(self):
+    def __alchemy(self):
+        return create_engine(
+            f"postgresql+psycopg2://{self.DB_USERNAME}:{self.DB_PASSWORD}@{self.DB_HOST}/{self.DB_DATABASE}"
+        )
+
+    def __pg(self):
         # Establish a connection with the db
         try:
-            self.conn = pg.connect(
+            conn = pg.connect(
                 host=self.DB_HOST,
                 dbname=self.DB_DATABASE,
                 user=self.DB_USERNAME,
                 password=self.DB_PASSWORD,
                 port=self.DB_PORT,
             )
-
+            return conn
         except Exception as e:
-            # log error to file
-            self.logger.debug(e)
-            self.error()
+            print(e)
 
-        # self.logger.info(self.conn)
-        return self.conn
+    def connect(self):
+        conn = None
+        if self.connector.lower() == "alchemy":
+            conn = self.__alchemy()
+        elif self.connector.lower() == "pg":
+            conn = self.__pg()
+        else:
+            raise TypeError("Invalid connector, expects either pg or alchemy")
+        return conn
 ```
 
 ## **Env Connection Handler**
@@ -98,9 +107,10 @@ class Service(ABC):
 ```
 
 ## Log Handler
+
+The log handler control how logs are formatted.
 ```python
 from Handlers.env_handler import env
-
 
 class LogHandler:
     def __init__(self, log_file=env("LOG", "ERROR_LOG")):

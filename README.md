@@ -1,19 +1,17 @@
-# D2b Data Pipeline
+# **D2b Data Pipeline**
 ## **Overview**
 D2b is a simple data pipeline designed to help automate the processes involved in extracting, transforming, analysing and exporting data insights carried out by data professionals at Data2bot. The automation pipeline is designed to abstract complexities and allow analysts to focus solely on SQL.
 
-To read the full documentation check <a href='https://anice1.github.io/d2b-docs/'>d2b-docs</a> or run `mkdocs serve` on terminal.
+<img src='docs/assets/system.svg' alt='System Flow'>
 
-<img src='docs/assets/system.svg' alt='System flow'>
+## **Key Implementation Tools**
+✅ &nbsp; &nbsp;  <a href='https://python.org'> Python </a> <br>
+✅ &nbsp; &nbsp;  <a href='https://www.postgresql.org'> Postgresql </a> <br>
+✅ &nbsp; &nbsp;  <a href='https://squidfunk.github.io/mkdocs-material/getting-started/'> Makedoc </a><br>
+✅ &nbsp; &nbsp;  <a href='https://www.gnu.org/software/make/manual/make.html'> GNU Makefile </a><br>
+✅ &nbsp; &nbsp;  <a href='https://www.github.com'> Github Actions </a>
 
-## Key Implementation Tools
-✅&nbsp;  <a href='https://python.org'> Python </a> <br>
-✅&nbsp;  <a href='https://www.postgresql.org'> Postgresql </a> <br>
-✅&nbsp;  <a href='https://squidfunk.github.io/mkdocs-material/getting-started/'> Makedoc </a><br>
-✅&nbsp;  <a href='https://www.gnu.org/software/make/manual/make.html'> GNU Makefile </a><br>
-✅&nbsp;  <a href='https://www.github.com'> Github Actions </a>
-
-## Installation and setup 🔩🪛
+## **Installation and setup** 🔩🪛
 Clone the repository.
 ```bash 
 git clone https://github.com/anochima/data2bot.git
@@ -77,22 +75,21 @@ new_username = env('SERVER', 'DB_USERNAME', 'user')
 print(new_username)  #output: user
 
 ```
-## Importing Data 🏬
+## **Importing Data** 🏬
 There are 2 ways to import data currently;
+
+`["DB", "WAREHOUSE"]`
 
 ```python
 # /scripts/start.py
 from Providers.ImportDataServiceProvider import ImportDataServiceProvider
 
-import_service = ImportDataServiceProvider()
+import_service = ImportDataServiceProvider(import_from = "WAREHOUSE")
 
 ''' Specify where to import where to import the files, either 'DB' or 'WAREHOUSE'. 
 If not set, defaults to "DB" '''
 
-import_service.import_from = "WAREHOUSE"
-
 # A list of files/object names to import
-
 import_service.service_list = [
     "orders.csv",
     "reviews.csv",
@@ -108,18 +105,16 @@ These "import froms" can be modified in the config.ini configuration file.
 DATA_STORES = ["DB", "WAREHOUSE"]
 ```
 
-## Exporting Data ⬆️
+## **Exporting Data** ⬆️
 
 ```python
 # /scripts/start.py
 from Providers.ExportDataServiceProvider import ExportDataServiceProvider
 
-export_service = ExportDataServiceProvider()
+export_service = ExportDataServiceProvider(export_to = "DB")
 
 ''' Specify where to export the files to, either 'DB' or 'WAREHOUSE'. 
 If not set, defaults to "DB" '''
-
-export_service.upload_to = "DB"
 
 # A list of files/object names to export
 export_service.service_list = [
@@ -132,8 +127,28 @@ export_service.service_list = [
 export_service.execute_service()
 
 ```
+```python
+# /scripts/start.py
+from Providers.ExportDataServiceProvider import ExportDataServiceProvider
 
-## Running SQL Queries
+export_service = ExportDataServiceProvider(export_to = "WAREHOUSE")
+
+''' Specify where to export the files to, either 'DB' or 'WAREHOUSE'. 
+If not set, defaults to "DB" '''
+
+# A list of files/object names to export
+export_service.service_list = [
+    "../data2bot/data/transformed/orders.csv",
+    "../data2bot/data/raw/reviews.csv",
+    "../data2bot/data/raw/shipment_deliveries.csv",
+]
+
+# start the export
+export_service.execute_service()
+
+```
+
+## **Running SQL Queries**
 All external SQL queries are stored inside the `/SQL` directory.
 
 For an external query to be executed, it must be registered inside the <a href="https://github.com/anochima/data2bot/blob/master/providers/AnalyticsServiceProvider.py" target='_blank'> Analytics Service Provider</a> class.
@@ -155,11 +170,12 @@ analytics_service.service_list = [
 analytics_service.execute_service()
 
 ```
-## Running the Pipeline ⚡️
+## **Running the Pipeline** ⚡️
 To run the pipeline, simply run the following command in your terminal.
 ```bash
 make run
 ```
+<img src='assets/run.png'/>
 
 ## Documentation
-To read the documentation, run `mkdocs serve` on terminal
+To read the full documentation check <a href='https://anice1.github.io/d2b-docs/'>d2b-docs</a> or run `mkdocs serve` on terminal.
