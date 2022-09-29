@@ -175,7 +175,7 @@ To run the pipeline, simply run the following command in your terminal.
 ```bash
 make run
 ```
-<img src='assets/run.png'/>
+<img src='docs/assets/run.png'/>
 
 ## Documentation
 To read the full documentation check <a href='https://anice1.github.io/d2b-docs/'>d2b-docs</a> or run `mkdocs serve` on terminal.
