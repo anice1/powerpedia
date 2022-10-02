@@ -1,4 +1,5 @@
 -- Active: 1663811583289@@d2b-internal-assessment-dwh.cxeuj0ektqdz.eu-central-1.rds.amazonaws.com@5432@d2b_assessment
+
 CREATE TABLE
     IF NOT EXISTS acnice6032_analytics.best_performing_product(
         ingestion_date DATE PRIMARY KEY NOT NULL,
@@ -16,6 +17,7 @@ CREATE TABLE
     );
 
 -- Get the product with highest reviews
+
 DO $$
 BEGIN 
 INSERT INTO acnice6032_analytics.best_performing_product(
@@ -210,7 +212,7 @@ WITH
         SELECT
             DATE(NOW()) AS ingestion_date,
             ship_dist.product_name,
-            ship_dist.most_ordered_day,
+            ship_dist.most_ordered_day::date,
             ship_dist.working_day,
             ship_dist.tt_review_point,
             ship_dist.pct_one_star_review,
@@ -232,7 +234,9 @@ WITH
     )
 select *
 from shipment_dist_pct;
+
 EXCEPTION WHEN unique_violation THEN RAISE NOTICE 'row skipped';
 
 END;
+
 $$ 
