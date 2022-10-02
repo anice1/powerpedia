@@ -42,7 +42,7 @@ def start_analysis():
 
 def export_data_to_warehouse():
     export_service = ExportDataServiceProvider(export_to="WAREHOUSE")
-    
+
     # table names to export
     export_service.service_list = [
         "agg_public_holiday",

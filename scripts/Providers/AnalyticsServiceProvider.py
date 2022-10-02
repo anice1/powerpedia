@@ -20,6 +20,7 @@ conn = DatabaseConn(connector="pg")
 conn = conn.connect()
 conn.autocommit = True
 
+
 class AnalyticsServiceProvider(Service):
 
     # name of analytics in sql e.g. "product_analysis.sql"
