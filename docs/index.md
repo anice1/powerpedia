@@ -49,6 +49,10 @@ DB_STAGING_SCHEMA =
 DB_ANALYTICS_SCHEMA =  
 
 S3_WAREHOUSE_BUCKET_NAME =
+DB_DEFAULT_SCHEMA = if_common
+DB_STAGING_SCHEMA = acnice6032_staging
+DB_ANALYTICS_SCHEMA = acnice6032_analytics
+DB_CONNECTOR = alchemy # or pg
 
 ```
 ### Retrieving configuration data from config.ini

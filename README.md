@@ -49,7 +49,10 @@ DB_STAGING_SCHEMA =
 DB_ANALYTICS_SCHEMA =  
 
 S3_WAREHOUSE_BUCKET_NAME =
-
+DB_DEFAULT_SCHEMA = if_common
+DB_STAGING_SCHEMA = acnice6032_staging
+DB_ANALYTICS_SCHEMA = acnice6032_analytics
+DB_CONNECTOR = alchemy # or pg
 ```
 ### Retrieving configuration data from config.ini
 To access the configuration variables into your python script. Import `env` function from `handlers.env_handler`.
