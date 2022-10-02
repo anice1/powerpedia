@@ -14,7 +14,8 @@ DB_PASSWORD=K8awgbnTpw
 
 DB_DEFAULT_SCHEMA = if_common
 DB_STAGING_SCHEMA = acnice6032_staging
-DB_ANALYTICS_SCHEMA = acnice6032_analytics 
+DB_ANALYTICS_SCHEMA = acnice6032_analytics
+DB_CONNECTOR = alchemy # or pg
 
 S3_WAREHOUSE_BUCKET_NAME = d2b-internal-assessment-bucket
 DATA_STORES = ["DB", "WAREHOUSE"]
