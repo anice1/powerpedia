@@ -33,3 +33,4 @@ help:
 	@echo "setup    : creates a virtual environment (data2bot) for the project."
 	@echo "clean   : deletes all unnecessary files and executes style formatting."
 	@echo "run   	: starts running the pipeline."
+	@echo "serve	: starts the streamlit local host server for visualization"
