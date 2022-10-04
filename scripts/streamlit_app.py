@@ -5,7 +5,10 @@ import streamlit as st
 
 # setup page configuration
 st.set_page_config(
-    layout='wide', page_icon='https://data2bots.com/wp-content/uploads/2018/11/image_1_8-2.png')
+    layout="wide",
+    page_icon="https://data2bots.com/wp-content/uploads/2018/11/image_1_8-2.png",
+)
+
 
 def intro():
 
@@ -60,17 +63,17 @@ def plot_analytics():
     )
     if plot.lower() == "public holiday orders":
 
-        st.header('Public Holiday Orders')
+        st.header("Public Holiday Orders")
         st.write(
-            'The total number of orders placed on a public holiday every month, for the past year')
+            "The total number of orders placed on a public holiday every month, for the past year"
+        )
         st.write("#### ")
         df = pd.read_csv("../data2bot/data/transformed/agg_public_holiday.csv")
         df = df.set_index("ingestion_date")
         df = df.T.reset_index()
 
         df = pd.melt(df, id_vars=["index"]).rename(
-            columns={"index": "month",
-                     "value": "total_orders"}
+            columns={"index": "month", "value": "total_orders"}
         )
 
         chart = (
@@ -82,36 +85,37 @@ def plot_analytics():
                 color="month:N",
             )
         )
-        
-        st.altair_chart(chart, use_container_width=True)
-        
 
+        st.altair_chart(chart, use_container_width=True)
 
     elif plot.lower() == "shipment deliveries":
 
-        st.header('Shipments')
-        st.write(
-            'The total number of Late shipments Vs. Undelivered shipments')
+        st.header("Shipments")
+        st.write("The total number of Late shipments Vs. Undelivered shipments")
         df = pd.read_csv("../data2bot/data/transformed/agg_shipments.csv")
         df = df.set_index("ingestion_date")
 
-        col1 , col2 = st.columns(2)
-        col1.metric('Average Late Shipments', df['tt_late_shipments'].median(), '%')
-        col2.metric('Average Undelivered Orders', df['tt_undelivered_items'].median(), '%')
+        col1, col2 = st.columns(2)
+        col1.metric("Average Late Shipments", df["tt_late_shipments"].median(), "%")
+        col2.metric(
+            "Average Undelivered Orders", df["tt_undelivered_items"].median(), "%"
+        )
 
         df = df.T.reset_index()
         df = pd.melt(df, id_vars=["index"]).rename(
-            columns={"index": "month",
-                     "value": "deliveries"}
+            columns={"index": "month", "value": "deliveries"}
         )
 
-        chart = alt.Chart(df).mark_line().encode(
-            x='ingestion_date:T',
-            y=alt.Y("deliveries:Q", stack=None),
-            color = "month:N"
+        chart = (
+            alt.Chart(df)
+            .mark_line()
+            .encode(
+                x="ingestion_date:T",
+                y=alt.Y("deliveries:Q", stack=None),
+                color="month:N",
+            )
         )
         st.altair_chart(chart, use_container_width=True)
-
 
     else:
         col1, col2 = st.columns(2)
