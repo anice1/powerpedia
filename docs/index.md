@@ -181,5 +181,12 @@ make run
 ```
 <img src='assets/run.png'/>
 
+## Visualization and Summarization
+There's an easy way to visualize the analysis on a local server using streamlit.
+```bash
+make serve
+```
+<img src='docs/assets/dashboard.png' alt='home dashboard'/>
+
 ## **Documentation**
 To read the documentation, run `mkdocs serve` on terminal

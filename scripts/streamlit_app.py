@@ -2,6 +2,9 @@
 import numpy as np
 import streamlit as st
 
+# setup page configuration
+st.set_page_config(
+    layout='wide', page_icon='https://data2bots.com/wp-content/uploads/2018/11/image_1_8-2.png')
 
 def intro():
 
@@ -37,51 +40,60 @@ def intro():
     """
     )
 
+
 def plot_analytics():
-    import time
+    import altair as alt
     import pandas as pd
     import matplotlib.pyplot as plt
     from Handlers.env_handler import env
 
-    st.markdown(f'# {list(page_names_to_funcs.keys())[1]}')
+    st.markdown(f"# {list(page_names_to_funcs.keys())[1]}")
     st.write(
         """
-        This demo illustrates a combination of plotting and animation with
-        Streamlit. We're generating a bunch of random numbers in a loop for around
-        5 seconds. Enjoy!
+        These dashboards visually summarizes all analysis carried out in the project. Enjoy!
         """
     )
-    st.write('\n')
-    plot = st.radio('Select Analysis', [
-                         'Public Holiday Orders', 'Shipment Deliveries', 'Best Performing Product'], horizontal=True)
-    
-    if plot.lower() == 'public holiday orders':
-        st.write('### Tabular Data')
+    st.write("\n")
+    plot = st.radio(
+        "Select Analysis",
+        ["Public Holiday Orders", "Shipment Deliveries", "Best Performing Product"],
+        horizontal=False,
+    )
+    if plot.lower() == "public holiday orders":
+
+        st.header('Public Holiday Orders')
+        st.write(
+            'The total number of orders placed on a public holiday every month, for the past year')
+        st.write("#### Tabular Data")
         df = pd.read_csv("../data2bot/data/transformed/agg_public_holiday.csv")
-        df.reset_index()    
         df = df.set_index("ingestion_date")
-        st.dataframe(df)
+        df = df.T.reset_index()
+
+        df = pd.melt(df, id_vars=["index"]).rename(
+            columns={"index": "month",
+                     "value": "total_orders"}
+        )
+
+        chart = (
+            alt.Chart(df)
+            .mark_area(opacity=0.5)
+            .encode(
+                x="ingestion_date",
+                y=alt.Y("total_orders:Q", stack=None),
+                color="month:N",
+            )
+        )
+        st.altair_chart(chart, use_container_width=True)
+        
 
 
-    elif plot.lower() == 'shipment deliveries':
+    elif plot.lower() == "shipment deliveries":
         pass
     else:
-        pass
+        col1, col2 = st.columns(2)
+        col1.metric("Most Ordered Date", "70 °F", "1.2 °F")
+        col2.metric("Wind", "9 mph", "-8%")
 
-    progress_bar = st.sidebar.progress(0)
-    status_text = st.sidebar.empty()
-    last_rows = np.random.randn(1, 1)
-    chart = st.line_chart(last_rows)
-
-    for i in range(1, 101):
-        new_rows = last_rows[-1, :] + np.random.randn(5, 1).cumsum(axis=0)
-        status_text.text("%i%% Complete" % i)
-        chart.add_rows(new_rows)
-        progress_bar.progress(i)
-        last_rows = new_rows
-        time.sleep(0.05)
-
-    progress_bar.empty()
 
 
 def data_frame_demo():
@@ -90,7 +102,7 @@ def data_frame_demo():
     import altair as alt
     from urllib.error import URLError
 
-    st.markdown(f"# {list(page_names_to_funcs.keys())[3]}")
+    st.markdown(f"# {list(page_names_to_funcs.keys())[2]}")
     st.write(
         """
         This demo shows how to use `st.write` to visualize Pandas DataFrames.
@@ -108,21 +120,18 @@ def data_frame_demo():
     try:
         df = get_UN_data()
         countries = st.multiselect(
-            "Choose countries", list(df.index), [
-                "China", "United States of America"]
+            "Choose countries", list(df.index), ["China", "United States of America"]
         )
         if not countries:
             st.error("Please select at least one country.")
         else:
             data = df.loc[countries]
             data /= 1000000.0
-            st.write("### Gross Agricultural Production ($B)",
-                     data.sort_index())
+            st.write("### Gross Agricultural Production ($B)", data.sort_index())
 
             data = data.T.reset_index()
             data = pd.melt(data, id_vars=["index"]).rename(
-                columns={"index": "year",
-                         "value": "Gross Agricultural Product ($B)"}
+                columns={"index": "year", "value": "Gross Agricultural Product ($B)"}
             )
             chart = (
                 alt.Chart(data)
@@ -145,10 +154,8 @@ def data_frame_demo():
         )
 
 
-page_names_to_funcs = {
-    "—": intro,
-    "Dashboards": plot_analytics
-}
+page_names_to_funcs = {"—": intro,
+                       "Dashboards": plot_analytics, 'plot': data_frame_demo}
 
-d2b = st.sidebar.selectbox("Choose a demo", page_names_to_funcs.keys())
+d2b = st.sidebar.selectbox("Menu", page_names_to_funcs.keys())
 page_names_to_funcs[d2b]()

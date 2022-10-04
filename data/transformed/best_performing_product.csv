@@ -1,2 +1,3 @@
 ingestion_date,product_name,most_ordered_day,is_public_holiday,tt_review_points,pct_one_star_review,pct_two_star_review,pct_three_star_review,pct_four_star_review,pct_five_star_review,pct_early_shipments,pct_late_shipments
 2022-10-02,Scooter,2022-01-06,True,967,5.48,13.03,17.06,27.71,36.71,0.0,0.0
+2022-10-04,Scooter,2022-01-06,True,967,5.48,13.03,17.06,27.71,36.71,0.0,0.0

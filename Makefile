@@ -23,6 +23,10 @@ clean:
 run: 
 	python3 scripts/start.py
 
+.PHONY: serve
+serve: 
+	streamlit run scripts/streamlit_app.py
+
 .PHONY: help
 help:
 	@echo "Commands:"

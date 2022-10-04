@@ -22,7 +22,7 @@ conn.autocommit = True
 
 
 class AnalyticsServiceProvider(Service):
-
+    
     # name of analytics in sql e.g. "product_analysis.sql"
     def __init__(self, service_list: List = None) -> None:
 
