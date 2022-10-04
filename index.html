@@ -314,6 +314,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#visualization-and-summarization" class="md-nav__link">
+    Visualization and Summarization 📊
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#documentation" class="md-nav__link">
     Documentation
   </a>
@@ -469,6 +476,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#visualization-and-summarization" class="md-nav__link">
+    Visualization and Summarization 📊
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#documentation" class="md-nav__link">
     Documentation
   </a>
@@ -530,6 +544,10 @@ DB_STAGING_SCHEMA =
 DB_ANALYTICS_SCHEMA =  
 
 S3_WAREHOUSE_BUCKET_NAME =
+DB_DEFAULT_SCHEMA = if_common
+DB_STAGING_SCHEMA = acnice6032_staging
+DB_ANALYTICS_SCHEMA = acnice6032_analytics
+DB_CONNECTOR = alchemy # or pg
 </code></pre></div>
 <h3 id="retrieving-configuration-data-from-configini">Retrieving configuration data from config.ini</h3>
 <p>To access the configuration variables into your python script. Import <code>env</code> function from <code>handlers.env_handler</code>.</p>
@@ -635,6 +653,12 @@ S3_WAREHOUSE_BUCKET_NAME =
 <div class="highlight"><pre><span></span><code>make run
 </code></pre></div>
 <img src='assets/run.png'/></p>
+<h2 id="visualization-and-summarization">Visualization and Summarization 📊</h2>
+<p>There's an easy way to visualize the analysis on a local server using streamlit.
+<div class="highlight"><pre><span></span><code>make serve
+</code></pre></div>
+<img src='assets/dashboard.png' alt='home dashboard'/>
+<img src='assets/dashboard2.png' alt='home dashboard'/></p>
 <h2 id="documentation"><strong>Documentation</strong></h2>
 <p>To read the documentation, run <code>mkdocs serve</code> on terminal</p>
 
