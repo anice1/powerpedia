@@ -180,12 +180,13 @@ make run
 ```
 <img src='docs/assets/run.png'/>
 
-## Visualization and Summarization
+## Visualization and Summarization 📊
 There's an easy way to visualize the analysis on a local server using streamlit.
 ```bash
 make serve
 ```
 <img src='docs/assets/dashboard.png'/>
+<img src='docs/assets/dashboard2.png'/>
 
 ## Documentation
 To read the full documentation check <a href='https://anice1.github.io/d2b-docs/'>d2b-docs</a> or run `mkdocs serve` on terminal.
