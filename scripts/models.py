@@ -60,10 +60,10 @@ def export_to_warehouse(
     for table in table_names:
         query = pd.read_sql_query(f"""SELECT * FROM {schema}.{table}""", con=engine)
         df = pd.DataFrame(query)
-        df.to_csv(f"../data2bot/data/transformed/{table}.csv", index=False)
+        df.to_csv(f"../d2b/data/transformed/{table}.csv", index=False)
 
-    upload_path = "../data2bot/data/transformed"
-    for file in os.listdir("../data2bot/data/transformed"):
+    upload_path = "../d2b/data/transformed"
+    for file in os.listdir("../d2b/data/transformed"):
         object_name = os.path.basename(file)
         file = "/".join([upload_path, object_name])
 
@@ -86,7 +86,7 @@ def import_from_warehouse(
     object_names: List,
     bucket_name=env("SERVER", "S3_WAREHOUSE_BUCKET_NAME"),
     prefix="orders_data",
-    path="../data2bot/data/raw",
+    path="../d2b/data/raw",
 ):
     """
     Extracts raw data from specified cloud (AWS) s3: bucket

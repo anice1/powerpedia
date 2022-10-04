@@ -68,7 +68,7 @@ def plot_analytics():
             "The total number of orders placed on a public holiday every month, for the past year"
         )
         st.write("#### ")
-        df = pd.read_csv("../data2bot/data/transformed/agg_public_holiday.csv")
+        df = pd.read_csv("../d2b/data/transformed/agg_public_holiday.csv")
         df = df.set_index("ingestion_date")
         df = df.T.reset_index()
 
@@ -92,7 +92,7 @@ def plot_analytics():
 
         st.header("Shipments")
         st.write("The total number of Late shipments Vs. Undelivered shipments")
-        df = pd.read_csv("../data2bot/data/transformed/agg_shipments.csv")
+        df = pd.read_csv("../d2b/data/transformed/agg_shipments.csv")
         df = df.set_index("ingestion_date")
 
         col1, col2 = st.columns(2)

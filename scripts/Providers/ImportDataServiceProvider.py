@@ -3,7 +3,7 @@
 import sys
 from typing import List
 
-sys.path.append("../scripts/")
+sys.path.append("../d2b/scripts/")
 from Handlers.env_handler import env
 from Handlers.log_handler import LogHandler
 from Handlers.service_handler import Service

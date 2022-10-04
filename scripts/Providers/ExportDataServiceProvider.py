@@ -7,7 +7,7 @@ from sqlalchemy import create_engine
 from Handlers.service_handler import Service
 
 
-sys.path.append("../scripts/")
+sys.path.append("../d2b/scripts/")
 from models import export_to_db, export_to_warehouse
 
 

@@ -3,7 +3,7 @@
 from configparser import ConfigParser
 
 # read configuraton file
-config_file = "../data2bot/config.ini"
+config_file = "../d2b/config.ini"
 config = ConfigParser()
 config.read(config_file)
 

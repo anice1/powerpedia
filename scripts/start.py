@@ -22,9 +22,9 @@ def import_from_warehouse():
 def export_data_to_db():
     export_service = ExportDataServiceProvider(export_to="DB")
     export_service.service_list = [
-        "../data2bot/data/raw/orders.csv",
-        "../data2bot/data/raw/reviews.csv",
-        "../data2bot/data/raw/shipment_deliveries.csv",
+        "../d2b/data/raw/orders.csv",
+        "../d2b/data/raw/reviews.csv",
+        "../d2b/data/raw/shipment_deliveries.csv",
     ]
     return export_service.execute_service()
 
@@ -33,9 +33,9 @@ def start_analysis():
     analytics_service = AnalyticsServiceProvider()
 
     analytics_service.service_list = [
-        "../data2bot/sql/product_orders_on_holidays.sql",
-        "../data2bot/sql/total_late_and_undelivered_shipments.sql",
-        "../data2bot/sql/best_performing_product.sql",
+        "../d2b/sql/product_orders_on_holidays.sql",
+        "../d2b/sql/total_late_and_undelivered_shipments.sql",
+        "../d2b/sql/best_performing_product.sql",
     ]
     analytics_service.execute_service()
 
