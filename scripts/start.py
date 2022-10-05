@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 
 import typer
-from Providers.AnalyticsServiceProvider import AnalyticsServiceProvider
-from Providers.ExportDataServiceProvider import ExportDataServiceProvider
-from Providers.ImportDataServiceProvider import ImportDataServiceProvider
+from providers.AnalyticsServiceProvider import AnalyticsServiceProvider
+from providers.ExportDataServiceProvider import ExportDataServiceProvider
+from providers.ImportDataServiceProvider import ImportDataServiceProvider
 
 app = typer.Typer()
 

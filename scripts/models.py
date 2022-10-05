@@ -6,10 +6,10 @@ import pandas as pd
 from typing import List
 from botocore import UNSIGNED
 from botocore.client import Config
-from Handlers.env_handler import env
+from handlers.env_handler import env
 from sqlalchemy import create_engine, inspect
-from Handlers.log_handler import LogHandler
-from Handlers.db_connect_handler import DatabaseConn
+from handlers.log_handler import LogHandler
+from handlers.db_connect_handler import DatabaseConn
 
 logger = LogHandler(log_file="logs/models.log")
 

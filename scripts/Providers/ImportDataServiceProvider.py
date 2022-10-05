@@ -4,9 +4,9 @@ import sys
 from typing import List
 
 sys.path.append("../d2b/scripts/")
-from Handlers.env_handler import env
-from Handlers.log_handler import LogHandler
-from Handlers.service_handler import Service
+from handlers.env_handler import env
+from handlers.log_handler import LogHandler
+from handlers.service_handler import Service
 from models import import_from_warehouse, import_from_db
 
 handler = LogHandler("logs/import.log")

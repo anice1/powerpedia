@@ -1,10 +1,9 @@
 #!/usr/bin/python3
-from email.policy import default
 import sys
 from typing import List
-from Handlers.env_handler import env
+from handlers.env_handler import env
 from sqlalchemy import create_engine
-from Handlers.service_handler import Service
+from handlers.service_handler import Service
 
 
 sys.path.append("../d2b/scripts/")

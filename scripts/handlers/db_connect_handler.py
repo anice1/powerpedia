@@ -3,7 +3,7 @@
 from typing import Type
 import psycopg2 as pg
 from sqlalchemy import create_engine
-from Handlers.env_handler import env
+from handlers.env_handler import env
 
 
 class DatabaseConn:

@@ -5,13 +5,13 @@
  These sql files are loaded into the Kernel. Now create something great!
 
 """
-import sys
+# import sys
 from typing import List
 
-sys.path.append("../d2b/scripts/")
-from Handlers.log_handler import LogHandler
-from Handlers.service_handler import Service
-from Handlers.db_connect_handler import DatabaseConn
+# sys.path.append("../d2b/scripts/")
+from handlers.log_handler import LogHandler
+from handlers.service_handler import Service
+from handlers.db_connect_handler import DatabaseConn
 
 
 logger = LogHandler(log_file="logs/analytics.log")
@@ -24,7 +24,7 @@ conn.autocommit = True
 class AnalyticsServiceProvider(Service):
 
     # name of analytics in sql e.g. "product_analysis.sql"
-    def __init__(self, service_list: List = None) -> None:
+    def __init__(self, service_list: List[str] = None) -> None:
 
         # name of files in data/raw to upload.
         self.service_list = service_list
