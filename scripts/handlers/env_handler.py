@@ -19,7 +19,7 @@ def env(section, key, value=None):
     value: desired value for the selected key, if not set, returns the key's
     current value.
     """
-    if value is None:
+    if value == None:
         return config[section][key]
     else:
         config[section][key] = value

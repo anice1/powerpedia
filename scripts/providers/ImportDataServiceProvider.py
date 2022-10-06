@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 
-import sys
+# import sys
 from typing import List
 
-sys.path.append("../d2b/scripts/")
+# sys.path.append("../d2b/scripts/")
 from handlers.env_handler import env
 from handlers.log_handler import LogHandler
 from handlers.service_handler import Service

@@ -1,9 +1,8 @@
 #!/usr/bin/python3
 
-from typing import Type
 import psycopg2 as pg
 from sqlalchemy import create_engine
-from handlers.env_handler import env
+from env_handler import env
 
 
 class DatabaseConn:
@@ -22,12 +21,12 @@ class DatabaseConn:
         self.DB_PASSWORD = env("SERVER", "DB_PASSWORD")
         self.connector = connector
 
-    def alchemy(self):
+    def __alchemy(self):
         return create_engine(
             f"postgresql+psycopg2://{self.DB_USERNAME}:{self.DB_PASSWORD}@{self.DB_HOST}/{self.DB_DATABASE}"
         )
 
-    def pg(self):
+    def __pg(self):
         # Establish a connection with the db
         try:
             conn = pg.connect(
@@ -44,11 +43,14 @@ class DatabaseConn:
     def connect(self):
         conn = None
         if self.connector.lower() == "alchemy":
-            conn = self.alchemy()
+            conn = self.__alchemy()
         elif self.connector.lower() == "pg":
-            conn = self.pg()
-        else:
-            raise TypeError("Invalid connector, expects either pg or alchemy")
+            conn = self.__pg()
+        elif not self.connector.lower() in env("SERVER", "DB_CONNECTOR"):
+            raise TypeError(
+                "Invalid connector, expects one of these "
+                + env("SERVER", "DB_CONNECTOR")
+            )
         return conn
 
     # def extract(self, table, schema=env("SERVER", "DB_DEFAULT_SCHEMA")):

@@ -1,12 +1,9 @@
 #!/usr/bin/python3
-import sys
 from typing import List
 from handlers.env_handler import env
 from sqlalchemy import create_engine
 from handlers.service_handler import Service
 
-
-sys.path.append("../d2b/scripts/")
 from models import export_to_db, export_to_warehouse
 
 

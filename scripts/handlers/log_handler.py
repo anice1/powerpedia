@@ -2,7 +2,7 @@
 
 import logging
 
-from handlers.env_handler import env
+from env_handler import env
 
 
 class LogHandler:
