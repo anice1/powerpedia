@@ -2,7 +2,7 @@
 
 import psycopg2 as pg
 from sqlalchemy import create_engine
-from env_handler import env
+from handlers.env_handler import env
 
 
 class DatabaseConn:
