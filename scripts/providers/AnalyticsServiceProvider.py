@@ -5,10 +5,8 @@
  These sql files are loaded into the Kernel. Now create something great!
 
 """
-# import sys
-from typing import List
 
-# sys.path.append("../d2b/scripts/")
+from typing import List
 from handlers.log_handler import LogHandler
 from handlers.service_handler import Service
 from handlers.db_connect_handler import DatabaseConn

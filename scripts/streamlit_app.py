@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-from turtle import color
+from distutils.log import info
 import numpy as np
 import streamlit as st
 
@@ -118,7 +118,9 @@ def plot_analytics():
         st.altair_chart(chart, use_container_width=True)
 
     else:
-        col1, col2 = st.columns(2)
+        st.header("Best Performing Product")
+        st.write("Discover the best performing product.")
+        st.info("What makes it the best? \n\n Day most ordered, On a holiday? etc.")
 
 
 pages = {"—": intro, "Dashboards": plot_analytics}
