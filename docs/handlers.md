@@ -3,7 +3,7 @@
 ## **Database Connection Handler**
 The database handler establishes necessary connection with the database based on information provided in the config.ini file.
 
-All errors encountered during the course of connection are logged to logs/data2bot.log
+All errors encountered during the course of connection are logged to logs/d2b.log
 ```python
 class DatabaseConn:
     def __init__(self, connector=env("SERVER", "DB_CONNECTOR")) -> None:
@@ -57,7 +57,7 @@ class DatabaseConn:
 # scripts/handlers/env_handler.py
 
 # read configuraton file
-config_file = "../data2bot/config.ini"
+config_file = "../d2b/config.ini"
 config = ConfigParser()
 config.read(config_file)
 

@@ -1,7 +1,7 @@
 [APP]
-APP_NAME = Data2Bot
+APP_NAME = Powerpedia
 APP_VERSION = "1.0.0"
-APP_COPYRIGHT = "Copyright (c) 2022 Data2Bot Assessment"
+APP_COPYRIGHT = "Copyright (c) 2022 powerpedia"
 APP_AUTHOR = "Anosike Chimaobi Nice"
 
 [SERVER]
@@ -21,5 +21,5 @@ S3_WAREHOUSE_BUCKET_NAME = d2b-internal-assessment-bucket
 DATA_STORES = ["DB", "WAREHOUSE"]
 
 [LOG]
-ERROR_LOG=logs/data2bot.log
+ERROR_LOG=logs/d2b.log
 LOG_LEVEL=DEBUG

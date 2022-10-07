@@ -1,6 +1,6 @@
 # **D2b Data Pipeline**
 ## **Overview**
-D2b is a simple data pipeline designed to help automate the processes involved in extracting, transforming, analysing and exporting data insights carried out by data professionals at Data2bot. The automation pipeline is designed to abstract complexities and allow analysts to focus solely on SQL.
+D2b is a simple data pipeline designed to help automate the processes involved in extracting, transforming, analysing and exporting data insights carried out by data professionals at powerpedia (Imaginary Company). The automation pipeline is designed to abstract complexities and allow analysts to focus solely on SQL.
 
 <img src='assets/system.svg' alt='System flow'>
 
@@ -14,8 +14,8 @@ D2b is a simple data pipeline designed to help automate the processes involved i
 ## **Installation and setup** 🔩🪛
 Clone the repository.
 ```bash 
-git clone https://github.com/anochima/data2bot.git
-cd data2bot
+git clone https://github.com/anochima/d2b.git
+cd d2b
 ```
 
 ```bash
@@ -23,7 +23,7 @@ make setup
 ```
 The above commands: 
 
-* Creates and activate a virtual environmnent (.data2bot) at the root directory
+* Creates and activate a virtual environmnent (.d2b) at the root directory
 * Installs all neccessary packages needed to successfully run the project
 * And finally creates a configuration file (config.ini) for setting up the Database connections, etc.
 
@@ -86,7 +86,7 @@ There are 2 ways to import data currently;
 
 ```python
 # /scripts/start.py
-from Providers.ImportDataServiceProvider import ImportDataServiceProvider
+from providers.ImportDataServiceProvider import ImportDataServiceProvider
 
 import_service = ImportDataServiceProvider(import_from = "WAREHOUSE")
 
@@ -113,7 +113,7 @@ DATA_STORES = ["DB", "WAREHOUSE"]
 
 ```python
 # /scripts/start.py
-from Providers.ExportDataServiceProvider import ExportDataServiceProvider
+from providers.ExportDataServiceProvider import ExportDataServiceProvider
 
 export_service = ExportDataServiceProvider(export_to = "DB")
 
@@ -122,9 +122,9 @@ If not set, defaults to "DB" '''
 
 # A list of files/object names to export
 export_service.service_list = [
-    "../data2bot/data/raw/orders.csv",
-    "../data2bot/data/raw/reviews.csv",
-    "../data2bot/data/raw/shipment_deliveries.csv",
+    "../d2b/data/raw/orders.csv",
+    "../d2b/data/raw/reviews.csv",
+    "../d2b/data/raw/shipment_deliveries.csv",
 ]
 
 # start the export
@@ -133,7 +133,7 @@ export_service.execute_service()
 ```
 ```python
 # /scripts/start.py
-from Providers.ExportDataServiceProvider import ExportDataServiceProvider
+from providers.ExportDataServiceProvider import ExportDataServiceProvider
 
 export_service = ExportDataServiceProvider(export_to = "WAREHOUSE")
 
@@ -142,9 +142,9 @@ If not set, defaults to "DB" '''
 
 # A list of files/object names to export
 export_service.service_list = [
-    "../data2bot/data/transformed/orders.csv",
-    "../data2bot/data/raw/reviews.csv",
-    "../data2bot/data/raw/shipment_deliveries.csv",
+    "../d2b/data/transformed/orders.csv",
+    "../d2b/data/raw/reviews.csv",
+    "../d2b/data/raw/shipment_deliveries.csv",
 ]
 
 # start the export
@@ -155,19 +155,19 @@ export_service.execute_service()
 ## **Running SQL Queries**
 All external SQL queries are stored inside the `/SQL` directory.
 
-For an external query to be executed, it must be registered inside the <a href="https://github.com/anochima/data2bot/blob/master/providers/AnalyticsServiceProvider.py" target='_blank'> Analytics Service Provider</a> class.
+For an external query to be executed, it must be registered inside the <a href="https://github.com/anice1/d2b/blob/master/providers/AnalyticsServiceProvider.py" target='_blank'> Analytics Service Provider</a> class.
 
 ```python
 # scripts/start.py
-from Providers.AnalyticsServiceProvider import AnalyticsServiceProvider
+from providers.AnalyticsServiceProvider import AnalyticsServiceProvider
 
 analytics_service = AnalyticsServiceProvider()
 
 # list of analytics scripts in /sql to run e.g. "product_analysis.sql"
 analytics_service.service_list = [
-    "../data2bot/sql/product_orders_on_holidays.sql",
-    "../data2bot/sql/total_late_and_undelivered_shipments.sql",
-    "../data2bot/sql/product_reviews_analytics.sql",
+    "../d2b/sql/product_orders_on_holidays.sql",
+    "../d2b/sql/total_late_and_undelivered_shipments.sql",
+    "../d2b/sql/product_reviews_analytics.sql",
 ]
 
 # start running analysis

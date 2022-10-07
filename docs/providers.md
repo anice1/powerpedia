@@ -78,5 +78,5 @@ class AnalyticsServiceProvider(Service):
         '...'
     ]
 
-    service_path = "../Data2bot-Assessment/sql"
+    service_path = "../d2b/sql"
 ```

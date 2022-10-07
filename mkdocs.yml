@@ -1,15 +1,15 @@
 # mkdocs.yml
-site_name: Data2bot Pipeline
+site_name: D2B Pipeline
 site_url: https://anice1.github.io/d2b-docs/
-site_description: D2b is a simple data pipeline designed to help automate the processes involved in extracting, transforming, analysing and exporting data insights carried out by data professionals at Data2bot.
+site_description: D2b is a simple data pipeline designed to help automate the processes involved in extracting, transforming, analysing and exporting data insights carried out by data professionals at powerpedia (Imaginary Company).
 
-repo_url: https://github.com/anice1/data2bot/
-repo_name: anice1/data2bot
+repo_url: https://github.com/anice1/d2b/
+repo_name: anice1/d2b
 
 theme:
   name: material
-  logo: https://data2bots.com/wp-content/uploads/2018/11/image_1_8-2.png
-  favicon: https://data2bots.com/wp-content/uploads/2018/11/image_1_8-2.png
+  logo: https://img.freepik.com/premium-vector/minimal-letter-p-pipe-setting-logo_643908-269.jpg
+  favicon: https://img.freepik.com/premium-vector/minimal-letter-p-pipe-setting-logo_643908-269.jpg
   features:
     - navigation.instant
     - navigation.top
@@ -36,6 +36,6 @@ extra:
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/AcNice_
     - icon: fontawesome/brands/github
-      link: https://github.com/anochima/data2bot-assessment
+      link: https://github.com/anice1/
     - icon: fontawesome/brands/facebook
       link: https://www.facebook.com/chimaobi.nice

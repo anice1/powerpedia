@@ -6,7 +6,7 @@ import streamlit as st
 # setup page configuration
 st.set_page_config(
     layout="wide",
-    page_icon="https://data2bots.com/wp-content/uploads/2018/11/image_1_8-2.png",
+    page_icon="https://img.freepik.com/premium-vector/minimal-letter-p-pipe-setting-logo_643908-269.jpg",
 )
 
 
@@ -17,13 +17,13 @@ def intro():
     st.markdown(
         """
         ### Overview
-        D2b is a simple data pipeline designed to help automate the processes involved in extracting, transforming, analysing and exporting data insights carried out by data professionals at Data2bot. The automation pipeline is designed to abstract complexities and allow analysts to focus solely on SQL.
+        D2b is a simple data pipeline designed to help automate the processes involved in extracting, transforming, analysing and exporting data insights carried out by data professionals at powerpedia (Imaginary Company). The automation pipeline is designed to abstract complexities and allow analysts to focus solely on SQL.
 
         ### **Installation and setup** 🔩🪛
         Clone the repository.
         ```bash 
-        git clone https://github.com/anochima/data2bot.git
-        cd data2bot
+        git clone https://github.com/anice1/d2b.git
+        cd d2b
         ```
 
         ```bash
@@ -31,7 +31,7 @@ def intro():
         ```
         The above commands: 
 
-        * Creates and activate a virtual environmnent (.data2bot) at the root directory
+        * Creates and activate a virtual environmnent (.d2b) at the root directory
         * Installs all neccessary packages needed to successfully run the project
         * And finally creates a configuration file (config.ini) for setting up the Database connections, etc.
         
@@ -96,9 +96,11 @@ def plot_analytics():
         df = df.set_index("ingestion_date")
 
         col1, col2 = st.columns(2)
-        col1.metric("Average Late Shipments", df["tt_late_shipments"].median(), "%")
+        col1.metric("Average Late Shipments",
+                    df["tt_late_shipments"].median(), "%")
         col2.metric(
-            "Average Undelivered Orders", df["tt_undelivered_items"].median(), "%"
+            "Average Undelivered Orders", df["tt_undelivered_items"].median(
+            ), "%"
         )
 
         df = df.T.reset_index()

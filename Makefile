@@ -3,8 +3,8 @@ SHELL = /bin/bash
 # Environment
 .PHONY: setup
 setup:
-	python3 -m venv ~/.data2bot && \
-	source ~/.data2bot/bin/activate && \
+	python3 -m venv ~/.d2b && \
+	source ~/.d2b/bin/activate && \
 	pip3 install -r configs/requirements.txt && \
 	cp configs/config.ini.example config.ini
 
@@ -30,7 +30,7 @@ serve:
 .PHONY: help
 help:
 	@echo "Commands:"
-	@echo "setup    : creates a virtual environment (data2bot) for the project."
+	@echo "setup    : creates a virtual environment (.d2b) for the project."
 	@echo "clean   : deletes all unnecessary files and executes style formatting."
 	@echo "run   	: starts running the pipeline."
 	@echo "serve	: starts the streamlit local host server for visualization"
