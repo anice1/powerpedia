@@ -96,11 +96,9 @@ def plot_analytics():
         df = df.set_index("ingestion_date")
 
         col1, col2 = st.columns(2)
-        col1.metric("Average Late Shipments",
-                    df["tt_late_shipments"].median(), "%")
+        col1.metric("Average Late Shipments", df["tt_late_shipments"].median(), "%")
         col2.metric(
-            "Average Undelivered Orders", df["tt_undelivered_items"].median(
-            ), "%"
+            "Average Undelivered Orders", df["tt_undelivered_items"].median(), "%"
         )
 
         df = df.T.reset_index()
