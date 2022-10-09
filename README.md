@@ -74,7 +74,7 @@ The env() function sets or returns config file section, key value `env('SECTION'
 ```python
 from handlers.env_handler import env
 
-username = env('SERVER', 'DB_USERNAME')# Get the database username
+username = env('SERVER', 'DB_USERNAME') # Get the database username
 print(username)  #output: root 
 ```
 
@@ -94,8 +94,7 @@ from providers.ImportDataServiceProvider import ImportDataServiceProvider
 
 import_service = ImportDataServiceProvider(import_from = "WAREHOUSE") #Import from warehouse by setting import_from="warehouse"
 
-# A list of files/object names to import
-import_service.service_list = [
+import_service.service_list = [ # A list of files/object names to import
     "orders.csv",
     "reviews.csv",
     "shipment_deliveries.csv",
@@ -107,7 +106,7 @@ import_service.execute_service() # start import
 
 These "import froms" can be modified in the config.ini configuration file.
 
-```
+```bash
 DATA_STORES = ["DB", "WAREHOUSE"]
 ```
 
@@ -120,8 +119,7 @@ from providers.ExportDataServiceProvider import ExportDataServiceProvider
 
 export_service = ExportDataServiceProvider(export_to="DB") #Export to db by setting export_to="db"
 
-# A list of files/object names to export
-export_service.service_list = [
+export_service.service_list = [ # A list of files/object names to export
     "../d2b/data/raw/orders.csv",
     "../d2b/data/raw/reviews.csv",
     "../d2b/data/raw/shipment_deliveries.csv",
@@ -138,8 +136,7 @@ from providers.ExportDataServiceProvider import ExportDataServiceProvider
 
 export_service = ExportDataServiceProvider(export_to = "WAREHOUSE") #Export to warehouse by setting export_to="warehouse"
 
-# A list of files/object names to export
-export_service.service_list = [
+export_service.service_list = [ # A list of files/object names to export
     "../d2b/data/transformed/orders.csv",
     "../d2b/data/raw/reviews.csv",
     "../d2b/data/raw/shipment_deliveries.csv",
@@ -160,8 +157,7 @@ from providers.AnalyticsServiceProvider import AnalyticsServiceProvider
 
 analytics_service = AnalyticsServiceProvider()
 
-# list of analytics scripts in /sql to run e.g. "product_analysis.sql"
-analytics_service.service_list = [
+analytics_service.service_list = [ # list of analytics scripts in /sql to run e.g. "product_analysis.sql"
     "../d2b/sql/product_orders_on_holidays.sql",
     "../d2b/sql/total_late_and_undelivered_shipments.sql",
     "../d2b/sql/product_reviews_analytics.sql",
