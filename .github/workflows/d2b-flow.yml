@@ -34,7 +34,3 @@ jobs:
           make setup
           make clean
           make run
-      - name: publish doc
-        run: |
-          pip install mkdocs-material
-          mkdocs gh-deploy
