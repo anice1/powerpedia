@@ -190,4 +190,4 @@ make serve
 
 ## Documentation
 
-To read the full documentation check <a href='https://anice1.github.io/d2b-docs/'>d2b-docs</a> or run `mkdocs serve` on terminal.
+To read the full documentation check <a href='https://anice1.github.io/d2b/'>d2b-docs</a> or run `mkdocs serve` on terminal.
