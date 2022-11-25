@@ -19,7 +19,7 @@ D2b is a simple data pipeline designed to help automate the processes involved i
 Clone the repository.
 
 ```bash
-git clone https://github.com/anochima/d2b.git
+git clone https://github.com/anice1/d2b.git
 cd d2b
 ```
 
